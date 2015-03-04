@@ -1,0 +1,174 @@
+fileFormatVersion: 2
+guid: 15ac7c038acf4408b8ee99a068d13b7f
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: BLADES
+    100002: blades
+    100004: blades_wood
+    100006: HOUSE
+    100008: LITTLETRUNKS
+    100010: TRUNK_WILD_MEAL
+    100012: TRUNK_WILD_MEAL_1
+    100014: TRUNK_WILD_MEAL_1_0
+    100016: TRUNK_WILD_MEAL_1_1
+    100018: TRUNK_WILD_MEAL_1_2
+    100020: TRUNK_WILD_MEAL_1_3
+    100022: TRUNK_WILD_MEAL_1_4
+    100024: TRUNK_WILD_MEAL_1_5
+    100026: //RootNode
+    400000: BLADES
+    400002: blades
+    400004: blades_wood
+    400006: HOUSE
+    400008: LITTLETRUNKS
+    400010: TRUNK_WILD_MEAL
+    400012: TRUNK_WILD_MEAL_1
+    400014: TRUNK_WILD_MEAL_1_0
+    400016: TRUNK_WILD_MEAL_1_1
+    400018: TRUNK_WILD_MEAL_1_2
+    400020: TRUNK_WILD_MEAL_1_3
+    400022: TRUNK_WILD_MEAL_1_4
+    400024: TRUNK_WILD_MEAL_1_5
+    400026: //RootNode
+    2300000: blades
+    2300002: blades_wood
+    2300004: HOUSE
+    2300006: TRUNK_WILD_MEAL
+    2300008: TRUNK_WILD_MEAL_1_0
+    2300010: TRUNK_WILD_MEAL_1_1
+    2300012: TRUNK_WILD_MEAL_1_2
+    2300014: TRUNK_WILD_MEAL_1_3
+    2300016: TRUNK_WILD_MEAL_1_4
+    2300018: TRUNK_WILD_MEAL_1_5
+    3300000: blades
+    3300002: blades_wood
+    3300004: HOUSE
+    3300006: TRUNK_WILD_MEAL
+    3300008: TRUNK_WILD_MEAL_1_0
+    3300010: TRUNK_WILD_MEAL_1_1
+    3300012: TRUNK_WILD_MEAL_1_2
+    3300014: TRUNK_WILD_MEAL_1_3
+    3300016: TRUNK_WILD_MEAL_1_4
+    3300018: TRUNK_WILD_MEAL_1_5
+    4300000: blades
+    4300002: blades_wood
+    4300004: TRUNK_WILD_MEAL
+    4300006: HOUSE
+    4300008: TRUNK_WILD_MEAL_1_0
+    4300010: TRUNK_WILD_MEAL_1_1
+    4300012: TRUNK_WILD_MEAL_1_2
+    4300014: TRUNK_WILD_MEAL_1_3
+    4300016: TRUNK_WILD_MEAL_1_4
+    4300018: TRUNK_WILD_MEAL_1_5
+    7400000: C4D Animation Take
+    9500000: //RootNode
+    11100000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 2
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: C4D Animation Take
+      takeName: C4D Animation Take
+      firstFrame: 0
+      lastFrame: 179
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 1
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: BLADES
+        weight: 1
+      - path: BLADES/blades
+        weight: 1
+      - path: BLADES/blades_wood
+        weight: 1
+      - path: BLADES/TRUNK_WILD_MEAL
+        weight: 1
+      - path: HOUSE
+        weight: 1
+      - path: LITTLETRUNKS
+        weight: 1
+      - path: LITTLETRUNKS/TRUNK_WILD_MEAL_1
+        weight: 1
+      - path: LITTLETRUNKS/TRUNK_WILD_MEAL_1_0
+        weight: 1
+      - path: LITTLETRUNKS/TRUNK_WILD_MEAL_1_1
+        weight: 1
+      - path: LITTLETRUNKS/TRUNK_WILD_MEAL_1_2
+        weight: 1
+      - path: LITTLETRUNKS/TRUNK_WILD_MEAL_1_3
+        weight: 1
+      - path: LITTLETRUNKS/TRUNK_WILD_MEAL_1_4
+        weight: 1
+      - path: LITTLETRUNKS/TRUNK_WILD_MEAL_1_5
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00100000005
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  additionalBone: 0
+  userData: 

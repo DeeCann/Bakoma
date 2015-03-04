@@ -1,0 +1,177 @@
+fileFormatVersion: 2
+guid: b6177263797aefc44860dc2d92291521
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: b_dlon_l
+    100002: b_dlon_p
+    100004: b_glowa
+    100006: b_golen_l
+    100008: b_golen_p
+    100010: b_klata
+    100012: b_oko_l
+    100014: b_oko_p
+    100016: b_palce_l
+    100018: b_palce_p
+    100020: b_przedramie_l
+    100022: b_przedramie_p
+    100024: b_ramie_l
+    100026: b_ramie_p
+    100028: b_root
+    100030: b_stopa_l
+    100032: b_stopa_p
+    100034: b_szczeka
+    100036: b_udo_l
+    100038: b_udo_p
+    100040: //RootNode
+    100042: zaba_bakus
+    400000: b_dlon_l
+    400002: b_dlon_p
+    400004: b_glowa
+    400006: b_golen_l
+    400008: b_golen_p
+    400010: b_klata
+    400012: b_oko_l
+    400014: b_oko_p
+    400016: b_palce_l
+    400018: b_palce_p
+    400020: b_przedramie_l
+    400022: b_przedramie_p
+    400024: b_ramie_l
+    400026: b_ramie_p
+    400028: b_root
+    400030: b_stopa_l
+    400032: b_stopa_p
+    400034: b_szczeka
+    400036: b_udo_l
+    400038: b_udo_p
+    400040: //RootNode
+    400042: zaba_bakus
+    4300000: zaba_bakus
+    7400000: supermoc
+    9500000: //RootNode
+    13700000: zaba_bakus
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 3
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: supermoc
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 20
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: b_root
+        weight: 1
+      - path: b_root/b_klata
+        weight: 1
+      - path: b_root/b_klata/b_glowa
+        weight: 1
+      - path: b_root/b_klata/b_glowa/b_oko_l
+        weight: 1
+      - path: b_root/b_klata/b_glowa/b_oko_p
+        weight: 1
+      - path: b_root/b_klata/b_glowa/b_szczeka
+        weight: 1
+      - path: b_root/b_klata/b_ramie_l
+        weight: 1
+      - path: b_root/b_klata/b_ramie_l/b_przedramie_l
+        weight: 1
+      - path: b_root/b_klata/b_ramie_l/b_przedramie_l/b_dlon_l
+        weight: 1
+      - path: b_root/b_klata/b_ramie_l/b_przedramie_l/b_dlon_l/b_palce_l
+        weight: 1
+      - path: b_root/b_klata/b_ramie_p
+        weight: 1
+      - path: b_root/b_klata/b_ramie_p/b_przedramie_p
+        weight: 1
+      - path: b_root/b_klata/b_ramie_p/b_przedramie_p/b_dlon_p
+        weight: 1
+      - path: b_root/b_klata/b_ramie_p/b_przedramie_p/b_dlon_p/b_palce_p
+        weight: 1
+      - path: b_root/b_udo_l
+        weight: 1
+      - path: b_root/b_udo_l/b_golen_l
+        weight: 1
+      - path: b_root/b_udo_l/b_golen_l/b_stopa_l
+        weight: 1
+      - path: b_root/b_udo_p
+        weight: 1
+      - path: b_root/b_udo_p/b_golen_p
+        weight: 1
+      - path: b_root/b_udo_p/b_golen_p/b_stopa_p
+        weight: 1
+      - path: zaba_bakus
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: b_root
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

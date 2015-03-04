@@ -1,0 +1,17 @@
+D:\Work\PC\Bakus\Temp\bin\Debug\Assembly-CSharp-firstpass.dll
+D:\Work\PC\Bakus\Temp\bin\Debug\Assembly-CSharp-firstpass.pdb
+D:\Work\PC\Bakus\Temp\bin\Debug\ProBuilderCore.dll
+D:\Work\PC\Bakus\Temp\bin\Debug\ProBuilderMeshOps.dll
+D:\Work\PC\Bakus\Temp\bin\Debug\ProCore.dll
+D:\Work\PC\Bakus\Temp\bin\Debug\SixBySeven.dll
+D:\Work\PC\Bakus\Temp\bin\Debug\UnityEditor.dll
+D:\Work\PC\Bakus\Temp\bin\Debug\UnityEngine.dll
+D:\Work\PC\Bakus\Temp\bin\Debug\UnityEngine.UI.dll
+D:\Work\PC\Bakus\Temp\bin\Debug\Mono.Cecil.dll
+D:\Work\PC\Bakus\Temp\bin\Debug\nunit.framework.dll
+D:\Work\PC\Bakus\Temp\bin\Debug\Unity.DataContract.dll
+D:\Work\PC\Bakus\Temp\bin\Debug\ICSharpCode.NRefactory.dll
+D:\Work\PC\Bakus\obj\Debug\Assembly-CSharp-firstpass.csprojResolveAssemblyReference.cache
+D:\Work\PC\Bakus\obj\Debug\Assembly-CSharp-firstpass.dll
+D:\Work\PC\Bakus\obj\Debug\Assembly-CSharp-firstpass.pdb
+D:\Work\PC\Bakus\Temp\bin\Debug\TDx.TDxInput.dll

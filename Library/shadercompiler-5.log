@@ -1,0 +1,21 @@
+Base path: C:/Program Files (x86)/Unity/Editor/Data
+Pipe name: \\.\pipe\UnityShaderCompiler-5-6764
+Cmd: getPlatforms
+Cmd: compileSnippet
+  api=1 type=0 insize=5508 outsize=392 kw=DIRECTIONAL LIGHTMAP_ON DIRLIGHTMAP_OFF ok=1
+Cmd: compileSnippet
+  api=0 type=1 insize=5508 outsize=514 kw=DIRECTIONAL LIGHTMAP_ON DIRLIGHTMAP_OFF ok=1
+Cmd: compileSnippet
+  api=1 type=1 insize=5508 outsize=366 kw=DIRECTIONAL LIGHTMAP_ON DIRLIGHTMAP_ON ok=1
+Cmd: compileSnippet
+  api=1 type=0 insize=3203 outsize=598 kw=DIRECTIONAL ok=1
+Cmd: compileSnippet
+  api=8 type=0 insize=3203 outsize=4794 kw=POINT_COOKIE ok=1
+Cmd: compileSnippet
+  api=1 type=1 insize=3203 outsize=86 kw=DIRECTIONAL ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=3203 outsize=738 kw=SPOT ok=1
+Unhandled exception: Readfile from pipe failed. GLE=Potok zosta³ zakoñczony.
+
+
+Quitting shader compiler process

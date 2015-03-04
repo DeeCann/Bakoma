@@ -1,0 +1,457 @@
+fileFormatVersion: 2
+guid: 226568fafc04d5b498353e049e7ebc20
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: b_dlon_l
+    100002: b_dlon_p
+    100004: b_glowa
+    100006: b_golen_l
+    100008: b_golen_p
+    100010: b_klata
+    100012: b_oko_l
+    100014: b_oko_p
+    100016: b_palce_l
+    100018: b_palce_p
+    100020: b_peleryna
+    100022: b_przedramie_l
+    100024: b_przedramie_p
+    100026: b_ramie_l
+    100028: b_ramie_p
+    100030: b_root
+    100032: b_stopa_l
+    100034: b_stopa_p
+    100036: b_szczeka
+    100038: b_udo_l
+    100040: b_udo_p
+    100042: group_mis
+    100044: //RootNode
+    400000: b_dlon_l
+    400002: b_dlon_p
+    400004: b_glowa
+    400006: b_golen_l
+    400008: b_golen_p
+    400010: b_klata
+    400012: b_oko_l
+    400014: b_oko_p
+    400016: b_palce_l
+    400018: b_palce_p
+    400020: b_peleryna
+    400022: b_przedramie_l
+    400024: b_przedramie_p
+    400026: b_ramie_l
+    400028: b_ramie_p
+    400030: b_root
+    400032: b_stopa_l
+    400034: b_stopa_p
+    400036: b_szczeka
+    400038: b_udo_l
+    400040: b_udo_p
+    400042: group_mis
+    400044: //RootNode
+    4300000: group_mis
+    7400000: bieg
+    9500000: //RootNode
+    13700000: group_mis
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 3
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: bieg
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 20
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: b_root
+        weight: 1
+      - path: b_root/b_klata
+        weight: 1
+      - path: b_root/b_klata/b_glowa
+        weight: 1
+      - path: b_root/b_klata/b_glowa/b_oko_l
+        weight: 1
+      - path: b_root/b_klata/b_glowa/b_oko_p
+        weight: 1
+      - path: b_root/b_klata/b_glowa/b_szczeka
+        weight: 1
+      - path: b_root/b_klata/b_peleryna
+        weight: 1
+      - path: b_root/b_klata/b_ramie_l
+        weight: 1
+      - path: b_root/b_klata/b_ramie_l/b_przedramie_l
+        weight: 1
+      - path: b_root/b_klata/b_ramie_l/b_przedramie_l/b_dlon_l
+        weight: 1
+      - path: b_root/b_klata/b_ramie_l/b_przedramie_l/b_dlon_l/b_palce_l
+        weight: 1
+      - path: b_root/b_klata/b_ramie_p
+        weight: 1
+      - path: b_root/b_klata/b_ramie_p/b_przedramie_p
+        weight: 1
+      - path: b_root/b_klata/b_ramie_p/b_przedramie_p/b_dlon_p
+        weight: 1
+      - path: b_root/b_klata/b_ramie_p/b_przedramie_p/b_dlon_p/b_palce_p
+        weight: 1
+      - path: b_root/b_udo_l
+        weight: 1
+      - path: b_root/b_udo_l/b_golen_l
+        weight: 1
+      - path: b_root/b_udo_l/b_golen_l/b_stopa_l
+        weight: 1
+      - path: b_root/b_udo_p
+        weight: 1
+      - path: b_root/b_udo_p/b_golen_p
+        weight: 1
+      - path: b_root/b_udo_p/b_golen_p/b_stopa_p
+        weight: 1
+      - path: group_mis
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 1
+  humanDescription:
+    human:
+    - boneName: b_root
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: b_udo_l
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: b_udo_p
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: b_golen_l
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: b_golen_p
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: b_stopa_l
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: b_stopa_p
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: b_klata
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: b_glowa
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: b_ramie_l
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: b_ramie_p
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: b_przedramie_l
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: b_przedramie_p
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: b_dlon_l
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: b_dlon_p
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: b_palce_l
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: b_palce_p
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: b_oko_l
+      humanName: LeftEye
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: b_oko_p
+      humanName: RightEye
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: b_szczeka
+      humanName: Jaw
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: mis_skin(Clone)
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: b_root
+      position: {x: -.001420393, y: .491503507, z: 2.00891179e-08}
+      rotation: {x: -3.85355392e-09, y: 3.85445631e-09, z: -.707106888, w: .707106769}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: b_klata
+      position: {x: -.198321611, y: -3.23355174e-08, z: 8.66860272e-09}
+      rotation: {x: 4.4434305e-06, y: .000790584309, z: -.00712815486, w: .99997431}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: b_glowa
+      position: {x: -.107012175, y: 7.03334777e-08, z: 4.76837148e-09}
+      rotation: {x: -5.03906194e-05, y: .0360917933, z: .00139527011, w: .999347508}
+      scale: {x: 1, y: .99999994, z: .99999994}
+      transformModified: 1
+    - name: b_oko_l
+      position: {x: -.265207678, y: -.0601063706, z: .0605091117}
+      rotation: {x: -1.04462481e-06, y: .675590217, z: 1.06018229e-06, w: .737277329}
+      scale: {x: 1.00000012, y: .99999994, z: 1}
+      transformModified: 1
+    - name: b_oko_p
+      position: {x: -.266458899, y: .0493298434, z: .0604164861}
+      rotation: {x: -1.23376456e-08, y: .675590217, z: -7.75620634e-08, w: .737277329}
+      scale: {x: 1.00000083, y: .999999702, z: 1.00000036}
+      transformModified: 1
+    - name: b_szczeka
+      position: {x: -.130776674, y: -.000885648711, z: .0875453129}
+      rotation: {x: -.330221951, y: .62492758, z: .629319787, w: .323072135}
+      scale: {x: .999999762, y: 1.00000012, z: 1}
+      transformModified: 1
+    - name: b_peleryna
+      position: {x: -.0864495039, y: .000185137978, z: -.140728235}
+      rotation: {x: .0588437244, y: .704662323, z: .703736067, w: -.0688766316}
+      scale: {x: .99999994, y: .99999994, z: .99999994}
+      transformModified: 1
+    - name: b_ramie_l
+      position: {x: -.0363739021, y: -.208153307, z: -5.79833213e-05}
+      rotation: {x: -.000617052603, y: -.000494301668, z: .781481981, w: .623927414}
+      scale: {x: .99999994, y: .99999994, z: .99999994}
+      transformModified: 1
+    - name: b_przedramie_l
+      position: {x: -.172678322, y: 9.15527323e-07, z: 1.00684694e-09}
+      rotation: {x: 5.63055269e-10, y: 4.33900347e-08, z: -.0662663877, w: .99780196}
+      scale: {x: 1.00000036, y: 1.00000036, z: 1}
+      transformModified: 1
+    - name: b_dlon_l
+      position: {x: -.166423827, y: 9.15527323e-07, z: 9.67702363e-10}
+      rotation: {x: -1.3597018e-10, y: 8.44465298e-09, z: .0022782993, w: .999997437}
+      scale: {x: .999999881, y: .999999881, z: 1}
+      transformModified: 1
+    - name: b_palce_l
+      position: {x: -.140632629, y: -7.62939436e-08, z: 8.16225976e-10}
+      rotation: {x: 2.88796521e-11, y: 1.43673105e-13, z: .00497482903, w: .999987662}
+      scale: {x: 1.00000012, y: 1.00000012, z: 1}
+      transformModified: 1
+    - name: b_ramie_p
+      position: {x: -.042294465, y: .207104474, z: -6.62993625e-05}
+      rotation: {x: .772507727, y: .635004878, z: .000611503376, w: .000501101487}
+      scale: {x: -.999999702, y: -.999999762, z: -1}
+      transformModified: 1
+    - name: b_przedramie_p
+      position: {x: -.172678277, y: 8.39233394e-07, z: 1.00685604e-09}
+      rotation: {x: 6.41344255e-10, y: 1.06216866e-08, z: -.0662668794, w: .99780196}
+      scale: {x: 1.00000024, y: 1.00000024, z: 1}
+      transformModified: 1
+    - name: b_dlon_p
+      position: {x: -.166423827, y: 7.62939408e-07, z: 9.67702363e-10}
+      rotation: {x: -4.2947975e-11, y: 2.02440464e-09, z: .00227904832, w: .999997437}
+      scale: {x: .999999762, y: .999999762, z: 1}
+      transformModified: 1
+    - name: b_palce_p
+      position: {x: -.140632629, y: 0, z: 8.16225976e-10}
+      rotation: {x: 2.88807658e-11, y: 1.43678662e-13, z: .00497482996, w: .999987662}
+      scale: {x: .99999994, y: .99999994, z: 1}
+      transformModified: 1
+    - name: b_udo_l
+      position: {x: .133736685, y: -.145812377, z: -7.62939365e-08}
+      rotation: {x: -1.13999249e-07, y: 2.19257049e-06, z: .999750793, w: .0223253313}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: b_golen_l
+      position: {x: -.138431221, y: 0, z: -1.92048888e-09}
+      rotation: {x: .000245340285, y: -.0620215945, z: .014685641, w: .997966766}
+      scale: {x: 1, y: 1, z: 1.00000012}
+      transformModified: 1
+    - name: b_stopa_l
+      position: {x: -.152901024, y: -2.16484068e-06, z: 0}
+      rotation: {x: -.0174130779, y: .638734639, z: .00569201214, w: .769208968}
+      scale: {x: 1, y: .999999821, z: .99999994}
+      transformModified: 1
+    - name: b_udo_p
+      position: {x: .133736566, y: .143853605, z: -7.62939436e-08}
+      rotation: {x: .999750793, y: .0223255716, z: 1.16580935e-07, w: -2.78882339e-06}
+      scale: {x: -1.00000024, y: -1.00000024, z: -1}
+      transformModified: 1
+    - name: b_golen_p
+      position: {x: -.138431221, y: -9.53674295e-09, z: -1.92048888e-09}
+      rotation: {x: .000245340256, y: -.0620215945, z: .014685642, w: .997966766}
+      scale: {x: 1, y: .99999994, z: 1.00000012}
+      transformModified: 1
+    - name: b_stopa_p
+      position: {x: -.152900994, y: -2.16484068e-06, z: 0}
+      rotation: {x: -.0174130611, y: .638734639, z: .00569199678, w: .769208968}
+      scale: {x: 1, y: 1, z: .999999881}
+      transformModified: 1
+    - name: group_mis
+      position: {x: -4.50764359e-09, y: 4.50764359e-09, z: -.103122868}
+      rotation: {x: -.707106829, y: 0, z: -0, w: .707106829}
+      scale: {x: 12.1106129, y: 12.1106129, z: 12.1106129}
+      transformModified: 1
+    armTwist: .5
+    foreArmTwist: 1
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 0faf2433ff4d9c84a864b5c376cc7a8a,
+    type: 3}
+  animationType: 3
+  additionalBone: 0
+  userData: 
