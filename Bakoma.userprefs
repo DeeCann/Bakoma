@@ -1,0 +1,13 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="..\..\..\Tmp\Bakus\Assets\Trampoliny\scripts\off_button.js">
+    <Files>
+      <File FileName="..\..\..\Tmp\Bakus\Assets\Trampoliny\scripts\timer.js" Line="3" Column="9" />
+      <File FileName="..\..\..\Tmp\Bakus\Assets\Trampoliny\scripts\off_button.js" Line="11" Column="24" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

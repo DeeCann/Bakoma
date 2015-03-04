@@ -34,7 +34,7 @@ public class Connect : MonoBehaviour {
         form.AddField("type", "1");
         form.AddField("uid", "2");
 
-        WWW w = new WWW("http://apps.pc-fb.com/bakoma/connect/update_product.php", form);
+		WWW w = new WWW("http://superbakusie.pl/connect/update_product.php", form);
 
 
         yield return w;
