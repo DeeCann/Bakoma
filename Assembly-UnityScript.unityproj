@@ -57,6 +57,7 @@
      <Compile Include="Assets\Trampoliny\scripts\fruitgenerator.js" />
      <Compile Include="Assets\Trampoliny\scripts\how.js" />
      <Compile Include="Assets\Trampoliny\scripts\inbox_sound.js" />
+     <Compile Include="Assets\Trampoliny\scripts\landscape.js" />
      <Compile Include="Assets\Trampoliny\scripts\lejek_sound.js" />
      <Compile Include="Assets\Trampoliny\scripts\level.js" />
      <Compile Include="Assets\Trampoliny\scripts\next.js" />

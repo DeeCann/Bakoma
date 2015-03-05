@@ -108,6 +108,8 @@ public class Game : MonoBehaviour {
             _fruitsInGame.Add(fruitsNames.Peach.ToString(), Random.Range(10, 20));
             _fruitsInGame.Add(fruitsNames.Strawberry.ToString(), Random.Range(10, 20));
 
+            
+
             GeneratedFruitsContainer = (GameObject)Instantiate(Resources.Load("Prefabs/GeneratedFruitsContainer"), Vector3.zero, Quaternion.identity);
             GeneratedFruitsContainer.name = "GeneratedFruitsContainer";
           
@@ -190,12 +192,12 @@ public class Game : MonoBehaviour {
 	}
 
 	void FixedUpdate() {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            PlayerPrefs.SetInt("EnterdMiniGame", 1);
-            GeneratedFruitsContainer.gameObject.SetActive(false);
-            Application.LoadLevel("Test");
-        }
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    PlayerPrefs.SetInt("EnterdMiniGame", 1);
+        //    GeneratedFruitsContainer.gameObject.SetActive(false);
+        //    Application.LoadLevel("Test");
+        //}
 
 		if (!_showStartFruitsAmountPanel && PlayerPrefs.GetInt("StartFruitsAmountShowed") == 0) {
 			_HUDControler.GetComponent<HUD> ().ShowStartFruitsAmount ();
@@ -236,6 +238,30 @@ public class Game : MonoBehaviour {
         get {
             return _gameHasEnded;
         }
+    }
+
+    public static bool DidPlayerGetAllFruits() {
+        //PlayerPrefs.SetInt("GamePoints_" + fruitsNames.Apple.ToString(), 20);
+        //PlayerPrefs.SetInt("GamePoints_" + fruitsNames.Blackberry.ToString(), 20);
+        //PlayerPrefs.SetInt("GamePoints_" + fruitsNames.Blueberry.ToString(), 20);
+        //PlayerPrefs.SetInt("GamePoints_" + fruitsNames.Peach.ToString(), 20);
+        //PlayerPrefs.SetInt("GamePoints_" + fruitsNames.Raspberry.ToString(), 20);
+        //PlayerPrefs.SetInt("GamePoints_" + fruitsNames.Strawberry.ToString(), 20); 
+
+        if (
+            PlayerPrefs.GetInt("GamePoints_" + fruitsNames.Apple.ToString()) >= _fruitsInGame[fruitsNames.Apple.ToString()] &&
+            PlayerPrefs.GetInt("GamePoints_" + fruitsNames.Blackberry.ToString()) >= _fruitsInGame[fruitsNames.Blackberry.ToString()] &&
+            PlayerPrefs.GetInt("GamePoints_" + fruitsNames.Blueberry.ToString()) >= _fruitsInGame[fruitsNames.Blueberry.ToString()] &&
+            PlayerPrefs.GetInt("GamePoints_" + fruitsNames.Peach.ToString()) >= _fruitsInGame[fruitsNames.Peach.ToString()] &&
+            PlayerPrefs.GetInt("GamePoints_" + fruitsNames.Raspberry.ToString()) >= _fruitsInGame[fruitsNames.Raspberry.ToString()] &&
+            PlayerPrefs.GetInt("GamePoints_" + fruitsNames.Strawberry.ToString()) >= _fruitsInGame[fruitsNames.Strawberry.ToString()]
+        ) {
+            GameHasEnded = true;
+            
+            return true;
+        }
+
+        return false;
     }
 
 	public static void NextRound() {

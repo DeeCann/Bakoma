@@ -16,6 +16,7 @@ public class NormalField : MonoBehaviour {
 		if(HasAnyFieldMoveAction && _enableTextHelper)
 			DrawGuiText();
 	}
+
 	
 	public bool HasAnyFieldMoveAction {
 		get{
