@@ -16,3 +16,6 @@ D:\Work\PC\Bakus\Temp\bin\Debug\Assembly-CSharp-firstpass.pdb
 D:\Work\PC\Bakus\obj\Debug\Assembly-CSharp.dll
 D:\Work\PC\Bakus\obj\Debug\Assembly-CSharp.pdb
 D:\Work\PC\Bakus\Temp\bin\Debug\TDx.TDxInput.dll
+D:\Work\PC\Bakoma\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
+D:\Work\PC\Bakoma\obj\Debug\Assembly-CSharp.dll
+D:\Work\PC\Bakoma\obj\Debug\Assembly-CSharp.pdb

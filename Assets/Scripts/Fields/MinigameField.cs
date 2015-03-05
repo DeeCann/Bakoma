@@ -37,18 +37,18 @@ public class MinigameField : MonoBehaviour
     {
         if (playerCollider.tag == "Player")
         {
-            if (playerCollider.gameObject.GetComponent<PlayerRoute>().NumberOfFieldsToGo == 1)
-            {
-                PlayerPrefs.SetInt("EnterdMiniGame", 1);
-                PlayerPrefs.SetInt("Difficulty", 1);
-                PlayerPrefs.SetString("MiniGameFruit", _minigameNames.ToString());
-                GameObject.Find("GeneratedFruitsContainer").gameObject.SetActive(false);
-                //GameObject.Find("Hippo").gameObject.SetActive(false);
-                StartCoroutine("LoadGame");
-                //Application.LoadLevel("Test");
-                _hasPlayerForMiniGame = true;
-                _playerEnteredTime = Time.time;
-            }
+            //if (playerCollider.gameObject.GetComponent<PlayerRoute>().NumberOfFieldsToGo == 1)
+            //{
+            //    PlayerPrefs.SetInt("EnterdMiniGame", 1);
+            //    PlayerPrefs.SetInt("Difficulty", 1);
+            //    PlayerPrefs.SetString("MiniGameFruit", _minigameNames.ToString());
+            //    GameObject.Find("GeneratedFruitsContainer").gameObject.SetActive(false);
+            //    //GameObject.Find("Hippo").gameObject.SetActive(false);
+            //    StartCoroutine("LoadGame");
+            //    //Application.LoadLevel("Test");
+            //    _hasPlayerForMiniGame = true;
+            //    _playerEnteredTime = Time.time;
+            //}
 
         };
     }

@@ -87,8 +87,9 @@ public class HUD : MonoBehaviour {
     public void ShowEndDemoPanel()
     {
         _EndDemoPanel.gameObject.SetActive(true);
-        StartCoroutine(HideAllMenus());
+       // StartCoroutine(HideAllMenus());
         StartCoroutine(ShowEndDemoVigniete());
+        //_EndDemoPanel.GetComponent<CanvasGroup>().alpha = 1;
     }
 
 	IEnumerator ShowVigniete() {
@@ -198,11 +199,11 @@ public class HUD : MonoBehaviour {
 
     IEnumerator ShowEndDemoVigniete()
     {
-        Color endDemoColor = _EndDemoPanel.GetComponent<Image>().color;
-        while (endDemoColor.a < 0.99f)
+        float endDemoAlpha = _EndDemoPanel.GetComponent<CanvasGroup>().alpha;
+        while (endDemoAlpha < 0.80f)
         {
-            endDemoColor.a += 0.16f;
-            _EndDemoPanel.GetComponent<Image>().color = endDemoColor;
+            endDemoAlpha += 0.16f;
+            _EndDemoPanel.GetComponent<CanvasGroup>().alpha = endDemoAlpha;
             yield return null;
         }
     }
