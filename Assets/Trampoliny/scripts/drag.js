@@ -1,5 +1,5 @@
-﻿var screenSpace;
-    var offset;
+﻿var screenSpace:Vector3;
+var offset:Vector3;
     var object: GameObject;
     var prefab : Transform;
     var clone: Object;
