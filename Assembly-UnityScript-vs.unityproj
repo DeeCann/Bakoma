@@ -73,6 +73,7 @@
      <Compile Include="Assets\Trampoliny\scripts\tramp_sound.js" />
      <Compile Include="Assets\Trampoliny\scripts\transparency.js" />
      <Compile Include="Assets\Trampoliny\scripts\unfreeze.js" />
+     <Compile Include="Assets\Trampoliny\scripts\unfreeze_tool.js" />
      <None Include="Assets\Standard Assets\Projectors\Guidelines.txt" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\BlendOneOne.shader" />
      <None Include="Assets\MeshBrush\Documentation.txt" />
