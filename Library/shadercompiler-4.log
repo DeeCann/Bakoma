@@ -1,20 +1,36 @@
 Base path: C:/Program Files (x86)/Unity/Editor/Data
-Pipe name: \\.\pipe\UnityShaderCompiler-4-20188
+Pipe name: \\.\pipe\UnityShaderCompiler-4-10172
 Cmd: getPlatforms
 Cmd: compileSnippet
-  api=5 type=0 insize=5508 outsize=3073 kw=DIRECTIONAL LIGHTMAP_ON DIRLIGHTMAP_ON ok=1
+  api=9 type=0 insize=3154 outsize=1334 kw= ok=1
 Cmd: compileSnippet
-  api=9 type=1 insize=5508 outsize=7 kw=DIRECTIONAL LIGHTMAP_OFF DIRLIGHTMAP_OFF ok=1
+  api=9 type=1 insize=5459 outsize=7 kw= ok=1
 Cmd: compileSnippet
-  api=9 type=0 insize=3203 outsize=1865 kw=DIRECTIONAL ok=1
+  api=9 type=0 insize=5464 outsize=2392 kw= ok=1
 Cmd: compileSnippet
-  api=5 type=1 insize=3203 outsize=6 kw=SPOT ok=1
+  api=9 type=1 insize=5470 outsize=7 kw= ok=1
 Cmd: compileSnippet
-  api=9 type=1 insize=5451 outsize=7 kw= ok=1
+  api=9 type=0 insize=1354 outsize=1681 kw= ok=1
 Cmd: compileSnippet
-  api=9 type=0 insize=5463 outsize=2371 kw= ok=1
+  api=9 type=1 insize=624 outsize=7 kw= ok=1
 Cmd: compileSnippet
-  api=9 type=1 insize=2925 outsize=7 kw= ok=1
+  api=9 type=0 insize=4366 outsize=1329 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_ON DIRLIGHTMAP_ON ok=1
+Cmd: compileSnippet
+  api=5 type=0 insize=4366 outsize=4864 kw=DIRECTIONAL SHADOWS_SCREEN LIGHTMAP_OFF DIRLIGHTMAP_OFF VERTEXLIGHT_ON ok=1
+Cmd: compileSnippet
+  api=5 type=1 insize=4366 outsize=6 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_ON DIRLIGHTMAP_OFF ok=1
+Cmd: compileSnippet
+  api=9 type=1 insize=4366 outsize=7 kw=DIRECTIONAL SHADOWS_SCREEN SHADOWS_NATIVE LIGHTMAP_ON DIRLIGHTMAP_ON ok=1
+Cmd: compileSnippet
+  api=9 type=0 insize=2380 outsize=2330 kw=POINT_COOKIE ok=1
+Cmd: compileSnippet
+  api=5 type=1 insize=2380 outsize=6 kw=DIRECTIONAL ok=1
+Cmd: compileSnippet
+  api=9 type=0 insize=1835 outsize=832 kw= ok=1
+Cmd: compileSnippet
+  api=9 type=0 insize=4093 outsize=3104 kw=LIGHTMAP_ON DIRLIGHTMAP_OFF HDR_LIGHT_PREPASS_OFF ok=1
+Cmd: compileSnippet
+  api=9 type=1 insize=4093 outsize=7 kw=LIGHTMAP_ON DIRLIGHTMAP_OFF HDR_LIGHT_PREPASS_OFF ok=1
 Unhandled exception: Readfile from pipe failed. GLE=Potok zosta³ zakoñczony.
 
 

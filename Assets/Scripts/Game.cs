@@ -54,7 +54,7 @@ public class Game : MonoBehaviour {
 
 	void Awake() {
         Physics.gravity = new Vector3(0, -9.8f, 0);
-		_startField = GameObject.FindGameObjectsWithTag(Tags.StartPoint)[Random.Range(0,3)];
+		_startField = GameObject.FindGameObjectsWithTag(Tags.StartPoint)[Random.Range(1,2)];
 		_HUDControler = GameObject.FindGameObjectWithTag(Tags.HUDControler);
 
         if (PlayerPrefs.GetInt("EnterdMiniGame") == 0)
@@ -189,6 +189,7 @@ public class Game : MonoBehaviour {
 
 	void Start() {
 		Dice.CanDoDiceRoll = true;
+		Screen.orientation = ScreenOrientation.Landscape;
 	}
 
 	void FixedUpdate() {
@@ -274,8 +275,16 @@ public class Game : MonoBehaviour {
 	}
 
     public static void SetFruitPoint(string fruit, int amount) {
-        _myPoints[fruit] = _myPoints[fruit] + amount;
-        PlayerPrefs.SetInt("GamePoints_" + fruit, _myPoints[fruit]);
+        //_myPoints[fruit] = _myPoints[fruit] + amount;
+		//Debug.Log (_myPoints ["Apple"]);
+		//Debug.Log (_myPoints ["Blackberry"]);
+		//Debug.Log (_myPoints ["Blueberry"]);
+		//Debug.Log (_myPoints ["Peach"]);
+		//Debug.Log (_myPoints ["Raspberry"]);
+		//Debug.Log (_myPoints ["Strawberry"]);
+
+        PlayerPrefs.SetInt("GamePoints_" + fruit, PlayerPrefs.GetInt ("GamePoints_"+fruit)+amount);
+		PlayerPrefs.Save ();
         FruitsPanel.SetPoint(fruit);
         _playerHasSomeFruit = true;
     }
@@ -289,7 +298,7 @@ public class Game : MonoBehaviour {
             while (!foundFruitsGreaterThanZero)
             {
                 fruitRandomName = Random.Range(0, 6);
-                if (_myPoints[_onBoardFruitsNames[fruitRandomName]] > 0)
+				if (PlayerPrefs.GetInt ("GamePoints_"+_onBoardFruitsNames[fruitRandomName]) > 0)
                 {
                     SetFruitPoint(_onBoardFruitsNames[fruitRandomName], amount * -1);
                     foundFruitsGreaterThanZero = true;

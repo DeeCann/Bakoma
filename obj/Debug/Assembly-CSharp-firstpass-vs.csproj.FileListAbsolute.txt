@@ -1,0 +1,17 @@
+d:\Work\PC\Bakoma-master\Temp\bin\Debug\Assembly-CSharp-firstpass.dll
+d:\Work\PC\Bakoma-master\Temp\bin\Debug\Assembly-CSharp-firstpass.pdb
+d:\Work\PC\Bakoma-master\Temp\bin\Debug\ProBuilderCore.dll
+d:\Work\PC\Bakoma-master\Temp\bin\Debug\ProBuilderMeshOps.dll
+d:\Work\PC\Bakoma-master\Temp\bin\Debug\ProCore.dll
+d:\Work\PC\Bakoma-master\Temp\bin\Debug\SixBySeven.dll
+d:\Work\PC\Bakoma-master\Temp\bin\Debug\TDx.TDxInput.dll
+d:\Work\PC\Bakoma-master\Temp\bin\Debug\UnityEditor.dll
+d:\Work\PC\Bakoma-master\Temp\bin\Debug\UnityEngine.dll
+d:\Work\PC\Bakoma-master\Temp\bin\Debug\UnityEngine.UI.dll
+d:\Work\PC\Bakoma-master\Temp\bin\Debug\Mono.Cecil.dll
+d:\Work\PC\Bakoma-master\Temp\bin\Debug\nunit.framework.dll
+d:\Work\PC\Bakoma-master\Temp\bin\Debug\Unity.DataContract.dll
+d:\Work\PC\Bakoma-master\Temp\bin\Debug\ICSharpCode.NRefactory.dll
+d:\Work\PC\Bakoma-master\obj\Debug\Assembly-CSharp-firstpass-vs.csprojResolveAssemblyReference.cache
+d:\Work\PC\Bakoma-master\obj\Debug\Assembly-CSharp-firstpass.dll
+d:\Work\PC\Bakoma-master\obj\Debug\Assembly-CSharp-firstpass.pdb

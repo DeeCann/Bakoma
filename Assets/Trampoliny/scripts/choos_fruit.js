@@ -18,12 +18,30 @@ function Start () {
 
 function Update () {
 
-if (Input.GetKey ("1")||fruit==1||PlayerPrefs.GetString("MiniGameFruit")=="Apple"){fruit=1;apple();GUI_apple.SetActive(true);apple_bcg.SetActive(true);strawberry_bcg.SetActive(false);peach_bcg.SetActive(false);}
-if (Input.GetKey ("2")||fruit==2||PlayerPrefs.GetString("MiniGameFruit")=="Strawberry"){fruit=2;strawberry();GUI_strawberry.SetActive(true);apple_bcg.SetActive(false);strawberry_bcg.SetActive(true);peach_bcg.SetActive(false);}
-if (Input.GetKey ("3")||fruit==3||PlayerPrefs.GetString("MiniGameFruit")=="Peach"){fruit=3;peach();GUI_peach.SetActive(true);apple_bcg.SetActive(false);strawberry_bcg.SetActive(false);peach_bcg.SetActive(true);}
-if (Input.GetKey ("4")||fruit==4||PlayerPrefs.GetString("MiniGameFruit")=="Blackberry"){fruit=4;blackberry();GUI_blackberry.SetActive(true);apple_bcg.SetActive(false);strawberry_bcg.SetActive(true);peach_bcg.SetActive(false);}
-if (Input.GetKey ("5")||fruit==5||PlayerPrefs.GetString("MiniGameFruit")=="Raspberry"){fruit=5;raspberry();GUI_raspberry.SetActive(true);apple_bcg.SetActive(false);strawberry_bcg.SetActive(true);peach_bcg.SetActive(false);}
-if (Input.GetKey ("6")||fruit==6||PlayerPrefs.GetString("MiniGameFruit")=="Blueberry"){fruit=6;blueberry();GUI_blueberry.SetActive(true);apple_bcg.SetActive(false);strawberry_bcg.SetActive(true);peach_bcg.SetActive(false);}
+if (Input.GetKey ("1")||fruit==1||PlayerPrefs.GetString("MiniGameFruit")=="Apple"){
+fruit=1;apple();GUI_apple.SetActive(true);GUI_strawberry.SetActive(false);GUI_peach.SetActive(false);GUI_blackberry.SetActive(false);GUI_raspberry.SetActive(false);GUI_blueberry.SetActive(false);
+apple_bcg.SetActive(true);strawberry_bcg.SetActive(false);peach_bcg.SetActive(false);}
+
+if (Input.GetKey ("2")||fruit==2||PlayerPrefs.GetString("MiniGameFruit")=="Strawberry"){
+fruit=2;strawberry();GUI_apple.SetActive(false);GUI_strawberry.SetActive(true);GUI_peach.SetActive(false);GUI_blackberry.SetActive(false);GUI_raspberry.SetActive(false);GUI_blueberry.SetActive(false);
+apple_bcg.SetActive(false);strawberry_bcg.SetActive(true);peach_bcg.SetActive(false);}
+
+if (Input.GetKey ("3")||fruit==3||PlayerPrefs.GetString("MiniGameFruit")=="Peach"){
+fruit=3;peach();GUI_apple.SetActive(false);GUI_strawberry.SetActive(false);GUI_peach.SetActive(true);GUI_blackberry.SetActive(false);GUI_raspberry.SetActive(false);GUI_blueberry.SetActive(false);
+apple_bcg.SetActive(false);strawberry_bcg.SetActive(false);peach_bcg.SetActive(true);}
+
+if (Input.GetKey ("4")||fruit==4||PlayerPrefs.GetString("MiniGameFruit")=="Blackberry"){
+fruit=4;blackberry();GUI_apple.SetActive(false);GUI_strawberry.SetActive(false);GUI_peach.SetActive(false);GUI_blackberry.SetActive(true);GUI_raspberry.SetActive(false);GUI_blueberry.SetActive(false);
+apple_bcg.SetActive(false);strawberry_bcg.SetActive(true);peach_bcg.SetActive(false);}
+
+if (Input.GetKey ("5")||fruit==5||PlayerPrefs.GetString("MiniGameFruit")=="Raspberry"){
+fruit=5;raspberry();GUI_apple.SetActive(false);GUI_strawberry.SetActive(false);GUI_peach.SetActive(false);GUI_blackberry.SetActive(false);GUI_raspberry.SetActive(true);GUI_blueberry.SetActive(false);
+apple_bcg.SetActive(false);strawberry_bcg.SetActive(true);peach_bcg.SetActive(false);}
+
+if (Input.GetKey ("6")||fruit==6||PlayerPrefs.GetString("MiniGameFruit")=="Blueberry"){
+fruit=6;blueberry();GUI_apple.SetActive(false);GUI_strawberry.SetActive(false);GUI_peach.SetActive(false);GUI_blackberry.SetActive(false);GUI_raspberry.SetActive(false);GUI_blueberry.SetActive(true);
+apple_bcg.SetActive(false);strawberry_bcg.SetActive(true);peach_bcg.SetActive(false);}
+
 }
 
 function apple(){

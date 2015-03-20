@@ -4,7 +4,7 @@ private var lastClickTime:float=0;
 var click:AudioClip;
 var parentName: String;
 
-var catchTime:float=.25;
+var catchTime:float;
 
 function Start () {
 parentName = transform.parent.name;
@@ -17,7 +17,7 @@ function Update () {
 function OnMouseDown () {
 		
 if(Input.GetButtonDown("Fire1")){
-if(Time.time-lastClickTime<catchTime){
+if(Time.time-lastClickTime<1){
 rigidbody.useGravity = true;
 rigidbody.isKinematic = false;
 //score_count.move=1;
@@ -27,6 +27,7 @@ audio.PlayOneShot(click);
 
 }
 lastClickTime=Time.time;
+Debug.Log(lastClickTime);
 }
 }
 function no_move(){

@@ -39,10 +39,10 @@ public class SpecialMoveField : MonoBehaviour {
 		gameObject.GetComponent<FieldSocket>().MyFieldObject = FieldObj;
 	} 
 	
-	void Update() {
-		if(HasAnyFieldMoveAction && EnableTextHelper)
-			DrawGuiText();
-	}
+	//void Update() {
+		//if(HasAnyFieldMoveAction && EnableTextHelper)
+		//	DrawGuiText();
+	//}
 	
 	public bool HasAnyFieldMoveAction {
 		get{

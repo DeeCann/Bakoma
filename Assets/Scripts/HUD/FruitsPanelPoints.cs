@@ -15,8 +15,16 @@ public class FruitsPanelPoints : MonoBehaviour {
     }
 
     public fruitsNames fruitNamePoints;
+    private int _lastPoint;
 
-    void Update() {
-        GetComponent<Text>().text = PlayerPrefs.GetInt("GamePoints_"+ fruitNamePoints.ToString()).ToString();
+    void Start() {
+        _lastPoint = PlayerPrefs.GetInt("GamePoints_" + fruitNamePoints.ToString());
+        GetComponent<Text>().text = _lastPoint.ToString();
+    }
+
+    void Update()
+    {
+        if (PlayerPrefs.GetInt("GamePoints_" + fruitNamePoints.ToString()) != _lastPoint)
+            GetComponent<Text>().text = PlayerPrefs.GetInt("GamePoints_" + fruitNamePoints.ToString()).ToString();
     }
 }

@@ -12,6 +12,15 @@ public class OnBoardFruit : MonoBehaviour {
 
             transform.GetComponentInChildren<ParticleSystem>().Emit(100);
             Game.SetFruitPoint(gameObject.name, 1);
+			StartCoroutine("Fruit_off");
+
+
+
         }
     }
+
+	IEnumerator Fruit_off() {
+		yield return new WaitForSeconds(2);
+		this.gameObject.SetActive (false);
+	}
 }

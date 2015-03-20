@@ -24,8 +24,13 @@ var offset:Vector3;
     prefab=this.transform;
     if(object.name=="wooden-platform-thin"){
     	for(var i:int=0;i<rand_n_tramp;i++){
-    		rand_tramp=Random.Range(-30,30);   		       
-        	clone=Instantiate (prefab, Vector3(-7+(i*10),-10,0), Quaternion.Euler(rand_tramp,90,0));
+    		if(i%2==0){
+    		rand_tramp=Random.Range(5,30);   		       
+        	clone=Instantiate (prefab, Vector3(-7+(i*10),-10,0), Quaternion.Euler(rand_tramp,90,0));}
+    		if(i%2==1){
+    		rand_tramp=Random.Range(-30,-5);   		       
+        	clone=Instantiate (prefab, Vector3(-7+(i*10),-10,0), Quaternion.Euler(rand_tramp,90,0));}
+    		
         	
         }
         Destroy(this.gameObject);	   

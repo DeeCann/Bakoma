@@ -18,6 +18,7 @@ var blackberry_3:GameObject;
 var raspberry_3:GameObject;
 var blueberry_3:GameObject;
 var przeszkody:GameObject;
+var tekst:GameObject;
 
 function Start () {
 
@@ -30,6 +31,7 @@ function OnMouseDown(){
 
 if(this.gameObject.name=="how1"){
 	maska.SetActive(false);
+	tekst.SetActive(false);
 }
 
 if(this.gameObject.name=="how3"){
