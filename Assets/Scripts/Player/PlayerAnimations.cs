@@ -6,6 +6,9 @@ public class PlayerAnimations : MonoBehaviour {
 	Animator animationControler;
     AudioSource audio;
 
+    private bool _speedUp = false;
+    private int _speedUpMaxSpeed = 7;
+
 	void Start ()
 	{
 		animationControler = GetComponent<Animator>();
@@ -13,7 +16,11 @@ public class PlayerAnimations : MonoBehaviour {
 
         audio = GetComponent<AudioSource>();
 	}
-	
+
+    void FixedUpdate() {
+        if (_speedUp)
+            animationControler.speed = Mathf.Lerp(animationControler.speed, 1, Time.deltaTime * 2);
+    }
 	public void StartMoveAnimation() {
 		animationControler.SetBool("PickRoadIdle", false);
 		animationControler.SetBool("Run", true);
@@ -38,4 +45,9 @@ public class PlayerAnimations : MonoBehaviour {
 
         audio.Play();
 	}
+
+    public void SpeedUp(float speedFactor) {
+        _speedUp = true;
+        animationControler.speed = _speedUpMaxSpeed - speedFactor;
+    }
 }

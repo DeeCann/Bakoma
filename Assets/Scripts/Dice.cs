@@ -67,7 +67,7 @@ public class Dice : MonoBehaviour {
 	private Quaternion showRandomRollDice {
 		get{
 			_diceValue = Random.Range(1,7);
-           // _diceValue = 5;
+           // _diceValue = 3;
 			_newDiceThrow = true;
 			switch(_diceValue) {
 				case 1: return Quaternion.AngleAxis(180, Vector3.right);

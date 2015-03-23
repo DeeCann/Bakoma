@@ -7,6 +7,9 @@ public class PlayerMove : MonoBehaviour {
 	private bool _hasNewMove = false;
 	private Vector3 _nextField = Vector3.zero;
 	private Quaternion lookAtRotation = Quaternion.AngleAxis(180, Vector3.up);
+    private bool _speedUp = false;
+    private float _speedUpMaxTIme = 3;
+    private float _speedFieldFactor = 0;
 
 	void Awake() {
 		// isKinematic must be blocked on hills to stop character from slide down
@@ -35,7 +38,14 @@ public class PlayerMove : MonoBehaviour {
 				Dice.CanDoDiceRoll = true;
 			}
 
-			transform.position = Vector3.MoveTowards(transform.position, _nextField, Time.deltaTime * 0.6f);
+            if (_speedUp) {
+                transform.position = Vector3.MoveTowards(transform.position, _nextField, Time.deltaTime * _speedUpMaxTIme);
+                _speedUpMaxTIme -= 0.1f * _speedFieldFactor;
+
+                if (_speedUpMaxTIme <= 0.6f)
+                    _speedUp = false;
+            } else
+			    transform.position = Vector3.MoveTowards(transform.position, _nextField, Time.deltaTime * 0.6f);
 		} else {
 			transform.rotation = lookAtRotation;
 			rigidbody.isKinematic = true;
@@ -46,5 +56,10 @@ public class PlayerMove : MonoBehaviour {
 		lookAtRotation = Quaternion.LookRotation(new Vector3( _nextField.x, transform.position.y, _nextField.z) - transform.position, Vector3.up);
 		transform.rotation = Quaternion.Lerp(transform.rotation, lookAtRotation, Time.deltaTime * 12);
 	}
+
+    public void SpeedUp(float speedFieldFactor) {
+        _speedUp = true;
+        _speedFieldFactor = speedFieldFactor;
+    }
 
 }

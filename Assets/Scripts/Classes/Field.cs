@@ -28,24 +28,13 @@ public class Field : IField  {
 		MyType = _type;
 		if(MyType == MyFieldType.RandomMove) {
 			_randomFieldsMovementValue = Random.Range(1,7);
-
-//			if(MyType == MyFieldType.RandomBackward)
-//				_randomFieldsMovementValue *= -1;
 		}
 
 		if(MyType == MyFieldType.ValueMove) {
 			_randomFieldsMovementValue = Random.Range(1,3) * 3;
-
-//			if(MyType == MyFieldType.ValueBackward)
-//				_randomFieldsMovementValue *= -1;
 		}
 	}
-	
-//	public MyFieldType GetType {
-//		get{
-//			return MyType;
-//		}
-//	}
+
 
 	public int MoveActionValue{
 		get{
