@@ -40,6 +40,11 @@ public class FruitsPanel : MonoBehaviour {
                 _fruitAnimationCompleted = "";
             }           
         }
+
+        if (_changeScore) {
+            transform.FindChild(_setPointForFruitName).GetComponentInChildren<FruitsPanelPoints>().UpdateScore();
+            _changeScore = false;
+        }
     }
 
     public static void SetPoint(string fruitName) {
@@ -48,6 +53,7 @@ public class FruitsPanel : MonoBehaviour {
         if (!_animationFruitStack.Contains(fruitName))
             _animationFruitStack.Add(fruitName);
 
+        
         _changeScore = true;
     }
 }

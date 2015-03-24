@@ -41,6 +41,7 @@ public class trapsPanelControler : MonoBehaviour {
         Camera.main.GetComponent<AudioSource>().Play();
 
         Game.RemoveRandomFruitPoint(1);
+
         ClosePanel();
     }
 

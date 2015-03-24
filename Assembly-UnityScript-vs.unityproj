@@ -148,6 +148,7 @@
      <None Include="Assets\ProCore\Prototype\About\pc_AboutEntry_ProBuilder.txt" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_Antialiasing\DLAA.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\NoiseAndGrainDX11.shader" />
+     <None Include="Assets\Plugins\Android\res\values\google_play_services_version.xml" />
      <None Include="Assets\External\MatCap Shaders\Shaders\MatCap_TextureMult.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\BrightPassFilter2.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\SeparableBlur.shader" />
@@ -207,6 +208,9 @@
  </Reference>
  <Reference Include="TDx.TDxInput">
  <HintPath>D:/Work/PC/Bakoma/Assets/SpaceNavigator/Plugins/TDx.TDxInput.dll</HintPath>
+ </Reference>
+ <Reference Include="FlurryAdLib">
+ <HintPath>D:/Work/PC/Bakoma/Assets/Standard Assets/NeatPlug/Ads/FlurryAd/FlurryAdLib.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

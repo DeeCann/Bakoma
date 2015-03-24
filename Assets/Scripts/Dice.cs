@@ -32,6 +32,7 @@ public class Dice : MonoBehaviour {
 					rollingStartTime = Time.time;
 					startToRoll = true;
 					releaseDiceToRoll = false;
+                    hit.collider.gameObject.GetComponent<AudioSource>().Play();
 				}
 			}
 		}
@@ -67,7 +68,17 @@ public class Dice : MonoBehaviour {
 	private Quaternion showRandomRollDice {
 		get{
 			_diceValue = Random.Range(1,7);
-           // _diceValue = 3;
+
+            
+            //switch (Input.GetKeyDown) { 
+            //    case KeyCode.Alpha1:  _diceValue = 1;  break;
+            //    case KeyCode.Alpha2: _diceValue = 2; break;
+            //    case KeyCode.Alpha3: _diceValue = 3; break;
+            //    case KeyCode.Alpha4: _diceValue = 4; break;
+            //    case KeyCode.Alpha5: _diceValue = 5; break;
+            //    case KeyCode.Alpha6: _diceValue = 5; break;
+            //}
+            //_diceValue = 4;
 			_newDiceThrow = true;
 			switch(_diceValue) {
 				case 1: return Quaternion.AngleAxis(180, Vector3.right);

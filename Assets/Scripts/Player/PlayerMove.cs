@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class PlayerMove : MonoBehaviour {
-
+    
 	private bool _hasNewMove = false;
 	private Vector3 _nextField = Vector3.zero;
 	private Quaternion lookAtRotation = Quaternion.AngleAxis(180, Vector3.up);
@@ -39,8 +39,9 @@ public class PlayerMove : MonoBehaviour {
 			}
 
             if (_speedUp) {
-                transform.position = Vector3.MoveTowards(transform.position, _nextField, Time.deltaTime * _speedUpMaxTIme);
-                _speedUpMaxTIme -= 0.1f * _speedFieldFactor;
+               
+                transform.position = Vector3.MoveTowards(transform.position, _nextField, Time.deltaTime * 0.6f);
+                //_speedUpMaxTIme -= 0.1f * _speedFieldFactor;
 
                 if (_speedUpMaxTIme <= 0.6f)
                     _speedUp = false;
@@ -58,8 +59,11 @@ public class PlayerMove : MonoBehaviour {
 	}
 
     public void SpeedUp(float speedFieldFactor) {
+        
         _speedUp = true;
         _speedFieldFactor = speedFieldFactor;
+
+        transform.FindChild("SoundFX").GetComponent<PlayerSoundsFX>().BoostSound();
     }
 
 }

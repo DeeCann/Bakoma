@@ -284,8 +284,9 @@ public class Game : MonoBehaviour {
 		//Debug.Log (_myPoints ["Strawberry"]);
 
         PlayerPrefs.SetInt("GamePoints_" + fruit, PlayerPrefs.GetInt ("GamePoints_"+fruit)+amount);
-		PlayerPrefs.Save ();
+        PlayerPrefs.Save();
         FruitsPanel.SetPoint(fruit);
+        //FruitsPanelPoints.UpdateScore();
         _playerHasSomeFruit = true;
     }
 
@@ -302,6 +303,7 @@ public class Game : MonoBehaviour {
                 {
                     SetFruitPoint(_onBoardFruitsNames[fruitRandomName], amount * -1);
                     foundFruitsGreaterThanZero = true;
+                    
                 }
             }
 

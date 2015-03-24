@@ -128,6 +128,7 @@
      <None Include="Assets\ProCore\Prototype\About\pc_AboutEntry_ProBuilder.txt" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_Antialiasing\DLAA.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\NoiseAndGrainDX11.shader" />
+     <None Include="Assets\Plugins\Android\res\values\google_play_services_version.xml" />
      <None Include="Assets\External\MatCap Shaders\Shaders\MatCap_TextureMult.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\BrightPassFilter2.shader" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\SeparableBlur.shader" />
@@ -182,6 +183,12 @@
  <Reference Include="AssetStoreToolsExtra">
  <HintPath>D:/Work/PC/Bakoma/Assets/AssetStoreTools/Editor/AssetStoreToolsExtra.dll</HintPath>
  </Reference>
+ <Reference Include="FlurryAdEditor">
+ <HintPath>D:/Work/PC/Bakoma/Assets/Editor/NeatPlug/Ads/FlurryAd/FlurryAdEditor.dll</HintPath>
+ </Reference>
+ <Reference Include="NeatPlugCommonEditor">
+ <HintPath>D:/Work/PC/Bakoma/Assets/Editor/NeatPlug/Common/NeatPlugCommonEditor.dll</HintPath>
+ </Reference>
  <Reference Include="IFacebook">
  <HintPath>D:/Work/PC/Bakoma/Assets/Facebook/Scripts/IFacebook.dll</HintPath>
  </Reference>
@@ -202,6 +209,9 @@
  </Reference>
  <Reference Include="TDx.TDxInput">
  <HintPath>D:/Work/PC/Bakoma/Assets/SpaceNavigator/Plugins/TDx.TDxInput.dll</HintPath>
+ </Reference>
+ <Reference Include="FlurryAdLib">
+ <HintPath>D:/Work/PC/Bakoma/Assets/Standard Assets/NeatPlug/Ads/FlurryAd/FlurryAdLib.dll</HintPath>
  </Reference>
  <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
  <HintPath>D:/Work/PC/Bakoma/Assets/UnityVS/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>

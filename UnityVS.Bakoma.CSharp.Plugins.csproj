@@ -67,6 +67,9 @@
     <Reference Include="TDx.TDxInput">
       <HintPath>Assets\SpaceNavigator\Plugins\TDx.TDxInput.dll</HintPath>
     </Reference>
+    <Reference Include="FlurryAdLib">
+      <HintPath>Assets\Standard Assets\NeatPlug\Ads\FlurryAd\FlurryAdLib.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Plugins\Flurry\FlurryBunch.cs" />
@@ -87,6 +90,7 @@
     <Compile Include="Assets\Standard Assets\Image Effects (Pro Only)\SepiaToneEffect.cs" />
     <Compile Include="Assets\Standard Assets\Image Effects (Pro Only)\TwirlEffect.cs" />
     <Compile Include="Assets\Standard Assets\Image Effects (Pro Only)\VortexEffect.cs" />
+    <Compile Include="Assets\Standard Assets\NeatPlug\Ads\FlurryAd\FlurryAd.cs" />
     <None Include="Assets\External\FastShadows\Shaders\FS_ShadowShader.shader" />
     <None Include="Assets\External\MatCap Shaders\Shaders\MatCap_Lit.shader" />
     <None Include="Assets\External\MatCap Shaders\Shaders\MatCap_TextureMult.shader" />
@@ -98,6 +102,7 @@
     <None Include="Assets\MeshBrush\SimpleVegetation.shader" />
     <None Include="Assets\MeshBrush\SimpleVegetationUnlit.shader" />
     <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
+    <None Include="Assets\Plugins\Android\res\values\google_play_services_version.xml" />
     <None Include="Assets\ProCore\Prototype\About\changelog.txt" />
     <None Include="Assets\ProCore\Prototype\About\Credits.txt" />
     <None Include="Assets\ProCore\Prototype\About\pc_AboutEntry_ProBuilder.txt" />
@@ -192,6 +197,7 @@
     <None Include="Assets\Trampoliny\anim\mask.shader" />
     <None Include="Assets\Trampoliny\dupa.shader" />
     <None Include="Assets\Trampoliny\mWaterScreen1\waterscreen1.shader" />
+    <None Include="Assets\Standard Assets\NeatPlug\Ads\FlurryAd\FlurryAdLib.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2013\UnityVS.CSharp.targets" />
 </Project>
