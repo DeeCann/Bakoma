@@ -6,6 +6,15 @@ var lines:int;
 var dataParamsList:Array;
 var ar:Array;
 
+var apple:GameObject;
+var straw:GameObject;
+var peach:GameObject;
+var blue:GameObject;
+var rasp:GameObject;
+var black:GameObject;
+var plus1:GameObject;
+var minus1:GameObject;
+
 var rand_number:int;
 var rand_a:int;
 var flag:int=0;
@@ -27,6 +36,21 @@ var rozowy3: GameObject;
 static var answer: int=0;
 
 function Start () {
+Pytanie.SetActive(true);
+odpA.SetActive(true);
+odpB.SetActive(true);
+odpC.SetActive(true);
+
+apple.SetActive(false);
+straw.SetActive(false);
+peach.SetActive(false);
+blue.SetActive(false);
+rasp.SetActive(false);
+black.SetActive(false);
+plus1.SetActive(false);
+minus1.SetActive(false);
+
+
 rand_number=Random.Range(1,100);
 
 rand_a=Random.Range(1,4);
@@ -47,8 +71,9 @@ if(answer==3){rozowy1.SetActive(false);rozowy2.SetActive(false);rozowy3.SetActiv
 }
 
 function quiz_end(){
-yield WaitForSeconds(4);
+yield WaitForSeconds(5);
 answer=0;
+
 PlayerPrefs.SetString("LoadLevelName","Game_Board");
 Application.LoadLevel("Loader");
 }
@@ -66,31 +91,65 @@ if(answer==3&&rand_a==3){audio.PlayOneShot(ok);add_point();return;}
 audio.PlayOneShot(not_ok);remove_point();return;
 }}
 
-static function add_point(){
+function add_point(){
 var rand=Random.Range(1,7);
-
+Debug.Log("rand"+rand);
 switch (rand)
 {
-case 1:PlayerPrefs.SetInt("GamePoints_Apple",PlayerPrefs.GetInt("GamePoints_Apple")+1);break;
-case 2:PlayerPrefs.SetInt("GamePoints_Strawberry",PlayerPrefs.GetInt("GamePoints_Strawberry")+1);break;
-case 3:PlayerPrefs.SetInt("GamePoints_Peach",PlayerPrefs.GetInt("GamePoints_Peach")+1);break;
-case 4:PlayerPrefs.SetInt("GamePoints_Blackberry",PlayerPrefs.GetInt("GamePoints_Blackberry")+1);break;
-case 5:PlayerPrefs.SetInt("GamePoints_Raspberry",PlayerPrefs.GetInt("GamePoints_Raspberry")+1);break;
-case 6:PlayerPrefs.SetInt("GamePoints_Blueberry",PlayerPrefs.GetInt("GamePoints_Blueberry")+1);break;
+case 1:PlayerPrefs.SetInt("GamePoints_Apple",PlayerPrefs.GetInt("GamePoints_Apple")+1);plus_point(1);Debug.Log("plus1");break;
+case 2:PlayerPrefs.SetInt("GamePoints_Strawberry",PlayerPrefs.GetInt("GamePoints_Strawberry")+1);plus_point(2);Debug.Log("plus2");break;
+case 3:PlayerPrefs.SetInt("GamePoints_Peach",PlayerPrefs.GetInt("GamePoints_Peach")+1);plus_point(3);Debug.Log("plus3");break;
+case 4:PlayerPrefs.SetInt("GamePoints_Blackberry",PlayerPrefs.GetInt("GamePoints_Blackberry")+1);plus_point(4);Debug.Log("plus4");break;
+case 5:PlayerPrefs.SetInt("GamePoints_Raspberry",PlayerPrefs.GetInt("GamePoints_Raspberry")+1);plus_point(5);Debug.Log("plus5");break;
+case 6:PlayerPrefs.SetInt("GamePoints_Blueberry",PlayerPrefs.GetInt("GamePoints_Blueberry")+1);plus_point(6);Debug.Log("plus6");break;
 }
 }
+function plus_point(fruit:int){
+Pytanie.SetActive(false);
+odpA.SetActive(false);
+odpB.SetActive(false);
+odpC.SetActive(false);
+plus1.SetActive(true);
+switch(fruit)
+{
+case 1:apple.SetActive(true); break;
+case 2:straw.SetActive(true);break;
+case 3:peach.SetActive(true);break;
+case 4:black.SetActive(true);break;
+case 5:rasp.SetActive(true);break;
+case 6:blue.SetActive(true);break;
 
-static function remove_point(){
-//var rand=Random.Range(1,7);
-//Debug.Log(rand);
-//switch (rand)
-//{
-//case 1:if(PlayerPrefs.GetInt("GamePoints_Apple")>0){PlayerPrefs.SetInt("GamePoints_Apple",PlayerPrefs.GetInt("GamePoints_Apple")+1);break;}
-
-//}
-//}
 }
 
+}
+
+function remove_point(){
+if(PlayerPrefs.GetInt("GamePoints_Apple")>0){PlayerPrefs.SetInt("GamePoints_Apple",PlayerPrefs.GetInt("GamePoints_Apple")-1);minus_point(1);Debug.Log("minus1");return;}
+if(PlayerPrefs.GetInt("GamePoints_Strawberry")>0){PlayerPrefs.SetInt("GamePoints_Strawberry",PlayerPrefs.GetInt("GamePoints_Strawberry")-1);minus_point(2);Debug.Log("minus2");return;}
+if(PlayerPrefs.GetInt("GamePoints_Peach")>0){PlayerPrefs.SetInt("GamePoints_Peach",PlayerPrefs.GetInt("GamePoints_Peach")-1);minus_point(3);Debug.Log("minus3");return;}
+if(PlayerPrefs.GetInt("GamePoints_Blackberry")>0){PlayerPrefs.SetInt("GamePoints_Blackberry",PlayerPrefs.GetInt("GamePoints_Blackberry")-1);minus_point(4);Debug.Log("minus4");return;}
+if(PlayerPrefs.GetInt("GamePoints_Raspberry")>0){PlayerPrefs.SetInt("GamePoints_Raspberry",PlayerPrefs.GetInt("GamePoints_Raspberry")-1);minus_point(5);Debug.Log("minus5");return;}
+if(PlayerPrefs.GetInt("GamePoints_Blueberry")>0){PlayerPrefs.SetInt("GamePoints_Blueberry",PlayerPrefs.GetInt("GamePoints_Blueberry")-1);minus_point(6);Debug.Log("minus6");return;}
+}
+
+function minus_point(fruit:int){
+Pytanie.SetActive(false);
+odpA.SetActive(false);
+odpB.SetActive(false);
+odpC.SetActive(false);
+minus1.SetActive(true);
+switch(fruit)
+{
+case 1:apple.SetActive(true); break;
+case 2:straw.SetActive(true);break;
+case 3:peach.SetActive(true);break;
+case 4:black.SetActive(true);break;
+case 5:rasp.SetActive(true);break;
+case 6:blue.SetActive(true);break;
+
+}
+
+}
 
 function question(rand :int, rand_a:int){
 ar=dataParamsList[rand];
