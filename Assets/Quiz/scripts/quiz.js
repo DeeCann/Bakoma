@@ -105,10 +105,10 @@ case 6:PlayerPrefs.SetInt("GamePoints_Blueberry",PlayerPrefs.GetInt("GamePoints_
 }
 }
 function plus_point(fruit:int){
-Pytanie.SetActive(false);
-odpA.SetActive(false);
-odpB.SetActive(false);
-odpC.SetActive(false);
+//Pytanie.SetActive(false);
+//odpA.SetActive(false);
+//odpB.SetActive(false);
+//odpC.SetActive(false);
 plus1.SetActive(true);
 switch(fruit)
 {
@@ -133,10 +133,10 @@ if(PlayerPrefs.GetInt("GamePoints_Blueberry")>0){PlayerPrefs.SetInt("GamePoints_
 }
 
 function minus_point(fruit:int){
-Pytanie.SetActive(false);
-odpA.SetActive(false);
-odpB.SetActive(false);
-odpC.SetActive(false);
+//Pytanie.SetActive(false);
+//odpA.SetActive(false);
+//odpB.SetActive(false);
+//odpC.SetActive(false);
 minus1.SetActive(true);
 switch(fruit)
 {

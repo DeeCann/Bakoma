@@ -39,9 +39,10 @@ public class PlayerMove : MonoBehaviour {
 			}
 
             if (_speedUp) {
-               
-                transform.position = Vector3.MoveTowards(transform.position, _nextField, Time.deltaTime * 0.6f);
-                //_speedUpMaxTIme -= 0.1f * _speedFieldFactor;
+
+                transform.position = Vector3.MoveTowards(transform.position, _nextField, Time.deltaTime * _speedUpMaxTIme);
+                print(Time.deltaTime * _speedUpMaxTIme);
+                _speedUpMaxTIme -= 0.1f * _speedFieldFactor;
 
                 if (_speedUpMaxTIme <= 0.6f)
                     _speedUp = false;
@@ -61,9 +62,10 @@ public class PlayerMove : MonoBehaviour {
     public void SpeedUp(float speedFieldFactor) {
         
         _speedUp = true;
-        _speedFieldFactor = speedFieldFactor;
-
+        _speedFieldFactor = speedFieldFactor * 0.5f;
+        _speedUpMaxTIme = 3;
         transform.FindChild("SoundFX").GetComponent<PlayerSoundsFX>().BoostSound();
+
     }
 
 }

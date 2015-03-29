@@ -14,6 +14,7 @@ public class SpecialMoveField : MonoBehaviour {
 	private bool _hasSomeMoveAction = false;
     private bool _showGoMoveNumber = false;
     private Color _startTextColor;
+    private Collider _playerCollider;
 
 	void Awake() {
 		FieldObj = new Field();
@@ -33,15 +34,18 @@ public class SpecialMoveField : MonoBehaviour {
     void Update()
     {
         if (_showGoMoveNumber)
+        {
+
             ShowHint();
+        }
     }
 
     void OnTriggerEnter(Collider playerCollider) {
         if (playerCollider.tag == "Player" && playerCollider.gameObject.GetComponent<PlayerRoute>().NumberOfFieldsToGo == 1)
         {
-            _showGoMoveNumber = true;
-            playerCollider.GetComponent<PlayerAnimations>().SpeedUp(7-FieldObj.MoveActionValue);
-            playerCollider.GetComponent<PlayerMove>().SpeedUp(7-FieldObj.MoveActionValue);
+           // _showGoMoveNumber = true;
+            _playerCollider = playerCollider;
+            StartCoroutine(SpeedUp());
         }
     }
 	
@@ -76,14 +80,23 @@ public class SpecialMoveField : MonoBehaviour {
         textCurrentColor.a -= 0.5f * Time.deltaTime;
         _moveGUISymbol.guiText.color = textCurrentColor;
 
-        _moveGUISymbol.guiText.fontSize += 4;
+        _moveGUISymbol.guiText.fontSize += 5;
         
-        if (textCurrentColor.a <= 0.1f) {
+        if (textCurrentColor.a <= 0.2f) {
             _moveGUISymbol.guiText.text = "";
             _showGoMoveNumber = false;
             textCurrentColor.a = 0.99f;
             _moveGUISymbol.guiText.color = _startTextColor;
             _moveGUISymbol.guiText.fontSize = 40;
+            _playerCollider.transform.FindChild("SpeedUpFX").GetComponent<TrailRenderer>().enabled = false;
         }
+    }
+
+    IEnumerator SpeedUp() {
+        yield return new WaitForSeconds(0.5f);
+        _showGoMoveNumber = true;
+        _playerCollider.GetComponent<PlayerAnimations>().SpeedUp(7 - FieldObj.MoveActionValue);
+        _playerCollider.GetComponent<PlayerMove>().SpeedUp(7 - FieldObj.MoveActionValue);
+        _playerCollider.transform.FindChild("SpeedUpFX").GetComponent<TrailRenderer>().enabled = true;
     }
 }

@@ -1,9 +1,9 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Facebook\Editor\FacebookPostprocess.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Quiz\scripts\quiz.js">
     <Files>
-      <File FileName="Assets\Facebook\Editor\FacebookPostprocess.cs" Line="51" Column="1" />
-      <File FileName="Assets\Quiz\scripts\quiz.js" Line="132" Column="170" />
+      <File FileName="..\Bakoma-www\Assets\Quiz\scripts\quiz.js" Line="110" Column="16" />
+      <File FileName="Assets\Quiz\scripts\quiz.js" Line="139" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
