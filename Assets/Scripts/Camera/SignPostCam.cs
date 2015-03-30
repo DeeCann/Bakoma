@@ -8,8 +8,9 @@ public class SignPostCam : MonoBehaviour {
     private Vector3 _arrowDelta;
 
     void Start() {
-        foreach (GameObject field in GameObject.FindGameObjectsWithTag("EndPathField"))
-            _endPaths.Add(new Vector3(field.transform.position.x, 200, field.transform.position.z));
+        foreach (GameObject field in GameObject.FindGameObjectsWithTag("EndPathField")) 
+			_endPaths.Add (new Vector3 (field.transform.position.x, 200, field.transform.position.z));
+
 
         _arrowDelta = arrow.transform.position - transform.position;
     }
