@@ -38,9 +38,9 @@ public class MinigameField : MonoBehaviour
 
     void OnTriggerEnter(Collider playerCollider)
     {
-        rand_game = Random.Range(1, 3);
+        rand_game = Random.Range(1, 101);
         Debug.Log(rand_game);
-        if (rand_game == 1)
+        if (rand_game < 40)
         {
             if (playerCollider.tag == "Player")
             {
@@ -64,7 +64,7 @@ public class MinigameField : MonoBehaviour
             }
             ;
         }
-        if (rand_game == 2)
+        if (rand_game >= 40)
         {
             if (playerCollider.tag == "Player")
             {

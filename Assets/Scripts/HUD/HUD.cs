@@ -16,7 +16,8 @@ public class HUD : MonoBehaviour {
 
     public void Exit()
     {
-		Application.LoadLevel ("Start");
+        PlayerPrefs.SetString("LoadLevelName", "Start");
+        Application.LoadLevel("Loader");
 		return;
     }
 
