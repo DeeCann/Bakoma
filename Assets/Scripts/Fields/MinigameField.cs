@@ -40,7 +40,7 @@ public class MinigameField : MonoBehaviour
     {
         rand_game = Random.Range(1, 101);
         Debug.Log(rand_game);
-        if (rand_game < 40)
+        if (rand_game >= 65)
         {
             if (playerCollider.tag == "Player")
             {
@@ -64,7 +64,7 @@ public class MinigameField : MonoBehaviour
             }
             ;
         }
-        if (rand_game >= 40)
+        if (rand_game <65)
         {
             if (playerCollider.tag == "Player")
             {
