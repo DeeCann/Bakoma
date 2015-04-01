@@ -11,7 +11,7 @@ public class PlayerCardsOnTrap : MonoBehaviour {
         {
             Button myButton = GetComponent<Button>();
             if (GetComponent<Image>().sprite.name != "Empty")
-                myButton.onClick.AddListener(() => { manager.ChooseCard(this.gameObject.name); });
+                myButton.onClick.AddListener(() => { manager.ChooseCard(GetComponent<Image>().sprite.name); });
             _listenerAdded = true;
         }
     }

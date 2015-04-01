@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine.UI;
 
 public class trapsPanelControler : MonoBehaviour {
@@ -11,6 +12,7 @@ public class trapsPanelControler : MonoBehaviour {
     private Transform _playerCardsContainer;
 
     private static bool _trapPanelEnabled = false;
+    private string _properCardName = "";
 
     public void EnablePanel() {
         _trapPanelEnabled = true;
@@ -22,17 +24,55 @@ public class trapsPanelControler : MonoBehaviour {
         transform.FindChild("ObstaclePresentation").GetComponent<Image>().sprite = Resources.Load<Sprite>("Textures/TrapCards/" + Cards.TrapCardName(Cards.GetRandomTrap));
         transform.FindChild("ObstaclePresentation").GetComponent<Image>().color = new Color(1, 1, 1, 1);
 
-        _playerCardsContainer.FindChild("PlayerCard").GetComponent<Image>().sprite = Resources.Load<Sprite>("Textures/DefaultCards/" + Cards.GetProperCardForTrap);
-        _playerCardsContainer.FindChild("PlayerCard").GetComponent<Image>().color = new Color(1, 1, 1, 1);
-        _playerCardsContainer.FindChild("PlayerCard").GetComponent<PlayerCardsOnTrap>().RegisterListener(this);
+        List<string> cardForUse = Cards.GetAllCardsForCharacter();
+
+        int offset = 0;
+        bool useEmptyCard = false;
+        if (cardForUse.Count == 0) {
+            offset = 560;
+            useEmptyCard = true;
+        }
+        if (cardForUse.Count > 0 && cardForUse.Count < 5)
+            offset = (5 - cardForUse.Count) * 140;
+        else if (cardForUse.Count == 5)
+            offset = 0;
+
+
+        if (useEmptyCard)
+        {
+            _playerCardsContainer.FindChild("PlayerCard1").GetComponent<RectTransform>().anchoredPosition = new Vector2(_playerCardsContainer.FindChild("PlayerCard1").GetComponent<RectTransform>().anchoredPosition.x + offset, _playerCardsContainer.FindChild("PlayerCard1").GetComponent<RectTransform>().anchoredPosition.y);
+            _playerCardsContainer.FindChild("PlayerCard1").gameObject.SetActive(true);
+            _playerCardsContainer.FindChild("PlayerCard1").GetComponent<Image>().sprite = Resources.Load<Sprite>("Textures/DefaultCards/Empty");
+            _playerCardsContainer.FindChild("PlayerCard1").GetComponent<Image>().color = new Color(1, 1, 1, 1);
+            _playerCardsContainer.FindChild("PlayerCard1").GetComponent<PlayerCardsOnTrap>().RegisterListener(this);
+
+            useEmptyCard = false;
+        }
+        else
+        {
+            for (int i = 1; i <= cardForUse.Count; i++)
+            {
+                _playerCardsContainer.FindChild("PlayerCard" + i).GetComponent<RectTransform>().anchoredPosition = new Vector2(_playerCardsContainer.FindChild("PlayerCard" + i).GetComponent<RectTransform>().anchoredPosition.x + offset, _playerCardsContainer.FindChild("PlayerCard" + i).GetComponent<RectTransform>().anchoredPosition.y);
+                _playerCardsContainer.FindChild("PlayerCard" + i).gameObject.SetActive(true);
+                _playerCardsContainer.FindChild("PlayerCard" + i).GetComponent<Image>().sprite = Resources.Load<Sprite>("Textures/DefaultCards/" + cardForUse[i - 1]);
+                _playerCardsContainer.FindChild("PlayerCard" + i).GetComponent<Image>().color = new Color(1, 1, 1, 1);
+                _playerCardsContainer.FindChild("PlayerCard" + i).GetComponent<PlayerCardsOnTrap>().RegisterListener(this);
+            }
+        }
+
+        _properCardName = Cards.GetProperCardForTrap;
     }
 
     public void ChooseCard(string cardName) {
-        GetComponent<AudioSource>().Stop();
-        Camera.main.GetComponent<AudioSource>().Play();
+        if (_properCardName != cardName)
+            transform.FindChild("ErrorSound").GetComponent<AudioSource>().Play();
+        else {
+            GetComponent<AudioSource>().Stop();
+            Camera.main.GetComponent<AudioSource>().Play();
 
-        Cards.RemovePlayerUsedCard();
-        ClosePanel();
+            Cards.RemovePlayerUsedCard();
+            ClosePanel();
+        }
     }
 
     public void GetSomeFruit()
@@ -87,7 +127,11 @@ public class trapsPanelControler : MonoBehaviour {
         }
         transform.FindChild("ObstaclePresentation").GetComponent<Image>().sprite = null;
         transform.FindChild("ObstaclePresentation").GetComponent<Image>().color = new Color(1, 1, 1, 0);
-        _playerCardsContainer.FindChild("PlayerCard").GetComponent<Image>().sprite = null;
-        _playerCardsContainer.FindChild("PlayerCard").GetComponent<Image>().color = new Color(1, 1, 1, 0);
+
+        for (int i = 0; i <= 4; i++)
+        {
+            _playerCardsContainer.FindChild("PlayerCard" + i).GetComponent<Image>().sprite = null;
+            _playerCardsContainer.FindChild("PlayerCard" + i).GetComponent<Image>().color = new Color(1, 1, 1, 0);
+        }
     }
 }

@@ -19,3 +19,23 @@ D:\Work\PC\Bakus\Temp\bin\Debug\TDx.TDxInput.dll
 D:\Work\PC\Bakoma\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
 D:\Work\PC\Bakoma\obj\Debug\Assembly-CSharp.dll
 D:\Work\PC\Bakoma\obj\Debug\Assembly-CSharp.pdb
+D:\Work\PC\Bakoma - New\Bakoma\Temp\bin\Debug\Assembly-CSharp.dll
+D:\Work\PC\Bakoma - New\Bakoma\Temp\bin\Debug\Assembly-CSharp.pdb
+D:\Work\PC\Bakoma - New\Bakoma\Temp\bin\Debug\FlurryAdLib.dll
+D:\Work\PC\Bakoma - New\Bakoma\Temp\bin\Debug\IFacebook.dll
+D:\Work\PC\Bakoma - New\Bakoma\Temp\bin\Debug\ProBuilderCore.dll
+D:\Work\PC\Bakoma - New\Bakoma\Temp\bin\Debug\ProBuilderMeshOps.dll
+D:\Work\PC\Bakoma - New\Bakoma\Temp\bin\Debug\ProCore.dll
+D:\Work\PC\Bakoma - New\Bakoma\Temp\bin\Debug\SixBySeven.dll
+D:\Work\PC\Bakoma - New\Bakoma\Temp\bin\Debug\TDx.TDxInput.dll
+D:\Work\PC\Bakoma - New\Bakoma\Temp\bin\Debug\UnityEditor.dll
+D:\Work\PC\Bakoma - New\Bakoma\Temp\bin\Debug\UnityEngine.dll
+D:\Work\PC\Bakoma - New\Bakoma\Temp\bin\Debug\UnityEngine.UI.dll
+D:\Work\PC\Bakoma - New\Bakoma\Temp\bin\Debug\Mono.Cecil.dll
+D:\Work\PC\Bakoma - New\Bakoma\Temp\bin\Debug\nunit.framework.dll
+D:\Work\PC\Bakoma - New\Bakoma\Temp\bin\Debug\Unity.DataContract.dll
+D:\Work\PC\Bakoma - New\Bakoma\Temp\bin\Debug\ICSharpCode.NRefactory.dll
+D:\Work\PC\Bakoma - New\Bakoma\Temp\bin\Debug\Assembly-CSharp-firstpass.pdb
+D:\Work\PC\Bakoma - New\Bakoma\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
+D:\Work\PC\Bakoma - New\Bakoma\obj\Debug\Assembly-CSharp.dll
+D:\Work\PC\Bakoma - New\Bakoma\obj\Debug\Assembly-CSharp.pdb

@@ -42,7 +42,6 @@ public class Cards : MonoBehaviour {
 	}
 	
 	void Awake() {
-
 		if(!PlayerPrefs.HasKey("FirstRun"))
 		{
 			PlayerPrefs.DeleteAll ();
@@ -129,7 +128,17 @@ public class Cards : MonoBehaviour {
 			return _playerCardDictionary[_playerCardForTrapSelected];
 		}
 	}
-	
+
+    public static List<string> GetAllCardsForCharacter() {
+        List<string> cardToUse = new List<string>();
+
+        foreach (int _cardIds in _playersCardsLinks[Game.GetCurrentCharacterName])
+            if (PlayerPrefs.GetInt("Card_" + _cardIds + "_Amount") > 0)
+                cardToUse.Add(_playerCardDictionary[_cardIds]);
+
+        return cardToUse;
+    }
+
 	public static string GetPlayerCardName(int cardId) {
 		return _playerCardDictionary[cardId];
 	}

@@ -16,7 +16,9 @@ public class HUD : MonoBehaviour {
 
     public void Exit()
     {
-		Application.LoadLevel ("Start");
+        PlayerPrefs.SetString("LoadLevelName", "Start");
+        Destroy(GameObject.Find("GeneratedFruitsContainer"));
+        Application.LoadLevel("Loader");
 		return;
     }
 
@@ -32,6 +34,7 @@ public class HUD : MonoBehaviour {
 			_playButtonSprite.gameObject.SetActive(true);
 			_gameIsPaused = true;
 
+            Camera.main.gameObject.GetComponent<AudioListener>().enabled = false;
 			return;
 		}
 
@@ -41,6 +44,8 @@ public class HUD : MonoBehaviour {
 			_pauseButtonSprite.gameObject.SetActive(true);
 			_playButtonSprite.gameObject.SetActive(false);
 			_gameIsPaused = false;
+
+            Camera.main.gameObject.GetComponent<AudioListener>().enabled = true;
 
 			return;
 		}

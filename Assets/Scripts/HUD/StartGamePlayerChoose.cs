@@ -8,7 +8,24 @@ public class StartGamePlayerChoose : MonoBehaviour {
     private float _currentStepRotation = 0;
     private Camera _characterChooseCamera;
 
+    void Awake() {
+        /** Usuwamy potencjalne obiekty przeniesione z levelu gry po powrocie **/
+        if (GameObject.Find("Bear") != null && GameObject.Find("Bear").transform.parent == null)
+            Destroy(GameObject.Find("Bear"));
+        if (GameObject.Find("Hippo") != null && GameObject.Find("Hippo").transform.parent == null)
+            Destroy(GameObject.Find("Hippo"));
+        if (GameObject.Find("Frog") != null && GameObject.Find("Frog").transform.parent == null)
+            Destroy(GameObject.Find("Frog"));
+        if (GameObject.Find("Dog") != null && GameObject.Find("Dog").transform.parent == null)
+            Destroy(GameObject.Find("Dog"));
+        if (GameObject.Find("Tiger") != null && GameObject.Find("Tiger").transform.parent == null)
+            Destroy(GameObject.Find("Tiger"));
+
+        PlayerPrefs.SetInt("ResetGameBoard", 1);
+    }
+
     void Start() {
+
         PlayerPrefs.SetInt("EnterdMiniGame", 0);
         PlayerPrefs.SetInt("StartFruitsAmountShowed", 0);
 
@@ -26,6 +43,8 @@ public class StartGamePlayerChoose : MonoBehaviour {
             float z = Mathf.Cos(angle) * radiusZ;
             transform.GetChild(pointNum).transform.position = new Vector3(x, 0, z);
         }
+
+        Time.timeScale = 1;
     }
 
     void Update() {
@@ -35,6 +54,7 @@ public class StartGamePlayerChoose : MonoBehaviour {
         if (Input.GetMouseButtonDown(0))
             if (Physics.Raycast(ray, out hit))
             {
+                
                 switch(hit.collider.name) {
                     case "Frog": PlayerPrefs.SetInt("Character", 4); break;
                     case "Bear": PlayerPrefs.SetInt("Character", 3); break;
@@ -48,7 +68,7 @@ public class StartGamePlayerChoose : MonoBehaviour {
     }
 
     void FixedUpdate() {
-        if (_startRotation) {    
+        if (_startRotation) {
             foreach (Transform character in transform)
             {
                 character.transform.RotateAround(Vector3.zero, Vector3.up, _currentAngleRotation);
@@ -77,6 +97,10 @@ public class StartGamePlayerChoose : MonoBehaviour {
             _currentStepRotation = 0;
             _currentAngleRotation = 3;
         }
+    }
+
+    public void Exit() {
+        Application.Quit();
     }
 }
 

@@ -57,7 +57,7 @@ public class Game : MonoBehaviour {
 		_startField = GameObject.FindGameObjectsWithTag(Tags.StartPoint)[Random.Range(1,2)];
 		_HUDControler = GameObject.FindGameObjectWithTag(Tags.HUDControler);
 
-        if (PlayerPrefs.GetInt("EnterdMiniGame") == 0)
+        if (PlayerPrefs.GetInt("ResetGameBoard") == 1)
         {
            
             /* narazie sinlge player */
@@ -99,8 +99,20 @@ public class Game : MonoBehaviour {
 
 		_currentPlayerRound = 1;
 
-        if (PlayerPrefs.GetInt("EnterdMiniGame") == 0)
+        if (PlayerPrefs.GetInt("ResetGameBoard") == 1)
         {
+            _fruitsInGame.Clear();
+            tilesListUniqueIds.Clear();
+            tilesArrowsListUniqueIds.Clear();
+            tilesAppleListUniqueIds.Clear();
+            tilesRabbitholeListUniqueIds.Clear();
+            tilesBerriesListUniqueIds.Clear();
+            tilesStrawberryListUniqueIds.Clear();
+            tilesBlackberryListUniqueIds.Clear();
+            tilesTrampListUniqueIds.Clear();
+            tilesRaspberryListUniqueIds.Clear();
+            tilesPeachListUniqueIds.Clear();
+
             _fruitsInGame.Add(fruitsNames.Apple.ToString(), Random.Range(10, 20));
             _fruitsInGame.Add(fruitsNames.Raspberry.ToString(), Random.Range(10, 20));
             _fruitsInGame.Add(fruitsNames.Blueberry.ToString(), Random.Range(10, 20));
@@ -133,6 +145,8 @@ public class Game : MonoBehaviour {
 
             foreach (string fruit in _onBoardFruitsNames)
                 PlayerPrefs.SetInt("GamePoints_" + fruit, 0);
+
+            PlayerPrefs.SetInt("ResetGameBoard", 0);
         }
         else {
             /* Normal tiles */

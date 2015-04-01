@@ -191,25 +191,25 @@
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.3/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="IFacebook">
- <HintPath>C:/Users/mbrand/Documents/Bakoma/Assets/Facebook/Scripts/IFacebook.dll</HintPath>
+ <HintPath>D:/Work/PC/Bakoma/Assets/Facebook/Scripts/IFacebook.dll</HintPath>
  </Reference>
  <Reference Include="ProBuilderCore">
- <HintPath>C:/Users/mbrand/Documents/Bakoma/Assets/ProCore/Prototype/Classes/ProBuilderCore.dll</HintPath>
+ <HintPath>D:/Work/PC/Bakoma/Assets/ProCore/Prototype/Classes/ProBuilderCore.dll</HintPath>
  </Reference>
  <Reference Include="ProBuilderMeshOps">
- <HintPath>C:/Users/mbrand/Documents/Bakoma/Assets/ProCore/Prototype/Classes/ProBuilderMeshOps.dll</HintPath>
+ <HintPath>D:/Work/PC/Bakoma/Assets/ProCore/Prototype/Classes/ProBuilderMeshOps.dll</HintPath>
  </Reference>
  <Reference Include="ProCore">
- <HintPath>C:/Users/mbrand/Documents/Bakoma/Assets/ProCore/Shared/Code/ProCore.dll</HintPath>
+ <HintPath>D:/Work/PC/Bakoma/Assets/ProCore/Shared/Code/ProCore.dll</HintPath>
  </Reference>
  <Reference Include="SixBySeven">
- <HintPath>C:/Users/mbrand/Documents/Bakoma/Assets/ProCore/Shared/Code/SixBySeven.dll</HintPath>
+ <HintPath>D:/Work/PC/Bakoma/Assets/ProCore/Shared/Code/SixBySeven.dll</HintPath>
  </Reference>
  <Reference Include="TDx.TDxInput">
- <HintPath>C:/Users/mbrand/Documents/Bakoma/Assets/SpaceNavigator/Plugins/TDx.TDxInput.dll</HintPath>
+ <HintPath>D:/Work/PC/Bakoma/Assets/SpaceNavigator/Plugins/TDx.TDxInput.dll</HintPath>
  </Reference>
  <Reference Include="FlurryAdLib">
- <HintPath>C:/Users/mbrand/Documents/Bakoma/Assets/Standard Assets/NeatPlug/Ads/FlurryAd/FlurryAdLib.dll</HintPath>
+ <HintPath>D:/Work/PC/Bakoma/Assets/Standard Assets/NeatPlug/Ads/FlurryAd/FlurryAdLib.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
