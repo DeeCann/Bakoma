@@ -14,6 +14,11 @@ public class trapsPanelControler : MonoBehaviour {
     private static bool _trapPanelEnabled = false;
     private string _properCardName = "";
 
+    private int _maxOffsetXAnchor = -480;
+    private int _gap = 280;
+    private int _offset = 0;
+    private int _lastOffset = 0;
+
     public void EnablePanel() {
         _trapPanelEnabled = true;
 
@@ -26,21 +31,27 @@ public class trapsPanelControler : MonoBehaviour {
 
         List<string> cardForUse = Cards.GetAllCardsForCharacter();
 
-        int offset = 0;
+       
         bool useEmptyCard = false;
         if (cardForUse.Count == 0) {
-            offset = 560;
+            _offset = 560;
             useEmptyCard = true;
         }
         if (cardForUse.Count > 0 && cardForUse.Count < 5)
-            offset = (5 - cardForUse.Count) * 140;
+            _offset = (5 - cardForUse.Count) * 140;
         else if (cardForUse.Count == 5)
-            offset = 0;
+            _offset = 0;
 
+        if (_lastOffset == _offset)
+            _offset = 0;
+        else
+            _lastOffset = _offset;
 
         if (useEmptyCard)
         {
-            _playerCardsContainer.FindChild("PlayerCard1").GetComponent<RectTransform>().anchoredPosition = new Vector2(_playerCardsContainer.FindChild("PlayerCard1").GetComponent<RectTransform>().anchoredPosition.x + offset, _playerCardsContainer.FindChild("PlayerCard1").GetComponent<RectTransform>().anchoredPosition.y);
+            //_playerCardsContainer.FindChild("PlayerCard1").GetComponent<RectTransform>().anchoredPosition = new Vector2(_playerCardsContainer.FindChild("PlayerCard1").GetComponent<RectTransform>().anchoredPosition.x + _offset, _playerCardsContainer.FindChild("PlayerCard1").GetComponent<RectTransform>().anchoredPosition.y);
+            _playerCardsContainer.FindChild("PlayerCard1").GetComponent<RectTransform>().anchoredPosition = new Vector2(_maxOffsetXAnchor + _offset, _playerCardsContainer.FindChild("PlayerCard1").GetComponent<RectTransform>().anchoredPosition.y);
+            
             _playerCardsContainer.FindChild("PlayerCard1").gameObject.SetActive(true);
             _playerCardsContainer.FindChild("PlayerCard1").GetComponent<Image>().sprite = Resources.Load<Sprite>("Textures/DefaultCards/Empty");
             _playerCardsContainer.FindChild("PlayerCard1").GetComponent<Image>().color = new Color(1, 1, 1, 1);
@@ -52,7 +63,7 @@ public class trapsPanelControler : MonoBehaviour {
         {
             for (int i = 1; i <= cardForUse.Count; i++)
             {
-                _playerCardsContainer.FindChild("PlayerCard" + i).GetComponent<RectTransform>().anchoredPosition = new Vector2(_playerCardsContainer.FindChild("PlayerCard" + i).GetComponent<RectTransform>().anchoredPosition.x + offset, _playerCardsContainer.FindChild("PlayerCard" + i).GetComponent<RectTransform>().anchoredPosition.y);
+                _playerCardsContainer.FindChild("PlayerCard" + i).GetComponent<RectTransform>().anchoredPosition = new Vector2(_playerCardsContainer.FindChild("PlayerCard" + i).GetComponent<RectTransform>().anchoredPosition.x + _offset, _playerCardsContainer.FindChild("PlayerCard" + i).GetComponent<RectTransform>().anchoredPosition.y);
                 _playerCardsContainer.FindChild("PlayerCard" + i).gameObject.SetActive(true);
                 _playerCardsContainer.FindChild("PlayerCard" + i).GetComponent<Image>().sprite = Resources.Load<Sprite>("Textures/DefaultCards/" + cardForUse[i - 1]);
                 _playerCardsContainer.FindChild("PlayerCard" + i).GetComponent<Image>().color = new Color(1, 1, 1, 1);
@@ -60,6 +71,7 @@ public class trapsPanelControler : MonoBehaviour {
             }
         }
 
+       
         _properCardName = Cards.GetProperCardForTrap;
     }
 

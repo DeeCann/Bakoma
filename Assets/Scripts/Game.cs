@@ -37,6 +37,7 @@ public class Game : MonoBehaviour {
 
 	private bool _showStartFruitsAmountPanel = false;
     private static bool _playerHasSomeFruit = false;
+    private static int _totalNumberOfFruits = 0;
 
 	private static GameObject _startField;
 	private GameObject _HUDControler;
@@ -145,6 +146,8 @@ public class Game : MonoBehaviour {
 
             foreach (string fruit in _onBoardFruitsNames)
                 PlayerPrefs.SetInt("GamePoints_" + fruit, 0);
+
+            _totalNumberOfFruits = 0;
 
             PlayerPrefs.SetInt("ResetGameBoard", 0);
         }
@@ -302,26 +305,37 @@ public class Game : MonoBehaviour {
         FruitsPanel.SetPoint(fruit);
         //FruitsPanelPoints.UpdateScore();
         _playerHasSomeFruit = true;
+
+        _totalNumberOfFruits += amount;
     }
 
     public static void RemoveRandomFruitPoint(int amount)
     {
+       
         if (_playerHasSomeFruit)
         {
-            bool foundFruitsGreaterThanZero = false;
-            int fruitRandomName = 0;
-            while (!foundFruitsGreaterThanZero)
-            {
-                fruitRandomName = Random.Range(0, 6);
-				if (PlayerPrefs.GetInt ("GamePoints_"+_onBoardFruitsNames[fruitRandomName]) > 0)
-                {
-                    SetFruitPoint(_onBoardFruitsNames[fruitRandomName], amount * -1);
-                    foundFruitsGreaterThanZero = true;
-                    
-                }
-            }
+            int _maxFruitsToTake = 0;
+            if (_totalNumberOfFruits <= 3)
+                _maxFruitsToTake = Random.Range(1,_totalNumberOfFruits+1);
+            else
+                _maxFruitsToTake = Random.Range(1,4);
 
-            FruitsPanel.SetPoint(_onBoardFruitsNames[fruitRandomName]);
+            for (int i = 0; i < _maxFruitsToTake; i++)
+            {
+                bool foundFruitsGreaterThanZero = false;
+                int fruitRandomName = 0;
+                while (!foundFruitsGreaterThanZero)
+                {
+                    fruitRandomName = Random.Range(0, 6);
+                    if (PlayerPrefs.GetInt("GamePoints_" + _onBoardFruitsNames[fruitRandomName]) > 0)
+                    {
+                        SetFruitPoint(_onBoardFruitsNames[fruitRandomName], amount * -1);
+                        foundFruitsGreaterThanZero = true;
+                    }
+                }
+
+                FruitsPanel.SetPoint(_onBoardFruitsNames[fruitRandomName]);
+            }
         }
     }
 

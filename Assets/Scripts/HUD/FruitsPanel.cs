@@ -5,9 +5,6 @@ using UnityEngine.UI;
 
 public class FruitsPanel : MonoBehaviour {
 
-    private static string _setPointForFruitName;
-    private static int _setPointForFruitAmount;
-    private static bool _changeScore = false;
     private int _animationState = Animator.StringToHash("Base Layer.GrabFruitGUIEffect");
     private static List<string> _animationFruitStack = new List<string>();
 
@@ -40,20 +37,12 @@ public class FruitsPanel : MonoBehaviour {
                 _fruitAnimationCompleted = "";
             }           
         }
-
-        if (_changeScore) {
-            transform.FindChild(_setPointForFruitName).GetComponentInChildren<FruitsPanelPoints>().UpdateScore();
-            _changeScore = false;
-        }
     }
 
     public static void SetPoint(string fruitName) {
-        _setPointForFruitName = fruitName;
-        _setPointForFruitAmount = PlayerPrefs.GetInt("GamePoints_" + fruitName);
         if (!_animationFruitStack.Contains(fruitName))
             _animationFruitStack.Add(fruitName);
 
-        
-        _changeScore = true;
+        GameObject.FindGameObjectWithTag("FruitsPointsPanel").transform.FindChild(fruitName).GetComponentInChildren<FruitsPanelPoints>().UpdateScore();
     }
 }
