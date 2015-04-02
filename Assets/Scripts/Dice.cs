@@ -66,6 +66,11 @@ public class Dice : MonoBehaviour {
             _newDiceThrow = true;
             _diceValue = 6;
         }
+        if (Input.GetKeyDown(KeyCode.Alpha0))
+        {
+            _newDiceThrow = true;
+            _diceValue = 100;
+        }
 	}
 
 	public static bool CanDoDiceRoll {
@@ -99,16 +104,6 @@ public class Dice : MonoBehaviour {
 		get{
 			_diceValue = Random.Range(1,7);
 
-            
-            //switch (Input.GetKeyDown) { 
-            //    case KeyCode.Alpha1:  _diceValue = 1;  break;
-            //    case KeyCode.Alpha2: _diceValue = 2; break;
-            //    case KeyCode.Alpha3: _diceValue = 3; break;
-            //    case KeyCode.Alpha4: _diceValue = 4; break;
-            //    case KeyCode.Alpha5: _diceValue = 5; break;
-            //    case KeyCode.Alpha6: _diceValue = 5; break;
-            //}
-            //_diceValue = 4;
 			_newDiceThrow = true;
 			switch(_diceValue) {
 				case 1: return Quaternion.AngleAxis(180, Vector3.right);

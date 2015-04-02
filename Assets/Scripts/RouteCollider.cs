@@ -49,12 +49,15 @@ public class RouteCollider : MonoBehaviour {
 			}
 
 			ray = new Ray(startRayDirection, stopRayDirection);
-			Debug.DrawRay(startRayDirection, stopRayDirection);
-			if(Physics.Raycast(ray, out hit, 0.4f) && hit.collider.transform.parent.gameObject.layer != 11) {
-				debugStartRay[foundedFieldsArrCounter] = startRayDirection;
-				debugStopRay[foundedFieldsArrCounter] = stopRayDirection;
-				foundWayFields[foundedFieldsArrCounter] = hit.collider.transform.parent.gameObject;
-				foundedFieldsArrCounter++;
+			Debug.DrawRay(startRayDirection, stopRayDirection, Color.yellow, 10);
+			if(Physics.Raycast(ray, out hit, 0.4f)) {
+                if (hit.collider.transform.parent.gameObject.layer != 11)
+                {
+                    debugStartRay[foundedFieldsArrCounter] = startRayDirection;
+                    debugStopRay[foundedFieldsArrCounter] = stopRayDirection;
+                    foundWayFields[foundedFieldsArrCounter] = hit.collider.transform.parent.gameObject;
+                    foundedFieldsArrCounter++;
+                }
 			}
 		}
 		debugRayTime = Time.time;

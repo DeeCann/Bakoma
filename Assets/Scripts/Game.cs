@@ -57,7 +57,8 @@ public class Game : MonoBehaviour {
         Physics.gravity = new Vector3(0, -9.8f, 0);
 		_startField = GameObject.FindGameObjectsWithTag(Tags.StartPoint)[Random.Range(1,2)];
 		_HUDControler = GameObject.FindGameObjectWithTag(Tags.HUDControler);
-
+        PlayerPrefs.SetInt("ResetGameBoard", 1);
+        PlayerPrefs.SetInt("Character", 0);
         if (PlayerPrefs.GetInt("ResetGameBoard") == 1)
         {
            
@@ -331,6 +332,7 @@ public class Game : MonoBehaviour {
                     {
                         SetFruitPoint(_onBoardFruitsNames[fruitRandomName], amount * -1);
                         foundFruitsGreaterThanZero = true;
+                        _totalNumberOfFruits--;
                     }
                 }
 
