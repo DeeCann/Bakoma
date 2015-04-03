@@ -102,6 +102,7 @@
      <Compile Include="Assets\Scripts\Game.cs" />
      <Compile Include="Assets\Scripts\GameInputs.cs" />
      <Compile Include="Assets\Scripts\GeneratedFruitsBootstrap.cs" />
+     <Compile Include="Assets\Scripts\HUD\EndGamePanel.cs" />
      <Compile Include="Assets\Scripts\HUD\FruitsPanel.cs" />
      <Compile Include="Assets\Scripts\HUD\FruitsPanelPoints.cs" />
      <Compile Include="Assets\Scripts\HUD\HUD.cs" />

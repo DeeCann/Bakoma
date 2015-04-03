@@ -14,6 +14,8 @@ public class Dice : MonoBehaviour {
 	private static bool _newDiceThrow = false;
 	private static int _diceValue = 0;
 
+    private static int _diceThrows = 0;
+
 	void FixedUpdate() {
 		if(startToRoll && rollingStartTime + rollingTime < Time.time ) {
 			animation.Stop();
@@ -40,31 +42,37 @@ public class Dice : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Alpha1)) {
             _newDiceThrow = true;
             _diceValue = 1;
+            _diceThrows++;
         }
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             _newDiceThrow = true;
             _diceValue = 2;
+            _diceThrows++;
         }
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
             _newDiceThrow = true;
             _diceValue = 3;
+            _diceThrows++;
         }
         if (Input.GetKeyDown(KeyCode.Alpha4))
         {
             _newDiceThrow = true;
             _diceValue = 4;
+            _diceThrows++;
         }
         if (Input.GetKeyDown(KeyCode.Alpha5))
         {
             _newDiceThrow = true;
             _diceValue = 5;
+            _diceThrows++;
         }
         if (Input.GetKeyDown(KeyCode.Alpha6))
         {
             _newDiceThrow = true;
             _diceValue = 6;
+            _diceThrows++;
         }
         if (Input.GetKeyDown(KeyCode.Alpha0))
         {
@@ -100,10 +108,18 @@ public class Dice : MonoBehaviour {
 		}
 	}
 
+    public static int GetThrows
+    {
+        get
+        {
+            return _diceThrows;
+        }
+    }
+
 	private Quaternion showRandomRollDice {
 		get{
 			_diceValue = Random.Range(1,7);
-
+            _diceThrows++;
 			_newDiceThrow = true;
 			switch(_diceValue) {
 				case 1: return Quaternion.AngleAxis(180, Vector3.right);

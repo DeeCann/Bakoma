@@ -91,7 +91,8 @@ public class PlayerRoute: MonoBehaviour {
 				_myNextFieldPosition = collideObject.transform.parent.GetComponent<FieldSocket>().TakeSocketVectorPosition(_myFieldSocketNumber);
                 
                 if (collideObject.transform.parent.tag == "EndPathField") {
-                    if (Game.DidPlayerGetAllFruits())
+                    Game.GameHasEnded = true;
+                    //if (Game.DidPlayerGetAllFruits())
                         _fieldsToGo = 0;
                 }
 			}
@@ -346,7 +347,7 @@ public class PlayerRoute: MonoBehaviour {
 		foreach(GameObject fieldObject in possibleFields) {
 
 			// check if the only way is back and we are standin on StartPathField - can happen when we came back to start field on route
-            if (fieldObject != null && fieldObject.GetInstanceID() == _myLastOccupiedField.GetInstanceID() && (_myCurrentOccupiedField.tag == "StartPathField" || _myCurrentOccupiedField.tag == "EndPathField"))
+            if (fieldObject != null && fieldObject.GetInstanceID() == _myLastOccupiedField.GetInstanceID() && (_myCurrentOccupiedField.tag == "StartPathField"))
 				_myPossibleFields.Add (fieldObject);
 
             if (_wasInMiniGame)
