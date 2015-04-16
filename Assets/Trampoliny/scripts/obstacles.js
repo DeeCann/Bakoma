@@ -40,11 +40,35 @@ while(notDone){
 
 function obs_on(){
 for(i=0;i<usedNumbers.Count;i++){
-	if(choos_fruit.fruit==1){eval("galaz"+usedNumbers[i]+".SetActive(true)");}
-	if(choos_fruit.fruit==2){eval("kwiatek"+usedNumbers[i]+".SetActive(true)");}
-	if(choos_fruit.fruit==3){eval("galaz"+usedNumbers[i]+".SetActive(true)");}
-	if(choos_fruit.fruit==4){eval("kwiatek"+usedNumbers[i]+".SetActive(true)");}
-	if(choos_fruit.fruit==5){eval("kwiatek"+usedNumbers[i]+".SetActive(true)");}
-	if(choos_fruit.fruit==6){eval("kwiatek"+usedNumbers[i]+".SetActive(true)");}
+	if(choos_fruit.fruit==1){//eval("galaz"+usedNumbers[i]+".SetActive(true)");
+	if(usedNumbers[i]==1){galaz1.SetActive(true);}
+	if(usedNumbers[i]==2){galaz2.SetActive(true);}
+	if(usedNumbers[i]==3){galaz3.SetActive(true);}
+	}
+	if(choos_fruit.fruit==2){//eval("kwiatek"+usedNumbers[i]+".SetActive(true)");
+	if(usedNumbers[i]==1){kwiatek1.SetActive(true);}
+	if(usedNumbers[i]==2){kwiatek2.SetActive(true);}
+	if(usedNumbers[i]==3){kwiatek3.SetActive(true);}
+	}
+	if(choos_fruit.fruit==3){//eval("galaz"+usedNumbers[i]+".SetActive(true)");
+	if(usedNumbers[i]==1){galaz1.SetActive(true);}
+	if(usedNumbers[i]==2){galaz2.SetActive(true);}
+	if(usedNumbers[i]==3){galaz3.SetActive(true);}
+	}
+	if(choos_fruit.fruit==4){//eval("kwiatek"+usedNumbers[i]+".SetActive(true)");
+	if(usedNumbers[i]==1){kwiatek1.SetActive(true);}
+	if(usedNumbers[i]==2){kwiatek2.SetActive(true);}
+	if(usedNumbers[i]==3){kwiatek3.SetActive(true);}
+	}
+	if(choos_fruit.fruit==5){//eval("kwiatek"+usedNumbers[i]+".SetActive(true)");
+	if(usedNumbers[i]==1){kwiatek1.SetActive(true);}
+	if(usedNumbers[i]==2){kwiatek2.SetActive(true);}
+	if(usedNumbers[i]==3){kwiatek3.SetActive(true);}
+	}
+	if(choos_fruit.fruit==6){//eval("kwiatek"+usedNumbers[i]+".SetActive(true)");
+	if(usedNumbers[i]==1){kwiatek1.SetActive(true);}
+	if(usedNumbers[i]==2){kwiatek2.SetActive(true);}
+	if(usedNumbers[i]==3){kwiatek3.SetActive(true);}
+	}
 }
 }

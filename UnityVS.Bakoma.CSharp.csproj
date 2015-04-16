@@ -22,7 +22,7 @@
     <OutputPath>Temp\UnityVS_bin\Debug\</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DefineConstants>DEBUG;TRACE;UNITY_4_6_3;UNITY_4_6;UNITY_WEBPLAYER;WEBPLUG;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_AUDIO_FMOD;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;INCLUDE_IL2CPP;INCLUDE_WP8SUPPORT;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_4_6_FEATURES;INCLUDE_WP_BLUE_SUPPORT;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;UNITY5_SCRIPTING_IN_UNITY4;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_DUCK_TYPING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_MONO;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN;UNITY_PRO_LICENSE</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;UNITY_4_6_3;UNITY_4_6;UNITY_IPHONE;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_AUDIO_FMOD;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;INCLUDE_IL2CPP;INCLUDE_WP8SUPPORT;ENABLE_WWW;ENABLE_IMAGEEFFECTS;UNITY_IPHONE_API;ENABLE_4_6_FEATURES;INCLUDE_WP_BLUE_SUPPORT;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;ENABLE_NETWORK;ENABLE_PHYSICS;UNITY5_SCRIPTING_IN_UNITY4;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_2D_PHYSICS;ENABLE_GAMECENTER;UNITY_IOS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_MONO;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN;UNITY_PRO_LICENSE</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -30,7 +30,7 @@
     <OutputPath>Temp\UnityVS_bin\Release\</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DefineConstants>TRACE;UNITY_4_6_3;UNITY_4_6;UNITY_WEBPLAYER;WEBPLUG;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_AUDIO_FMOD;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;INCLUDE_IL2CPP;INCLUDE_WP8SUPPORT;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_4_6_FEATURES;INCLUDE_WP_BLUE_SUPPORT;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;UNITY5_SCRIPTING_IN_UNITY4;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_DUCK_TYPING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_MONO;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN;UNITY_PRO_LICENSE</DefineConstants>
+    <DefineConstants>TRACE;UNITY_4_6_3;UNITY_4_6;UNITY_IPHONE;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_AUDIO_FMOD;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;INCLUDE_IL2CPP;INCLUDE_WP8SUPPORT;ENABLE_WWW;ENABLE_IMAGEEFFECTS;UNITY_IPHONE_API;ENABLE_4_6_FEATURES;INCLUDE_WP_BLUE_SUPPORT;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;ENABLE_NETWORK;ENABLE_PHYSICS;UNITY5_SCRIPTING_IN_UNITY4;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_2D_PHYSICS;ENABLE_GAMECENTER;UNITY_IOS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_MONO;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN;UNITY_PRO_LICENSE</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="mscorlib" />
@@ -51,21 +51,6 @@
     </Reference>
     <Reference Include="IFacebook">
       <HintPath>Assets\Facebook\Scripts\IFacebook.dll</HintPath>
-    </Reference>
-    <Reference Include="ProBuilderCore">
-      <HintPath>Assets\ProCore\Prototype\Classes\ProBuilderCore.dll</HintPath>
-    </Reference>
-    <Reference Include="ProBuilderMeshOps">
-      <HintPath>Assets\ProCore\Prototype\Classes\ProBuilderMeshOps.dll</HintPath>
-    </Reference>
-    <Reference Include="ProCore">
-      <HintPath>Assets\ProCore\Shared\Code\ProCore.dll</HintPath>
-    </Reference>
-    <Reference Include="SixBySeven">
-      <HintPath>Assets\ProCore\Shared\Code\SixBySeven.dll</HintPath>
-    </Reference>
-    <Reference Include="TDx.TDxInput">
-      <HintPath>Assets\SpaceNavigator\Plugins\TDx.TDxInput.dll</HintPath>
     </Reference>
     <Reference Include="FlurryAdLib">
       <HintPath>Assets\Standard Assets\NeatPlug\Ads\FlurryAd\FlurryAdLib.dll</HintPath>
@@ -112,7 +97,6 @@
     <Compile Include="Assets\MeshBrush\MeshBrush.cs" />
     <Compile Include="Assets\MeshBrush\MeshBrushParent.cs" />
     <Compile Include="Assets\MeshBrush\MeshBrush_RuntimeAPI.cs" />
-    <Compile Include="Assets\ProCore\Prototype\Scripts\RebuildMeshOnWake.cs" />
     <Compile Include="Assets\Scenes\NeatPlug\Ads\FlurryAd\FlurryAdTest.cs" />
     <Compile Include="Assets\Sceny\TestBack.cs" />
     <Compile Include="Assets\Scripts\Camera\SignPostCam.cs" />
@@ -167,14 +151,6 @@
     <Compile Include="Assets\Scripts\Tags.cs" />
     <Compile Include="Assets\Scripts\TouchRotate.cs" />
     <Compile Include="Assets\Scripts\WebSerwis\Connect.cs" />
-    <Compile Include="Assets\SpaceNavigator\Plugins\QuaternionExtensions.cs" />
-    <Compile Include="Assets\SpaceNavigator\Plugins\SpaceNavigator.cs" />
-    <Compile Include="Assets\SpaceNavigator\Plugins\SpaceNavigatorNoDevice.cs" />
-    <Compile Include="Assets\SpaceNavigator\Plugins\SpaceNavigatorWindows.cs" />
-    <Compile Include="Assets\SpaceNavigator\Runtime samples\- Fly around\Scripts\FlyAround.cs" />
-    <Compile Include="Assets\SpaceNavigator\Runtime samples\- Fly around\Scripts\SmoothFollow2.cs" />
-    <Compile Include="Assets\SpaceNavigator\Runtime samples\- Follow curve\Scripts\Controller.cs" />
-    <Compile Include="Assets\SpaceNavigator\Runtime samples\- Follow curve\Scripts\Torus.cs" />
     <None Include="Assets\External\FastShadows\Shaders\FS_ShadowShader.shader" />
     <None Include="Assets\External\MatCap Shaders\Shaders\MatCap_Lit.shader" />
     <None Include="Assets\External\MatCap Shaders\Shaders\MatCap_TextureMult.shader" />
@@ -187,19 +163,8 @@
     <None Include="Assets\MeshBrush\SimpleVegetationUnlit.shader" />
     <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
     <None Include="Assets\Plugins\Android\res\values\google_play_services_version.xml" />
-    <None Include="Assets\ProCore\Prototype\About\changelog.txt" />
-    <None Include="Assets\ProCore\Prototype\About\Credits.txt" />
-    <None Include="Assets\ProCore\Prototype\About\pc_AboutEntry_ProBuilder.txt" />
-    <None Include="Assets\ProCore\Prototype\Shader\DiffuseVertexColor.shader" />
-    <None Include="Assets\ProCore\Prototype\Shader\DiffuseVertexColorEmission.shader" />
-    <None Include="Assets\ProCore\Prototype\Shader\DiffuseVertexColorTransparency.shader" />
-    <None Include="Assets\ProCore\Prototype\Shader\UnlitColor.shader" />
-    <None Include="Assets\ProCore\Prototype\Shader\UnlitColor-Overlay.shader" />
-    <None Include="Assets\ProCore\Prototype\Shader\VertexBillboard.shader" />
-    <None Include="Assets\ProCore\Shared\About\README.txt" />
     <None Include="Assets\Raw Mocap Data\Animations\_CompleteAnimationList.txt" />
     <None Include="Assets\README.txt" />
-    <None Include="Assets\SpaceNavigator\README.txt" />
     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_Antialiasing\DLAA.shader" />
     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_Antialiasing\FXAA2.shader" />
     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_Antialiasing\FXAA3Console.shader" />
@@ -282,11 +247,6 @@
     <None Include="Assets\Trampoliny\dupa.shader" />
     <None Include="Assets\Trampoliny\mWaterScreen1\waterscreen1.shader" />
     <None Include="Assets\Facebook\Scripts\IFacebook.dll" />
-    <None Include="Assets\ProCore\Prototype\Classes\ProBuilderCore.dll" />
-    <None Include="Assets\ProCore\Prototype\Classes\ProBuilderMeshOps.dll" />
-    <None Include="Assets\ProCore\Shared\Code\ProCore.dll" />
-    <None Include="Assets\ProCore\Shared\Code\SixBySeven.dll" />
-    <None Include="Assets\SpaceNavigator\Plugins\TDx.TDxInput.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2013\UnityVS.CSharp.targets" />
 </Project>

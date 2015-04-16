@@ -29,7 +29,7 @@ var notDone: boolean=true;
 var i: int;
 
 
-//var randomNumbers = new List.<int>();
+
 
 function Start () {
 i=0;
@@ -69,7 +69,28 @@ for(i=0;i<usedNumbers.Count;i++){
 
 function slot_on(){
 for(i=0;i<usedNumbers.Count;i++){
-	eval("slot_"+usedNumbers[i]+".SetActive(true)");
+	//eval("slot_"+usedNumbers[i]+".SetActive(true)");
+	if(usedNumbers[i]==0){slot_0.SetActive(true);}
+	if(usedNumbers[i]==1){slot_1.SetActive(true);}
+	if(usedNumbers[i]==2){slot_2.SetActive(true);}
+	if(usedNumbers[i]==3){slot_3.SetActive(true);}
+	if(usedNumbers[i]==4){slot_4.SetActive(true);}
+	if(usedNumbers[i]==5){slot_5.SetActive(true);}
+	if(usedNumbers[i]==6){slot_6.SetActive(true);}
+	if(usedNumbers[i]==7){slot_7.SetActive(true);}
+	if(usedNumbers[i]==8){slot_8.SetActive(true);}
+	if(usedNumbers[i]==9){slot_9.SetActive(true);}
+	if(usedNumbers[i]==10){slot_10.SetActive(true);}
+	if(usedNumbers[i]==11){slot_11.SetActive(true);}
+	if(usedNumbers[i]==12){slot_12.SetActive(true);}
+	if(usedNumbers[i]==13){slot_13.SetActive(true);}
+	if(usedNumbers[i]==14){slot_14.SetActive(true);}
+	if(usedNumbers[i]==15){slot_15.SetActive(true);}
+	if(usedNumbers[i]==16){slot_16.SetActive(true);}
+	if(usedNumbers[i]==17){slot_17.SetActive(true);}
+	if(usedNumbers[i]==18){slot_18.SetActive(true);}
+	if(usedNumbers[i]==19){slot_19.SetActive(true);}
+	
 }
 }
 
