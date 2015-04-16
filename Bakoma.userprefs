@@ -1,9 +1,8 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="..\..\WizardTemple\Board Game Starter Kit\Assets\Scripts\Player\CrossRoad.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Player\PlayerRoute.cs">
     <Files>
-      <File FileName="Assets\Trampoliny\scripts\obstacles.js" Line="43" Column="31" />
-      <File FileName="..\..\WizardTemple\Board Game Starter Kit\Assets\Scripts\Player\CrossRoad.cs" Line="24" Column="1" />
+      <File FileName="Assets\Scripts\Player\PlayerRoute.cs" Line="350" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

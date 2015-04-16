@@ -1,23 +1,35 @@
 Base path: C:/Program Files (x86)/Unity/Editor/Data
-Pipe name: \\.\pipe\UnityShaderCompiler-2-5860
+Pipe name: \\.\pipe\UnityShaderCompiler-2-9776
 Cmd: getPlatforms
 Cmd: compileSnippet
   api=14 type=0 insize=1191 outsize=1011 kw= ok=1
 Cmd: compileSnippet
-  api=14 type=0 insize=3154 outsize=740 kw= ok=1
+  api=14 type=1 insize=1191 outsize=1388 kw= ok=1
 Cmd: compileSnippet
-  api=14 type=1 insize=5464 outsize=2387 kw= ok=1
+  api=14 type=1 insize=3154 outsize=1384 kw= ok=1
 Cmd: compileSnippet
-  api=14 type=1 insize=2925 outsize=1375 kw= ok=1
+  api=14 type=1 insize=3198 outsize=2407 kw= ok=1
 Cmd: compileSnippet
-  api=14 type=1 insize=2924 outsize=1451 kw= ok=1
+  api=14 type=0 insize=1251 outsize=1007 kw= ok=1
 Cmd: compileSnippet
-  api=14 type=0 insize=4366 outsize=2921 kw=DIRECTIONAL SHADOWS_SCREEN SHADOWS_NATIVE LIGHTMAP_OFF DIRLIGHTMAP_OFF ok=1
+  api=14 type=1 insize=1251 outsize=1567 kw= ok=1
 Cmd: compileSnippet
-  api=14 type=1 insize=4366 outsize=1736 kw=DIRECTIONAL SHADOWS_SCREEN SHADOWS_NATIVE LIGHTMAP_ON DIRLIGHTMAP_OFF ok=1
+  api=14 type=0 insize=5463 outsize=952 kw= ok=1
 Cmd: compileSnippet
-  api=14 type=0 insize=2380 outsize=1711 kw=POINT_COOKIE ok=1
+  api=14 type=0 insize=5464 outsize=952 kw= ok=1
 Cmd: compileSnippet
-  api=14 type=1 insize=2380 outsize=1479 kw=POINT ok=1
+  api=14 type=0 insize=5468 outsize=1434 kw= ok=1
 Cmd: compileSnippet
-  api=14 type=0 insize=1835 outsize=965 kw= ok=1
+  api=14 type=1 insize=5470 outsize=1895 kw= ok=1
+Cmd: compileSnippet
+  api=14 type=0 insize=2934 outsize=1656 kw= ok=1
+Cmd: compileSnippet
+  api=14 type=1 insize=3844 outsize=1894 kw= ok=1
+Cmd: compileSnippet
+  api=14 type=0 insize=3842 outsize=1012 kw= ok=1
+Cmd: compileSnippet
+  api=14 type=0 insize=624 outsize=515 kw= ok=1
+Unhandled exception: Readfile from pipe failed. GLE=Potok zosta³ zakoñczony.
+
+
+Quitting shader compiler process

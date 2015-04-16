@@ -95,8 +95,6 @@ public class Game : MonoBehaviour {
             Players[0] = player;
 
             PlayerPrefs.SetString("Player" + 0, characterNames[PlayerPrefs.GetInt("Character")]);
-
-            GameHasEnded = false;
         }
 
 
