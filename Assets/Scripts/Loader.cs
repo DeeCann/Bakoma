@@ -3,12 +3,17 @@ using System.Collections;
 
 public class Loader : MonoBehaviour {
 
-
+	void Awake(){
+		Screen.orientation = ScreenOrientation.Landscape;
+		}
     void Start()
     {
-		Screen.orientation = ScreenOrientation.Landscape;
+
         Application.LoadLevel(PlayerPrefs.GetString("LoadLevelName"));
+
     }
+
+
 
 
     

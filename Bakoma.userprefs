@@ -1,9 +1,13 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="..\..\WizardTemple\Board Game Starter Kit\Assets\Scripts\Player\CrossRoad.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\loader_js.js">
     <Files>
-      <File FileName="Assets\Trampoliny\scripts\obstacles.js" Line="43" Column="31" />
-      <File FileName="..\..\WizardTemple\Board Game Starter Kit\Assets\Scripts\Player\CrossRoad.cs" Line="24" Column="1" />
+      <File FileName="Assets\meminfo\test\test.cs" Line="18" Column="31" />
+      <File FileName="Assets\Scripts\Loader.cs" Line="12" Column="9" />
+      <File FileName="Assets\Quiz\scripts\quiz.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\quit.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\preloader.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\loader_js.js" Line="14" Column="63" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

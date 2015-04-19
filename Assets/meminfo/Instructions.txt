@@ -1,0 +1,49 @@
+Memory info for Android and iOS.
+
+version 1.1
+
+- Added iOS support.
+
+
+FEATURES:
+---------
+
+This plugin serves the purpose to get memory information on Android for:
+
+Total ram
+Free ram
+Active ram
+Innactive ram
+Cached ram
+
+Swap that is cached
+Total Swap size
+Free Swap size.
+
+
+For iOS you get the:
+
+Total Ram
+Free Ram
+Used Ram
+
+
+
+
+INSTRUCTIONS:
+-------------
+
+Call meminfo.getMemInfo() from somewhere in your code and the public struct meminf will get filled with
+the data retrieved. Read the structs variables as shown in the test.cs example file.
+
+The memory size is reported in kiloBytes for Android and in bytes for iOS.
+
+For a quick test you can compile and run on your device the testScene.
+
+
+
+SUPPORT:
+--------
+
+For any questions, problems and suggestions please use this email adress: elias_t@yahoo.com
+
