@@ -21,3 +21,7 @@ Cmd: compileSnippet
   api=14 type=1 insize=2380 outsize=1479 kw=POINT ok=1
 Cmd: compileSnippet
   api=14 type=0 insize=1835 outsize=965 kw= ok=1
+Unhandled exception: Readfile from pipe failed. GLE=Potok zosta³ zakoñczony.
+
+
+Quitting shader compiler process

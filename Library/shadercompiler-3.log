@@ -27,3 +27,7 @@ Cmd: compileSnippet
   api=14 type=0 insize=4093 outsize=1431 kw=LIGHTMAP_ON DIRLIGHTMAP_ON HDR_LIGHT_PREPASS_ON ok=1
 Cmd: compileSnippet
   api=14 type=1 insize=4093 outsize=1774 kw=LIGHTMAP_ON DIRLIGHTMAP_ON HDR_LIGHT_PREPASS_ON ok=1
+Unhandled exception: Readfile from pipe failed. GLE=Potok zosta³ zakoñczony.
+
+
+Quitting shader compiler process
