@@ -1,15 +1,6 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\preloader.js">
-    <Files>
-      <File FileName="Assets\meminfo\test\test.cs" Line="19" Column="15" />
-      <File FileName="Assets\Scripts\Loader.cs" Line="1" Column="1" />
-      <File FileName="Assets\Quiz\scripts\quiz.js" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\quit.js" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\preloader.js" Line="4" Column="31" />
-      <File FileName="Assets\Scripts\loader_js.js" Line="1" Column="1" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

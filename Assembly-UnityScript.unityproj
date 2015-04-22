@@ -53,6 +53,7 @@
      <Compile Include="Assets\Scripts\loader_js.js" />
      <Compile Include="Assets\Scripts\preloader.js" />
      <Compile Include="Assets\Scripts\quit.js" />
+     <Compile Include="Assets\Scripts\quit_gb.js" />
      <Compile Include="Assets\Trampoliny\scripts\2_inst.js" />
      <Compile Include="Assets\Trampoliny\scripts\3_inst.js" />
      <Compile Include="Assets\Trampoliny\scripts\NewBehaviourScript.js" />

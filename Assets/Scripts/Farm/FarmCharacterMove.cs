@@ -11,7 +11,7 @@ public class FarmCharacterMove : MonoBehaviour {
 
 
 	void Start ()
-	{
+	{ 
 		animationControler = GetComponent<Animator>();
 	}
 
@@ -20,7 +20,7 @@ public class FarmCharacterMove : MonoBehaviour {
 			_horizontalInput = Input.GetAxis("Horizontal") * 0.3f;
 		else 
 			_horizontalInput = Input.acceleration.x;
-
+		_horizontalInput = Input.GetAxis("Horizontal") * 0.3f;
 		if(Application.platform == RuntimePlatform.OSXEditor) {
 			if(Input.GetKeyDown(KeyCode.Space) && IsGrounded)
 				startJump = true;
@@ -28,6 +28,8 @@ public class FarmCharacterMove : MonoBehaviour {
 			if(Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began && IsGrounded)
 				startJump = true;
 		}
+		if(Input.GetKeyDown(KeyCode.Space) && IsGrounded)
+			startJump = true;
 	}
 
 	void FixedUpdate() {
