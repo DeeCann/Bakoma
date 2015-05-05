@@ -58,7 +58,7 @@ public class Game : MonoBehaviour {
 
 	void Awake() {
         Physics.gravity = new Vector3(0, -9.8f, 0);
-		_startField = GameObject.FindGameObjectsWithTag(Tags.StartPoint)[Random.Range(2,3)];
+		_startField = GameObject.FindGameObjectsWithTag(Tags.StartPoint)[Random.Range(0,1)];
 		_HUDControler = GameObject.FindGameObjectWithTag(Tags.HUDControler);
         //PlayerPrefs.SetInt("ResetGameBoard", 1);
         //PlayerPrefs.SetInt("Character", 0);

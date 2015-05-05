@@ -134,7 +134,9 @@
      <Compile Include="Assets\Scripts\TouchRotate.cs" />
      <Compile Include="Assets\Scripts\WebSerwis\Connect.cs" />
      <Compile Include="Assets\Scripts\initFB.cs" />
+     <Compile Include="Assets\Scripts\quit_gb.cs" />
      <Compile Include="Assets\meminfo\test\test.cs" />
+     <Compile Include="Assets\meminfo\test\test_gb.cs" />
      <None Include="Assets\Standard Assets\Projectors\Guidelines.txt" />
      <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\BlendOneOne.shader" />
      <None Include="Assets\MeshBrush\Documentation.txt" />
