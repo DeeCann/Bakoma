@@ -132,6 +132,7 @@ public class Cards : MonoBehaviour {
 
     public static List<string> GetAllCardsForCharacter() {
         List<string> cardToUse = new List<string>();
+
         foreach (int _cardIds in _playersCardsLinks[Game.GetCurrentCharacterName])
             if (PlayerPrefs.GetInt("Card_" + _cardIds + "_Amount") > 0)
                 cardToUse.Add(_playerCardDictionary[_cardIds]);

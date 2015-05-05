@@ -140,10 +140,19 @@ public class trapsPanelControler : MonoBehaviour {
         transform.FindChild("ObstaclePresentation").GetComponent<Image>().sprite = null;
         transform.FindChild("ObstaclePresentation").GetComponent<Image>().color = new Color(1, 1, 1, 0);
 
-        for (int i = 0; i <= 4; i++)
+        for (int i = 1; i <= 5; i++)
         {
             _playerCardsContainer.FindChild("PlayerCard" + i).GetComponent<Image>().sprite = null;
             _playerCardsContainer.FindChild("PlayerCard" + i).GetComponent<Image>().color = new Color(1, 1, 1, 0);
+        }
+
+        HUD.hasEnteredTrap = false;
+        Game.NextRound();
+
+        int xResetPosition = -480;
+        for (int i = 0; i <= 4; i++)
+        {
+            _playerCardsContainer.FindChild("PlayerCard" + (i+1)).GetComponent<RectTransform>().anchoredPosition = new Vector2(xResetPosition + (i * 280), _playerCardsContainer.FindChild("PlayerCard" + (i+1)).GetComponent<RectTransform>().anchoredPosition.y);
         }
     }
 }

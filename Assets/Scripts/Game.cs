@@ -32,7 +32,7 @@ public class Game : MonoBehaviour {
     private static string[] _onBoardFruitsNames = new string[] { "Apple", "Blackberry", "Blueberry", "Peach", "Raspberry", "Strawberry" };
     private static Dictionary<string, int> _myPoints = new Dictionary<string, int>() { {"Apple", 0}, {"Blackberry", 0}, {"Blueberry", 0}, {"Peach", 0}, {"Raspberry", 0}, {"Strawberry", 0} };
 
-	private static int _playersNumber = 1;
+	public static int _playersNumber = 1;
 	private static int _currentPlayerRound = 0;
 
 	private bool _showStartFruitsAmountPanel = false;
@@ -43,6 +43,9 @@ public class Game : MonoBehaviour {
 	private GameObject _HUDControler;
 
     private static bool _gameHasEnded = false;
+    private static List<int> _playersInFinishLine =new List<int>();
+
+    public static bool _hasEnteredMinigameField = false;
 
 	private enum fruitsNames {
 		Apple = 1,
@@ -55,53 +58,57 @@ public class Game : MonoBehaviour {
 
 	void Awake() {
         Physics.gravity = new Vector3(0, -9.8f, 0);
-		_startField = GameObject.FindGameObjectsWithTag(Tags.StartPoint)[Random.Range(0,1)];
+		_startField = GameObject.FindGameObjectsWithTag(Tags.StartPoint)[Random.Range(2,3)];
 		_HUDControler = GameObject.FindGameObjectWithTag(Tags.HUDControler);
         //PlayerPrefs.SetInt("ResetGameBoard", 1);
         //PlayerPrefs.SetInt("Character", 0);
         if (PlayerPrefs.GetInt("ResetGameBoard") == 1)
         {
-           
-            /* narazie sinlge player */
 
+            for (int i = 0; i < _playersNumber; i++)
+            {
 
-            //for (int i = 0; i < _playersNumber; i++)
-            //{
+                //GameObject player = Instantiate(Resources.Load(characterNames[i]), Vector3.zero, Quaternion.identity) as GameObject;
+                GameObject player = Instantiate(Resources.Load(PlayerPrefs.GetString("Character_"+(i+1))), Vector3.zero, Quaternion.identity) as GameObject;
+                //player.name = characterNames[i];
+                player.name = PlayerPrefs.GetString("Character_" + (i + 1));
 
-            //    //GameObject player = Instantiate(Resources.Load(characterNames[i]), Vector3.zero, Quaternion.identity) as GameObject;
-            //    GameObject player = Instantiate(Resources.Load(PlayerPrefs.GetString("CharacterSelected")), Vector3.zero, Quaternion.identity) as GameObject;
-            //    player.name = characterNames[i];
+                //player.GetComponent<PlayerRoute>().StartFieldSocket = _startField.GetComponent<FieldSocket>().TakeSocketNumber;
+                player.GetComponent<PlayerRoute>().StartFieldSocket = _startField.GetComponent<FieldSocket>().TakeSocketNumber(i+1);
+                player.transform.position = _startField.GetComponent<FieldSocket>().TakeSocketVectorPosition(player.GetComponent<PlayerRoute>().StartFieldSocket);
+                player.transform.position = new Vector3(player.transform.position.x, 0.06f, player.transform.position.z);
 
-            //    player.GetComponent<PlayerRoute>().StartFieldSocket = _startField.GetComponent<FieldSocket>().TakeSocketNumber;
-            //    player.transform.position = _startField.GetComponent<FieldSocket>().TakeSocketVectorPosition(player.GetComponent<PlayerRoute>().StartFieldSocket);
-            //    player.transform.position = new Vector3(player.transform.position.x, 0.06f, player.transform.position.z);
+                player.GetComponent<PlayerCharacter>().PlayerNumber = i + 1;
+                Players[i] = player;
 
-            //    player.GetComponent<PlayerCharacter>().PlayerNumber = i + 1;
-            //    Players[i] = player;
+                PlayerPrefs.SetString("Player" + i, characterNames[i]);
 
-            //    PlayerPrefs.SetString("Player" + i, characterNames[i]);
-            //}
+                print(player.name);
+            }
+
+            _currentPlayerRound = 1;
 
             //GameObject player = Instantiate(Resources.Load(characterNames[i]), Vector3.zero, Quaternion.identity) as GameObject;
 
-            GameObject player = Instantiate(Resources.Load(characterNames[PlayerPrefs.GetInt("Character")]), Vector3.zero, Quaternion.identity) as GameObject;
-            player.name = characterNames[PlayerPrefs.GetInt("Character")];
 
-            player.GetComponent<PlayerRoute>().StartFieldSocket = _startField.GetComponent<FieldSocket>().TakeSocketNumber;
-            player.transform.position = _startField.GetComponent<FieldSocket>().TakeSocketVectorPosition(player.GetComponent<PlayerRoute>().StartFieldSocket);
-            player.transform.position = new Vector3(player.transform.position.x, 0.06f, player.transform.position.z);
 
-            player.GetComponent<PlayerCharacter>().PlayerNumber = 1;
-            Players[0] = player;
 
-            PlayerPrefs.SetString("Player" + 0, characterNames[PlayerPrefs.GetInt("Character")]);
+            //GameObject player = Instantiate(Resources.Load(characterNames[PlayerPrefs.GetInt("Character")]), Vector3.zero, Quaternion.identity) as GameObject;
+            //player.name = characterNames[PlayerPrefs.GetInt("Character")];
 
-            GameHasEnded = false;
+            //player.GetComponent<PlayerRoute>().StartFieldSocket = _startField.GetComponent<FieldSocket>().TakeSocketNumber;
+            //player.transform.position = _startField.GetComponent<FieldSocket>().TakeSocketVectorPosition(player.GetComponent<PlayerRoute>().StartFieldSocket);
+            //player.transform.position = new Vector3(player.transform.position.x, 0.06f, player.transform.position.z);
+
+            //player.GetComponent<PlayerCharacter>().PlayerNumber = 1;
+            //Players[0] = player;
+
+            //PlayerPrefs.SetString("Player" + 0, characterNames[PlayerPrefs.GetInt("Character")]);
         }
 
 
 
-		_currentPlayerRound = 1;
+		
 
         if (PlayerPrefs.GetInt("ResetGameBoard") == 1)
         {
@@ -199,15 +206,21 @@ public class Game : MonoBehaviour {
 
         if (PlayerPrefs.GetInt("EnterdMiniGame") == 1)
         {
-            //GameObject.Find("Hippo").gameObject.SetActive(true);
+            foreach (GameObject _players in GameObject.FindGameObjectsWithTag("Player"))
+            {
+                _players.GetComponentInChildren<SkinnedMeshRenderer>().enabled = true;
+                _players.GetComponentInChildren<Projector>().enabled = true;
+            } 
             GeneratedFruitsContainer.gameObject.SetActive(true);
+
+            _hasEnteredMinigameField = false;
+            NextRound();
         }
 
-
-       
 	}
 
 	void Start() {
+        
 		Dice.CanDoDiceRoll = true;
 		Screen.orientation = ScreenOrientation.Landscape;
 	}
@@ -243,6 +256,14 @@ public class Game : MonoBehaviour {
 		}
 	}
 
+    public static int GetCurrentPlayerRound
+    {
+        get
+        {
+            return _currentPlayerRound;
+        }
+    }
+
     public static string GetCurrentCharacterName
     {
         get
@@ -259,6 +280,13 @@ public class Game : MonoBehaviour {
         get {
             return _gameHasEnded;
         }
+    }
+
+    public static void PlayerReachdFinish()
+    {
+        _playersInFinishLine.Add(_currentPlayerRound);
+        if(_playersInFinishLine.Count == _playersNumber)
+            Game._gameHasEnded = true;
     }
 
     public static bool DidPlayerGetAllFruits() {
@@ -286,11 +314,35 @@ public class Game : MonoBehaviour {
     }
 
 	public static void NextRound() {
-		if(_currentPlayerRound == _playersNumber)
-			_currentPlayerRound = 1;
-		else
-			_currentPlayerRound++;
+        print(_hasEnteredMinigameField);
+        if (HUD.hasEnteredTrap || _hasEnteredMinigameField)
+            return;
 
+        if (_playersInFinishLine.Count == _playersNumber)
+        {
+            Game._gameHasEnded = true;
+            return;
+        }
+
+        bool foundNextPlayer = false;
+
+        if (_currentPlayerRound < _playersNumber)
+            _currentPlayerRound++;
+        else
+            _currentPlayerRound = 1;
+
+        while (!foundNextPlayer)
+        {
+            if (!_playersInFinishLine.Contains(_currentPlayerRound))
+                    foundNextPlayer = true;
+             else
+                _currentPlayerRound++;
+
+            if (_currentPlayerRound > _playersNumber)
+                _currentPlayerRound = 1;
+        }
+
+        HUD.SetNewPlayer(_currentPlayerRound);
 		PinchZoom.ResetZoom();
 	}
 

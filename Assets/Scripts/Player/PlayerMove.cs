@@ -28,6 +28,7 @@ public class PlayerMove : MonoBehaviour {
 
 	void FixedUpdate() {
 		if(_hasNewMove) {
+            GetComponent<CapsuleCollider>().radius = 0.15f;
 			_nextField = GetComponent<PlayerRoute>().MyNextField;
 
 			if(!GetComponent<PlayerRoute>().IsWaitingForInteraction)
@@ -51,6 +52,7 @@ public class PlayerMove : MonoBehaviour {
 		} else {
 			transform.rotation = lookAtRotation;
 			rigidbody.isKinematic = true;
+            GetComponent<CapsuleCollider>().radius = 0;
 		}
 	}
 

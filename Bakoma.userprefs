@@ -1,11 +1,6 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="..\..\WizardTemple\Board Game Starter Kit\Assets\Scripts\Player\CrossRoad.cs">
-    <Files>
-      <File FileName="Assets\Trampoliny\scripts\obstacles.js" Line="43" Column="31" />
-      <File FileName="..\..\WizardTemple\Board Game Starter Kit\Assets\Scripts\Player\CrossRoad.cs" Line="24" Column="1" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

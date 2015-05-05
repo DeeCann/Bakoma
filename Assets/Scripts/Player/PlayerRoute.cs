@@ -87,11 +87,14 @@ public class PlayerRoute: MonoBehaviour {
 			--_fieldsToGo;
 			
 			if(_fieldsToGo >= 0) {
-				_myFieldSocketNumber = collideObject.transform.parent.GetComponent<FieldSocket>().TakeSocketNumber;
+                print("router");
+				_myFieldSocketNumber = collideObject.transform.parent.GetComponent<FieldSocket>().TakeSocketNumber(Game.GetCurrentPlayerRound);
+
 				_myNextFieldPosition = collideObject.transform.parent.GetComponent<FieldSocket>().TakeSocketVectorPosition(_myFieldSocketNumber);
-                
+                print(_myNextFieldPosition);
                 if (collideObject.transform.parent.tag == "EndPathField") {
-                    Game.GameHasEnded = true;
+                    Game.PlayerReachdFinish();
+                    //Game.GameHasEnded = true;
                     //if (Game.DidPlayerGetAllFruits())
                         _fieldsToGo = 0;
                 }

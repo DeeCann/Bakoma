@@ -18,7 +18,7 @@ public class Field : IField  {
 	private int _randomFieldsMovementValue = 0;
 	
 	private List<bool> sockets = new List<bool>() {false, false, false, false, false};
-	private List<Vector3> socketsPositions = new List<Vector3>() {new Vector3(-0.01f,0,-0.01f), new Vector3(-0.1f,0,0.1f), new Vector3(0.1f,0,0.1f), new Vector3(-0.1f,0,-0.1f), new Vector3(0.1f,0	,-0.1f)};
+    private List<Vector3> socketsPositions = new List<Vector3>() { new Vector3(-0.01f, 0, -0.01f), new Vector3(-0.07f, 0, 0.07f), new Vector3(0.07f, 0, 0.07f), new Vector3(-0.07f, 0, -0.07f), new Vector3(0.07f, 0, -0.07f) };
 
 	public Field() {
 		MyType = MyFieldType.Null;
@@ -42,17 +42,25 @@ public class Field : IField  {
 		}
 	}
 
-	public int GetFreeSocketNumber {
-		get{
-			for(int i = 0; i < sockets.Count; i++) {
-				if(sockets[i] == false) {
-					sockets[i] = true;
-					return i;
-				}
-			}
-			return 0;
-		}
+	public int GetFreeSocketNumber(int _playerID) {
+		//get{
+            //for(int i = 0; i < sockets.Count; i++) {
+            //    if(sockets[i] == false) {
+            //        sockets[i] = true;
+            //        return i;
+            //    }
+            //}
+            //return 0;
+		//}
+        sockets[_playerID] = true;
+        return _playerID;
 	}
+
+    public int LockSocket {
+        set {
+            sockets[value] = true;
+        }
+    }
 
 	public Vector3 GetFreeSocketVectorPosition(int socket) {;
 		return socketsPositions[socket];

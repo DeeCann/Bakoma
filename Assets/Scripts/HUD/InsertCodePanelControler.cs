@@ -101,7 +101,7 @@ public class InsertCodePanelControler : MonoBehaviour {
         WWWForm form = new WWWForm();
         form.AddField("code", _codeField.parent.GetComponent<InputField>().text);
         form.AddField("type", "2");
-        form.AddField("uid", "test");
+        form.AddField("uid", SystemInfo.deviceModel);
 
         WWW w = new WWW("http://apps.pc-fb.com/bakoma/connect/update_product.php", form);
         yield return w;
