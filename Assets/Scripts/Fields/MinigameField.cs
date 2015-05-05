@@ -40,7 +40,7 @@ public class MinigameField : MonoBehaviour
     {
         rand_game = Random.Range(1, 101);
         Debug.Log(rand_game);
-        if (rand_game >= 65)
+        if (rand_game >= 70&&rand_game<=85)
         {
             if (playerCollider.tag == "Player")
             {
@@ -63,8 +63,31 @@ public class MinigameField : MonoBehaviour
 
             }
             ;
-        }
-        if (rand_game <65)
+		}if (rand_game >85)
+		{
+			if (playerCollider.tag == "Player")
+			{
+				Debug.Log("minigame_enter");
+				if (playerCollider.gameObject.GetComponent<PlayerRoute>().NumberOfFieldsToGo == 1)
+				{
+					
+					PlayerPrefs.SetInt("EnterdMiniGame", 1);
+					PlayerPrefs.SetInt("Difficulty", 1);
+					PlayerPrefs.SetString("MiniGameFruit", _minigameNames.ToString());
+					
+					GameObject.Find("GeneratedFruitsContainer").gameObject.SetActive(false);
+					//GameObject.Find("Hippo").gameObject.SetActive(false);
+					StartCoroutine("LoadFarm");
+					//Application.LoadLevel("Test");
+					
+					_hasPlayerForMiniGame = true;
+					_playerEnteredTime = Time.time;
+				}
+				
+			}
+			;
+		}
+        if (rand_game <70)
         {
             if (playerCollider.tag == "Player")
             {
@@ -115,5 +138,13 @@ public class MinigameField : MonoBehaviour
 		async.allowSceneActivation = false;
 		yield return async;
 		}
+
+	IEnumerator LoadFarm()
+	{
+		PlayerPrefs.SetString("LoadLevelName", "Farm");
+		async = Application.LoadLevelAsync("Loader");
+		async.allowSceneActivation = false;
+		yield return async;
+	}
 
 }

@@ -7,7 +7,22 @@ public class CameraFollow : MonoBehaviour {
 	private Transform player;
 
 	void Start() {
-		player = GameObject.FindGameObjectWithTag("Player").transform;
+		if (GameObject.Find ("hipcio(Clone)")) {
+			player = GameObject.Find ("hipcio(Clone)").transform;
+				}
+		if (GameObject.Find ("zaba(Clone)")) {
+			player = GameObject.Find ("zaba(Clone)").transform;
+				}
+		if (GameObject.Find ("tygrys(Clone)")) {
+			player = GameObject.Find ("tygrys(Clone)").transform;
+		}
+		if (GameObject.Find ("mis(Clone)")) {
+			player = GameObject.Find ("mis(Clone)").transform;
+		}
+		if (GameObject.Find ("pies(Clone)")) {
+			player = GameObject.Find ("pies(Clone)").transform;
+		}
+
 	}
 
 	void FixedUpdate() {

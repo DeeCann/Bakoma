@@ -100,8 +100,11 @@
     <None Include="Assets\MeshBrush\Documentation.txt" />
     <None Include="Assets\MeshBrush\SimpleVegetation.shader" />
     <None Include="Assets\MeshBrush\SimpleVegetationUnlit.shader" />
+    <None Include="Assets\OVR\Shaders\OVRGUIShader.shader" />
+    <None Include="Assets\OVR\Shaders\TextShader3D.shader" />
     <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
     <None Include="Assets\Plugins\Android\res\values\google_play_services_version.xml" />
+    <None Include="Assets\Plugins\donotdelete.txt" />
     <None Include="Assets\Raw Mocap Data\Animations\_CompleteAnimationList.txt" />
     <None Include="Assets\README.txt" />
     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_Antialiasing\DLAA.shader" />
@@ -185,6 +188,23 @@
     <None Include="Assets\Trampoliny\anim\mask.shader" />
     <None Include="Assets\Trampoliny\dupa.shader" />
     <None Include="Assets\Trampoliny\mWaterScreen1\waterscreen1.shader" />
+    <None Include="Assets\Tuscany\Models\Materials\AlphaTest-DiffuseBack.shader" />
+    <None Include="Assets\Tuscany\Models\Materials\AlphaTest-DiffuseDoublesided.shader" />
+    <None Include="Assets\Tuscany\Models\Materials\DoubleSided ButterFly.shader" />
+    <None Include="Assets\Tuscany\Models\Materials\DoubleSided.shader" />
+    <None Include="Assets\Tuscany\Models\Materials\TransparentTerrain.shader" />
+    <None Include="Assets\Tuscany\Models\Materials\Vertex color unlit 1.shader" />
+    <None Include="Assets\Tuscany\Models\Materials\Vertex color unlit 2.shader" />
+    <None Include="Assets\Tuscany\Models\Materials\Vertex color unlit 3.shader" />
+    <None Include="Assets\Tuscany\Models\Materials\Vertex color unlit 4.shader" />
+    <None Include="Assets\Tuscany\Models\Materials\Vertex color unlit 5.shader" />
+    <None Include="Assets\Tuscany\Models\Materials\Vertex color unlit 6.shader" />
+    <None Include="Assets\Tuscany\Models\Materials\Vertex color unlit 7.shader" />
+    <None Include="Assets\Tuscany\Models\Materials\Vertex color unlit 8.shader" />
+    <None Include="Assets\Tuscany\Particles\Shaders\Add_Layer.shader" />
+    <None Include="Assets\Tuscany\Particles\Shaders\AddSmooth_Layer.shader" />
+    <None Include="Assets\Tuscany\Particles\Shaders\Particle Alpha Blend_IgnoreFog.shader" />
+    <None Include="Assets\Tuscany\Water (Basic)\Sources\Shaders\FX-Water Simple.shader" />
     <None Include="Assets\Standard Assets\NeatPlug\Ads\FlurryAd\FlurryAdLib.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2013\UnityVS.CSharp.targets" />
