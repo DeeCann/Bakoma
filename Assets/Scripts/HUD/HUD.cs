@@ -11,9 +11,15 @@ public class HUD : MonoBehaviour {
     public Transform _trapPanel;
     public Transform _UpperPanel;
     public Transform _EndDemoPanel;
+    public Transform _CharactersPanel;
+    
+    public static bool hasEnteredTrap = false;
 
-	private bool _gameIsPaused = false;	
-
+	private bool _gameIsPaused = false;
+    private static bool _setNewPlayer = false;
+    
+    private static int _lastPlayer = 0;
+    private static int _currentPlayer = 0;
     public void Exit()
     {
         PlayerPrefs.SetString("LoadLevelName", "Start");
@@ -22,9 +28,32 @@ public class HUD : MonoBehaviour {
 		return;
     }
 
+    void Start() {
+        for (int i = 1; i <= Game._playersNumber; i++)
+        {
+            _CharactersPanel.transform.FindChild("Panel" + i).gameObject.SetActive(true);
+            _CharactersPanel.transform.FindChild("Panel" + i).GetComponent<Image>().overrideSprite = Resources.Load("Textures/ico" + PlayerPrefs.GetString("Character_" + i), typeof(Sprite)) as Sprite;
+            _CharactersPanel.transform.FindChild("Panel" + i).FindChild("Image").GetComponent<Image>().color = hexToColor(PlayerPrefs.GetString("CharacterColor_" + i));
+
+            if (i == Game.GetCurrentPlayerRound)
+            {
+                _CharactersPanel.transform.FindChild("Panel" + i).GetComponent<Image>().color = new Color(1, 1, 1, 1);
+                _lastPlayer = i;
+            }
+        }
+    }
+
     void Update() {
         if (Input.GetKeyDown(KeyCode.Escape))
             TimeControl();
+
+        if (_setNewPlayer) {
+            _CharactersPanel.transform.FindChild("Panel" + _lastPlayer).GetComponent<Image>().color = new Color(1, 1, 1, 0.5f);
+            _CharactersPanel.transform.FindChild("Panel" + _currentPlayer).GetComponent<Image>().color = new Color(1, 1, 1, 1);
+            _setNewPlayer = false;
+            _lastPlayer = _currentPlayer;
+        }
+
     }
 
 	public void TimeControl() {
@@ -95,6 +124,11 @@ public class HUD : MonoBehaviour {
        // StartCoroutine(HideAllMenus());
         StartCoroutine(ShowEndDemoVigniete());
         //_EndDemoPanel.GetComponent<CanvasGroup>().alpha = 1;
+    }
+
+    public static void SetNewPlayer(int _player) {
+        _currentPlayer = _player;
+        _setNewPlayer = true; 
     }
 
 	IEnumerator ShowVigniete() {
@@ -211,6 +245,22 @@ public class HUD : MonoBehaviour {
             _EndDemoPanel.GetComponent<CanvasGroup>().alpha = endDemoAlpha;
             yield return null;
         }
+    }
+
+    private Color hexToColor(string hex)
+    {
+        hex = hex.Replace("0x", "");//in case the string is formatted 0xFFFFFF
+        hex = hex.Replace("#", "");//in case the string is formatted #FFFFFF
+        byte a = 255;//assume fully visible unless specified in hex
+        byte r = byte.Parse(hex.Substring(0, 2), System.Globalization.NumberStyles.HexNumber);
+        byte g = byte.Parse(hex.Substring(2, 2), System.Globalization.NumberStyles.HexNumber);
+        byte b = byte.Parse(hex.Substring(4, 2), System.Globalization.NumberStyles.HexNumber);
+        //Only use alpha if the string has enough characters
+        if (hex.Length == 8)
+        {
+            a = byte.Parse(hex.Substring(4, 2), System.Globalization.NumberStyles.HexNumber);
+        }
+        return new Color32(r, g, b, a);
     }
 
 }

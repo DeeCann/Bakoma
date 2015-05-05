@@ -123,7 +123,6 @@
     <Compile Include="Assets\OVR\Scripts\OVRUGUI.cs" />
     <Compile Include="Assets\OVR\Scripts\OVRUtils.cs" />
     <Compile Include="Assets\OVR\Scripts\OVRVisionGuide.cs" />
-    <Compile Include="Assets\ProCore\Prototype\Scripts\RebuildMeshOnWake.cs" />
     <Compile Include="Assets\Scenes\NeatPlug\Ads\FlurryAd\FlurryAdTest.cs" />
     <Compile Include="Assets\Sceny\TestBack.cs" />
     <Compile Include="Assets\Scripts\Camera\SignPostCam.cs" />
@@ -143,6 +142,7 @@
     <Compile Include="Assets\Scripts\Fields\ShortcutField.cs" />
     <Compile Include="Assets\Scripts\Fields\SpecialMoveField.cs" />
     <Compile Include="Assets\Scripts\Fields\TrapField.cs" />
+    <Compile Include="Assets\Scripts\Fields\WalkCollider.cs" />
     <Compile Include="Assets\Scripts\FieldsBootstrap.cs" />
     <Compile Include="Assets\Scripts\FollowCamera.cs" />
     <Compile Include="Assets\Scripts\Game.cs" />
@@ -156,6 +156,7 @@
     <Compile Include="Assets\Scripts\HUD\InsertCodePanelControler.cs" />
     <Compile Include="Assets\Scripts\HUD\StartGameHUD.cs" />
     <Compile Include="Assets\Scripts\HUD\StartGamePlayerChoose.cs" />
+    <Compile Include="Assets\Scripts\HUD\StartGamePlayerDetails.cs" />
     <Compile Include="Assets\Scripts\HUD\cardPanelControler.cs" />
     <Compile Include="Assets\Scripts\HUD\trapsPanelControler.cs" />
     <Compile Include="Assets\Scripts\HighTrees\BranchMove.cs" />

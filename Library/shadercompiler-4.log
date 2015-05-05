@@ -1,8 +1,33 @@
 Base path: C:/Program Files (x86)/Unity/Editor/Data
+<<<<<<< HEAD
 Pipe name: \\.\pipe\UnityShaderCompiler-4-13264
 Cmd: getPlatforms
 Cmd: compileSnippet
   api=8 type=1 insize=952 outsize=1138 kw= ok=1
+=======
+Pipe name: \\.\pipe\UnityShaderCompiler-4-5924
+Cmd: getPlatforms
+Cmd: compileSnippet
+  api=14 type=1 insize=3154 outsize=1384 kw= ok=1
+Cmd: compileSnippet
+  api=14 type=1 insize=5463 outsize=2387 kw= ok=1
+Cmd: compileSnippet
+  api=14 type=1 insize=2934 outsize=1649 kw= ok=1
+Cmd: compileSnippet
+  api=14 type=0 insize=3834 outsize=1012 kw= ok=1
+Cmd: compileSnippet
+  api=14 type=0 insize=624 outsize=515 kw= ok=1
+Cmd: compileSnippet
+  api=14 type=0 insize=4366 outsize=1266 kw=DIRECTIONAL SHADOWS_SCREEN SHADOWS_NATIVE LIGHTMAP_ON DIRLIGHTMAP_ON ok=1
+Cmd: compileSnippet
+  api=14 type=0 insize=2380 outsize=1711 kw=POINT ok=1
+Cmd: compileSnippet
+  api=14 type=1 insize=2380 outsize=1676 kw=POINT_COOKIE ok=1
+Cmd: compileSnippet
+  api=14 type=1 insize=1835 outsize=536 kw= ok=1
+Cmd: compileSnippet
+  api=14 type=1 insize=4093 outsize=2369 kw=LIGHTMAP_ON DIRLIGHTMAP_OFF HDR_LIGHT_PREPASS_ON ok=1
+>>>>>>> 6a06c79965ae8ac2ad3eeb0e3b39742e92c08faf
 Unhandled exception: Readfile from pipe failed. GLE=Potok zosta³ zakoñczony.
 
 

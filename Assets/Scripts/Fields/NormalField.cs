@@ -8,8 +8,11 @@ public class NormalField : MonoBehaviour {
 	private bool _enableTextHelper = true;
 
 	void Awake() {
-		FieldObj = new Field();
-		gameObject.GetComponent<FieldSocket>().MyFieldObject = FieldObj;
+        if (FieldObj == null)
+        {
+            FieldObj = new Field();
+            gameObject.GetComponent<FieldSocket>().MyFieldObject = FieldObj;
+        }
 	} 
 
 	void Update() {

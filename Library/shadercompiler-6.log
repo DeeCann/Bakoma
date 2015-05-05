@@ -13,3 +13,7 @@ Cmd: compileSnippet
   api=14 type=0 insize=3844 outsize=1012 kw= ok=1
 Cmd: compileSnippet
   api=14 type=1 insize=4366 outsize=1811 kw=DIRECTIONAL SHADOWS_SCREEN SHADOWS_NATIVE LIGHTMAP_OFF DIRLIGHTMAP_OFF ok=1
+Unhandled exception: Readfile from pipe failed. GLE=Potok zosta³ zakoñczony.
+
+
+Quitting shader compiler process

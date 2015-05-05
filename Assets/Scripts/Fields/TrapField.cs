@@ -28,6 +28,8 @@ public class TrapField : MonoBehaviour {
 	}
 
     private void PlayerHasEnterTrap() {
+        HUD.hasEnteredTrap = true;
+
         _HUDControler.ShowTrapPanel();
     }
 }

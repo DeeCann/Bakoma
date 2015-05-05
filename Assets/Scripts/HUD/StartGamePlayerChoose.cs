@@ -3,6 +3,8 @@ using System.Collections;
 
 public class StartGamePlayerChoose : MonoBehaviour {
 
+    public Transform playerDetailsPanel;
+
     private bool _startRotation = false;
     private float _currentAngleRotation = 3;
     private float _currentStepRotation = 0;
@@ -54,16 +56,11 @@ public class StartGamePlayerChoose : MonoBehaviour {
         if (Input.GetMouseButtonDown(0))
             if (Physics.Raycast(ray, out hit))
             {
-                
-                switch(hit.collider.name) {
-                    case "Frog": PlayerPrefs.SetInt("Character", 4); break;
-                    case "Bear": PlayerPrefs.SetInt("Character", 3); break;
-                    case "Dog": PlayerPrefs.SetInt("Character", 2); break;
-                    case "Tiger": PlayerPrefs.SetInt("Character", 1); break;
-                    case "Hippo": PlayerPrefs.SetInt("Character", 0); break;
-                }
-                PlayerPrefs.SetString("LoadLevelName", "Game_Board");
-                Application.LoadLevel("Loader");
+                foreach (Transform child in transform)
+                    child.gameObject.SetActive(false);
+
+                playerDetailsPanel.gameObject.SetActive(true);
+                playerDetailsPanel.GetComponent<StartGamePlayerDetails>().CharacterSelected(hit.collider.name);
             }
     }
 
