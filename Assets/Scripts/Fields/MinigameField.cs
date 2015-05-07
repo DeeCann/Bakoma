@@ -54,89 +54,60 @@ public class MinigameField : MonoBehaviour
 
     void OnTriggerEnter(Collider playerCollider)
     {
-        
-
-        rand_game = Random.Range(1, 101);
-        //rand_game = 86;
-        Debug.Log(rand_game);
-        if (rand_game >= 70&&rand_game<=85)
+        if (playerCollider.tag == "Player" && playerCollider.gameObject.GetComponent<PlayerRoute>().NumberOfFieldsToGo == 1)
         {
-            if (playerCollider.tag == "Player")
+            rand_game = Random.Range(1, 101);
+
+            if (rand_game >= 70 && rand_game<=85)
             {
-                if (playerCollider.gameObject.GetComponent<PlayerRoute>().NumberOfFieldsToGo == 1)
-                {
-
-                    PlayerPrefs.SetInt("EnterdMiniGame", 1);
+                PlayerPrefs.SetInt("EnterdMiniGame", 1);
                    
-                    PlayerPrefs.SetInt("Difficulty", PlayerPrefs.GetInt("CharacterAge_" + Game.GetCurrentPlayerRound));
-                    PlayerPrefs.SetString("MiniGameFruit", _minigameNames.ToString());
+                PlayerPrefs.SetInt("Difficulty", PlayerPrefs.GetInt("CharacterAge_" + Game.GetCurrentPlayerRound));
+                PlayerPrefs.SetString("MiniGameFruit", _minigameNames.ToString());
 
-                    GameObject.Find("GeneratedFruitsContainer").gameObject.SetActive(false);
-                    //GameObject.Find("Hippo").gameObject.SetActive(false);
-                    StartCoroutine("LoadGame");
-                    //Application.LoadLevel("Test");
+                GameObject.Find("GeneratedFruitsContainer").gameObject.SetActive(false);
+                //GameObject.Find("Hippo").gameObject.SetActive(false);
+                StartCoroutine("LoadGame");
+                //Application.LoadLevel("Test");
 
-                    _hasPlayerForMiniGame = true;
-                    _playerEnteredTime = Time.time;
-                    print("minigame");
+                _hasPlayerForMiniGame = true;
+                _playerEnteredTime = Time.time;
 
-                    Game._hasEnteredMinigameField = true;
-                   
-                }
 
+                Game._hasEnteredMinigameField = true;
             }
-            ;
-		}if (rand_game >85)
-		{
-			if (playerCollider.tag == "Player")
-			{
-				Debug.Log("minigame_enter");
-				if (playerCollider.gameObject.GetComponent<PlayerRoute>().NumberOfFieldsToGo == 1)
-				{
+		    else if (rand_game >85)
+		    {
+				PlayerPrefs.SetInt("EnterdMiniGame", 1);
+				PlayerPrefs.SetInt("Difficulty", 1);
+				PlayerPrefs.SetString("MiniGameFruit", _minigameNames.ToString());
 					
-					PlayerPrefs.SetInt("EnterdMiniGame", 1);
-					PlayerPrefs.SetInt("Difficulty", 1);
-					PlayerPrefs.SetString("MiniGameFruit", _minigameNames.ToString());
+				GameObject.Find("GeneratedFruitsContainer").gameObject.SetActive(false);
+				//GameObject.Find("Hippo").gameObject.SetActive(false);
+				StartCoroutine("LoadFarm");
+				//Application.LoadLevel("Test");
 					
-					GameObject.Find("GeneratedFruitsContainer").gameObject.SetActive(false);
-					//GameObject.Find("Hippo").gameObject.SetActive(false);
-					StartCoroutine("LoadFarm");
-					//Application.LoadLevel("Test");
-					
-					_hasPlayerForMiniGame = true;
-					_playerEnteredTime = Time.time;
+				_hasPlayerForMiniGame = true;
+				_playerEnteredTime = Time.time;
 
-                    Game._hasEnteredMinigameField = true;
-				}
-				
-			}
-			;
-		}
-        if (rand_game <70)
-        {
-            if (playerCollider.tag == "Player")
+                Game._hasEnteredMinigameField = true;
+		    }
+            else if (rand_game <70)
             {
-                Debug.Log("minigame_enter");
-                if (playerCollider.gameObject.GetComponent<PlayerRoute>().NumberOfFieldsToGo == 1)
-                {
+                PlayerPrefs.SetInt("EnterdMiniGame", 1);
+                PlayerPrefs.SetInt("Difficulty", PlayerPrefs.GetInt("CharacterAge_" + Game.GetCurrentPlayerRound));
+                PlayerPrefs.SetString("MiniGameQuiz", _minigameNames.ToString());
 
-                    PlayerPrefs.SetInt("EnterdMiniGame", 1);
-                    PlayerPrefs.SetInt("Difficulty", PlayerPrefs.GetInt("CharacterAge_" + Game.GetCurrentPlayerRound));
-                    PlayerPrefs.SetString("MiniGameQuiz", _minigameNames.ToString());
-
-                    GameObject.Find("GeneratedFruitsContainer").gameObject.SetActive(false);
+                GameObject.Find("GeneratedFruitsContainer").gameObject.SetActive(false);
                    
-                    StartCoroutine("LoadQuiz");
-                    //Application.LoadLevel("Test");
+                StartCoroutine("LoadQuiz");
+                //Application.LoadLevel("Test");
 
-                    _hasPlayerForMiniGame = true;
-                    _playerEnteredTime = Time.time;
+                _hasPlayerForMiniGame = true;
+                _playerEnteredTime = Time.time;
 
-                    Game._hasEnteredMinigameField = true;
-                }
-
+                Game._hasEnteredMinigameField = true;
             }
-            ;
         }
     }
 
