@@ -133,6 +133,14 @@
     <Compile Include="Assets\InstantOC\Editor\IocEditor.cs" />
     <Compile Include="Assets\JSON\Editor\JSONChecker.cs" />
     <Compile Include="Assets\MeshBrush\Editor\MeshBrushEditor.cs" />
+    <Compile Include="Assets\OVR\Editor\OVRBuild.cs" />
+    <Compile Include="Assets\OVR\Editor\OVRCameraControllerEditor.cs" />
+    <Compile Include="Assets\OVR\Editor\OVRDeviceEditor.cs" />
+    <Compile Include="Assets\OVR\Editor\OVREditorGUIUtility.cs" />
+    <Compile Include="Assets\OVR\Editor\OVRPlayerControllerEditor.cs" />
+    <Compile Include="Assets\OVR\Editor\OVRPrefabs.cs" />
+    <Compile Include="Assets\OVR\Editor\OVRShimLoader.cs" />
+    <Compile Include="Assets\OVR\Editor\OVRUGUIEditor.cs" />
     <None Include="Assets\External\FastShadows\Shaders\FS_ShadowShader.shader" />
     <None Include="Assets\External\MatCap Shaders\Shaders\MatCap_Lit.shader" />
     <None Include="Assets\External\MatCap Shaders\Shaders\MatCap_TextureMult.shader" />
@@ -144,8 +152,11 @@
     <None Include="Assets\MeshBrush\Documentation.txt" />
     <None Include="Assets\MeshBrush\SimpleVegetation.shader" />
     <None Include="Assets\MeshBrush\SimpleVegetationUnlit.shader" />
+    <None Include="Assets\OVR\Shaders\OVRGUIShader.shader" />
+    <None Include="Assets\OVR\Shaders\TextShader3D.shader" />
     <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
     <None Include="Assets\Plugins\Android\res\values\google_play_services_version.xml" />
+    <None Include="Assets\Plugins\donotdelete.txt" />
     <None Include="Assets\Raw Mocap Data\Animations\_CompleteAnimationList.txt" />
     <None Include="Assets\README.txt" />
     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_Antialiasing\DLAA.shader" />

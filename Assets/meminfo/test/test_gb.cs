@@ -7,8 +7,17 @@ public class test_gb : MonoBehaviour {
 
 	private int flag;
 	
-	void Start () {
-
+	void Awake () {
+		flag = 0;
+		#if UNITY_ANDROID || UNITY_IPHONE
+		//call this every time you want to get updated data
+		//if it returns false no memory data was retrieved
+		bool mi = meminfo.getMemInfo();
+		if(!mi) Debug.Log("Could not get Memory Info");
+		
+		if(meminfo.minf.memfree<5000){malo.SetActive (true);flag=1;}
+		
+		#endif
 		
 	}
 	

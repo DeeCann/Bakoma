@@ -39,46 +39,46 @@ public class Dice : MonoBehaviour {
 			}
 		}
 
-        if (Input.GetKeyDown(KeyCode.Alpha1)) {
-            _newDiceThrow = true;
-            _diceValue = 1;
-            _diceThrows++;
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            _newDiceThrow = true;
-            _diceValue = 2;
-            _diceThrows++;
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha3))
-        {
-            _newDiceThrow = true;
-            _diceValue = 3;
-            _diceThrows++;
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha4))
-        {
-            _newDiceThrow = true;
-            _diceValue = 4;
-            _diceThrows++;
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha5))
-        {
-            _newDiceThrow = true;
-            _diceValue = 5;
-            _diceThrows++;
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha6))
-        {
-            _newDiceThrow = true;
-            _diceValue = 6;
-            _diceThrows++;
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha0))
-        {
-            _newDiceThrow = true;
-            _diceValue = 100;
-        }
+        //if (Input.GetKeyDown(KeyCode.Alpha1)) {
+        //    _newDiceThrow = true;
+        //    _diceValue = 1;
+        //    _diceThrows++;
+        //}
+        //if (Input.GetKeyDown(KeyCode.Alpha2))
+        //{
+        //    _newDiceThrow = true;
+        //    _diceValue = 2;
+        //    _diceThrows++;
+        //}
+        //if (Input.GetKeyDown(KeyCode.Alpha3))
+        //{
+        //    _newDiceThrow = true;
+        //    _diceValue = 3;
+        //    _diceThrows++;
+        //}
+        //if (Input.GetKeyDown(KeyCode.Alpha4))
+        //{
+        //    _newDiceThrow = true;
+        //    _diceValue = 4;
+        //    _diceThrows++;
+        //}
+        //if (Input.GetKeyDown(KeyCode.Alpha5))
+        //{
+        //    _newDiceThrow = true;
+        //    _diceValue = 5;
+        //    _diceThrows++;
+        //}
+        //if (Input.GetKeyDown(KeyCode.Alpha6))
+        //{
+        //    _newDiceThrow = true;
+        //    _diceValue = 6;
+        //    _diceThrows++;
+        //}
+        //if (Input.GetKeyDown(KeyCode.Alpha0))
+        //{
+        //    _newDiceThrow = true;
+        //    _diceValue = 100;
+        //}
 	}
 
 	public static bool CanDoDiceRoll {

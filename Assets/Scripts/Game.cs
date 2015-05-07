@@ -87,6 +87,7 @@ public class Game : MonoBehaviour {
             }
 
             _currentPlayerRound = 1;
+            PlayerPrefs.SetString("Current_character", GetCurrentCharacterName);
 
             //GameObject player = Instantiate(Resources.Load(characterNames[i]), Vector3.zero, Quaternion.identity) as GameObject;
 
@@ -343,6 +344,9 @@ public class Game : MonoBehaviour {
         }
 
         HUD.SetNewPlayer(_currentPlayerRound);
+
+        PlayerPrefs.SetString("Current_character", GetCurrentCharacterName);
+
 		PinchZoom.ResetZoom();
 	}
 

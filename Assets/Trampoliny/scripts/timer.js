@@ -35,7 +35,7 @@ function Update(){
 function total(){
 	if(flag==1){
 	if(choos_fruit.fruit==1){
-	total_points.SetActive(true);total_points.GetComponent.<UI.Text>().text=score_count.score_total.ToString();apple_summary.SetActive(true);
+	total_points.SetActive(true);total_points.GetComponent.<UI.Text>().text=Game.score_summary.ToString();apple_summary.SetActive(true);
 	PlayerPrefs.SetInt("GamePoints_Apple",PlayerPrefs.GetInt("GamePoints_Apple")+score_count.score_total);
 	}
 	if(choos_fruit.fruit==2){

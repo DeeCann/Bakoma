@@ -88,8 +88,11 @@
     <None Include="Assets\MeshBrush\Documentation.txt" />
     <None Include="Assets\MeshBrush\SimpleVegetation.shader" />
     <None Include="Assets\MeshBrush\SimpleVegetationUnlit.shader" />
+    <None Include="Assets\OVR\Shaders\OVRGUIShader.shader" />
+    <None Include="Assets\OVR\Shaders\TextShader3D.shader" />
     <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
     <None Include="Assets\Plugins\Android\res\values\google_play_services_version.xml" />
+    <None Include="Assets\Plugins\donotdelete.txt" />
     <None Include="Assets\Raw Mocap Data\Animations\_CompleteAnimationList.txt" />
     <None Include="Assets\README.txt" />
     <None Include="Assets\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_Antialiasing\DLAA.shader" />

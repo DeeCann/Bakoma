@@ -10,6 +10,7 @@ public class FarmCharacterMove : MonoBehaviour {
 	private float startJumpTime = 0;
 
 
+
 	void Start ()
 	{ 
 		animationControler = GetComponent<Animator>();
@@ -62,6 +63,46 @@ public class FarmCharacterMove : MonoBehaviour {
 			Destroy(collideObject.transform.FindChild("GrabWave").gameObject, 1);
 			collideObject.transform.FindChild("GrabWave").transform.parent = null;
 			Destroy(collideObject.gameObject);
+
+		}
+		if(collideObject.tag == "MiniGame_Straw") {
+			collideObject.transform.FindChild("GrabWave").animation.Play();
+			Destroy(collideObject.transform.FindChild("GrabWave").gameObject, 1);
+			collideObject.transform.FindChild("GrabWave").transform.parent = null;
+			Destroy(collideObject.gameObject);
+
+		}
+		if(collideObject.tag == "MiniGame_Peach") {
+			collideObject.transform.FindChild("GrabWave").animation.Play();
+			Destroy(collideObject.transform.FindChild("GrabWave").gameObject, 1);
+			collideObject.transform.FindChild("GrabWave").transform.parent = null;
+			Destroy(collideObject.gameObject);
+			
+		}
+		if(collideObject.tag == "MiniGame_Black") {
+			collideObject.transform.FindChild("GrabWave").animation.Play();
+			Destroy(collideObject.transform.FindChild("GrabWave").gameObject, 1);
+			collideObject.transform.FindChild("GrabWave").transform.parent = null;
+			Destroy(collideObject.gameObject);
+			
+		}
+		if(collideObject.tag == "MiniGame_Rasp") {
+			collideObject.transform.FindChild("GrabWave").animation.Play();
+			Destroy(collideObject.transform.FindChild("GrabWave").gameObject, 1);
+			collideObject.transform.FindChild("GrabWave").transform.parent = null;
+			Destroy(collideObject.gameObject);
+			
+		}
+		if(collideObject.tag == "MiniGame_Blue") {
+			collideObject.transform.FindChild("GrabWave").animation.Play();
+			Destroy(collideObject.transform.FindChild("GrabWave").gameObject, 1);
+			collideObject.transform.FindChild("GrabWave").transform.parent = null;
+			Destroy(collideObject.gameObject);
+			
+		}
+		if(collideObject.tag == "end_barrel") {
+			Debug.Log ("koniec");
+			
 		}
 	}
 
