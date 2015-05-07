@@ -8,6 +8,7 @@ public class FarmCharacterMove : MonoBehaviour {
 
 	private bool startJump = false;
 	private float startJumpTime = 0;
+	private float dirJump;
 
 
 
@@ -17,10 +18,8 @@ public class FarmCharacterMove : MonoBehaviour {
 	}
 
 	void Update() {
-		if(Application.platform == RuntimePlatform.OSXEditor)
-			_horizontalInput = Input.GetAxis("Horizontal") * 0.3f;
-		else 
-			_horizontalInput = Input.acceleration.x;
+		if(Application.platform == RuntimePlatform.OSXEditor)_horizontalInput = Input.GetAxis("Horizontal") * 0.3f;
+		else _horizontalInput = Input.acceleration.x;
 		_horizontalInput = Input.GetAxis("Horizontal") * 0.3f;
 		if(Application.platform == RuntimePlatform.OSXEditor) {
 			if(Input.GetKeyDown(KeyCode.Space) && IsGrounded)
@@ -29,8 +28,10 @@ public class FarmCharacterMove : MonoBehaviour {
 			if(Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began && IsGrounded)
 				startJump = true;
 		}
-		if(Input.GetKeyDown(KeyCode.Space) && IsGrounded)
-			startJump = true;
+		if (Input.GetKeyDown (KeyCode.Space) && IsGrounded) {
+						startJump = true;
+						dirJump=_horizontalInput;
+				}
 	}
 
 	void FixedUpdate() {
@@ -38,9 +39,13 @@ public class FarmCharacterMove : MonoBehaviour {
 			if(startJumpTime + 0.1f < Time.time)
 				animationControler.SetBool("Jump", false);
 		}
+		if (animationControler.GetCurrentAnimatorStateInfo (0).IsName ("Jump")) {
+			//_horizontalInput=0;
+				} 
+		if (startJump) {
+						Jump ();
 
-		if(startJump)
-			Jump();
+				}
 
 		if(CanMove)
 		{
@@ -109,7 +114,8 @@ public class FarmCharacterMove : MonoBehaviour {
 	private void Jump() {
 		startJumpTime = Time.time;
 		startJump = false;
-		rigidbody.AddForce(transform.up * 5.8f, ForceMode.Impulse);
+		rigidbody.AddForce(10,5.8f,0, ForceMode.Impulse);
+
 		animationControler.SetBool("Jump", true);
 	}
 

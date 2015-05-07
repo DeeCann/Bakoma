@@ -52,6 +52,9 @@
     <Reference Include="IFacebook">
       <HintPath>Assets\Facebook\Scripts\IFacebook.dll</HintPath>
     </Reference>
+    <Reference Include="OneSignalSDK">
+      <HintPath>Assets\Plugins\OneSignalSDK.dll</HintPath>
+    </Reference>
     <Reference Include="ProBuilderCore">
       <HintPath>Assets\ProCore\Prototype\Classes\ProBuilderCore.dll</HintPath>
     </Reference>
@@ -181,8 +184,6 @@
     <Compile Include="Assets\Scripts\WebSerwis\Connect.cs" />
     <Compile Include="Assets\Scripts\initFB.cs" />
     <Compile Include="Assets\Scripts\quit_gb.cs" />
-    <Compile Include="Assets\Tuscany\Models\Birds\BirdsBehaviour.cs" />
-    <Compile Include="Assets\Tuscany\Water (Basic)\Sources\Scripts\WaterSimple.cs" />
     <Compile Include="Assets\meminfo\test\test.cs" />
     <Compile Include="Assets\meminfo\test\test_gb.cs" />
     <None Include="Assets\External\FastShadows\Shaders\FS_ShadowShader.shader" />
@@ -199,6 +200,12 @@
     <None Include="Assets\OVR\Shaders\OVRGUIShader.shader" />
     <None Include="Assets\OVR\Shaders\TextShader3D.shader" />
     <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
+    <None Include="Assets\Plugins\Android\google-play-services_lib\AndroidManifest.xml" />
+    <None Include="Assets\Plugins\Android\google-play-services_lib\lint.xml" />
+    <None Include="Assets\Plugins\Android\google-play-services_lib\proguard.txt" />
+    <None Include="Assets\Plugins\Android\google-play-services_lib\README.txt" />
+    <None Include="Assets\Plugins\Android\google-play-services_lib\res\values\version.xml" />
+    <None Include="Assets\Plugins\Android\OneSignal\AndroidManifest.xml" />
     <None Include="Assets\Plugins\Android\res\values\google_play_services_version.xml" />
     <None Include="Assets\Plugins\donotdelete.txt" />
     <None Include="Assets\Raw Mocap Data\Animations\_CompleteAnimationList.txt" />
@@ -284,23 +291,6 @@
     <None Include="Assets\Trampoliny\anim\mask.shader" />
     <None Include="Assets\Trampoliny\dupa.shader" />
     <None Include="Assets\Trampoliny\mWaterScreen1\waterscreen1.shader" />
-    <None Include="Assets\Tuscany\Models\Materials\AlphaTest-DiffuseBack.shader" />
-    <None Include="Assets\Tuscany\Models\Materials\AlphaTest-DiffuseDoublesided.shader" />
-    <None Include="Assets\Tuscany\Models\Materials\DoubleSided ButterFly.shader" />
-    <None Include="Assets\Tuscany\Models\Materials\DoubleSided.shader" />
-    <None Include="Assets\Tuscany\Models\Materials\TransparentTerrain.shader" />
-    <None Include="Assets\Tuscany\Models\Materials\Vertex color unlit 1.shader" />
-    <None Include="Assets\Tuscany\Models\Materials\Vertex color unlit 2.shader" />
-    <None Include="Assets\Tuscany\Models\Materials\Vertex color unlit 3.shader" />
-    <None Include="Assets\Tuscany\Models\Materials\Vertex color unlit 4.shader" />
-    <None Include="Assets\Tuscany\Models\Materials\Vertex color unlit 5.shader" />
-    <None Include="Assets\Tuscany\Models\Materials\Vertex color unlit 6.shader" />
-    <None Include="Assets\Tuscany\Models\Materials\Vertex color unlit 7.shader" />
-    <None Include="Assets\Tuscany\Models\Materials\Vertex color unlit 8.shader" />
-    <None Include="Assets\Tuscany\Particles\Shaders\Add_Layer.shader" />
-    <None Include="Assets\Tuscany\Particles\Shaders\AddSmooth_Layer.shader" />
-    <None Include="Assets\Tuscany\Particles\Shaders\Particle Alpha Blend_IgnoreFog.shader" />
-    <None Include="Assets\Tuscany\Water (Basic)\Sources\Shaders\FX-Water Simple.shader" />
     <None Include="Assets\Facebook\Scripts\IFacebook.dll" />
     <None Include="Assets\ProCore\Prototype\Classes\ProBuilderCore.dll" />
     <None Include="Assets\ProCore\Prototype\Classes\ProBuilderMeshOps.dll" />

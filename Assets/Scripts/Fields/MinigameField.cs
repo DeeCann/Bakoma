@@ -57,7 +57,7 @@ public class MinigameField : MonoBehaviour
         
 
         rand_game = Random.Range(1, 101);
-        rand_game = 10;
+        rand_game = 90;
         Debug.Log(rand_game);
         if (rand_game >= 70&&rand_game<=85)
         {
