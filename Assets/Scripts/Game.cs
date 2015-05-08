@@ -58,7 +58,7 @@ public class Game : MonoBehaviour {
 
 	void Awake() {
         Physics.gravity = new Vector3(0, -9.8f, 0);
-		_startField = GameObject.FindGameObjectsWithTag(Tags.StartPoint)[Random.Range(0,1)];
+		_startField = GameObject.FindGameObjectsWithTag(Tags.StartPoint)[Random.Range(2,3)];
 		_HUDControler = GameObject.FindGameObjectWithTag(Tags.HUDControler);
         //PlayerPrefs.SetInt("ResetGameBoard", 1);
         //PlayerPrefs.SetInt("Character", 0);
@@ -87,6 +87,7 @@ public class Game : MonoBehaviour {
             }
 
             _currentPlayerRound = 1;
+            PlayerPrefs.SetString("Current_character", GetCurrentCharacterName);
 
             //GameObject player = Instantiate(Resources.Load(characterNames[i]), Vector3.zero, Quaternion.identity) as GameObject;
 
@@ -343,6 +344,9 @@ public class Game : MonoBehaviour {
         }
 
         HUD.SetNewPlayer(_currentPlayerRound);
+
+        PlayerPrefs.SetString("Current_character", GetCurrentCharacterName);
+
 		PinchZoom.ResetZoom();
 	}
 
