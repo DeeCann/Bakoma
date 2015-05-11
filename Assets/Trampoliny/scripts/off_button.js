@@ -9,7 +9,7 @@ function Update () {
 
 }
 function OnMouseDown(){
-if(this.gameObject.name=="iks"){
-	timer.timeLeft=0;
-}
+
+	Timer.timeLeft=0;
+
 }

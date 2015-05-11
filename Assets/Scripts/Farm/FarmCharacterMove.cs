@@ -12,6 +12,9 @@ public class FarmCharacterMove : MonoBehaviour {
 
 
 
+
+
+
 	void Start ()
 	{ 
 		animationControler = GetComponent<Animator>();
@@ -20,7 +23,7 @@ public class FarmCharacterMove : MonoBehaviour {
 	void Update() {
 		if(Application.platform == RuntimePlatform.OSXEditor)_horizontalInput = Input.GetAxis("Horizontal") * 0.3f;
 		else _horizontalInput = Input.acceleration.x;
-		_horizontalInput = Input.GetAxis("Horizontal") * 0.3f;
+		//_horizontalInput = Input.GetAxis("Horizontal") * 0.3f;
 		if(Application.platform == RuntimePlatform.OSXEditor) {
 			if(Input.GetKeyDown(KeyCode.Space) && IsGrounded)
 				startJump = true;
@@ -30,8 +33,10 @@ public class FarmCharacterMove : MonoBehaviour {
 		}
 		if (Input.GetKeyDown (KeyCode.Space) && IsGrounded) {
 						startJump = true;
-						dirJump=_horizontalInput;
+						
 				}
+
+
 	}
 
 	void FixedUpdate() {
@@ -39,31 +44,38 @@ public class FarmCharacterMove : MonoBehaviour {
 			if(startJumpTime + 0.1f < Time.time)
 				animationControler.SetBool("Jump", false);
 		}
+
 		if (animationControler.GetCurrentAnimatorStateInfo (0).IsName ("Jump")) {
-			//_horizontalInput=0;
-				} 
-		if (startJump) {
-						Jump ();
 
-				}
-
+		}
+		
+		
+		
 		if(CanMove)
 		{
 			animationControler.SetFloat("Move", _horizontalInput * 8);
-
+			
 			float angle = (-90 * _horizontalInput * 4) + 180;
 			angle = Mathf.Clamp(angle, 90, 270);
-
+			
 			transform.rotation = Quaternion.AngleAxis(angle, Vector3.up);
 			transform.position = new Vector3(transform.position.x + (_horizontalInput / 5), transform.position.y, 0);
 		} else {
 			animationControler.SetFloat("Move", Mathf.Lerp( _horizontalInput, 0, Time.deltaTime * 2));
 			transform.rotation = Quaternion.Lerp(transform.rotation,  Quaternion.AngleAxis(180, Vector3.up), Time.deltaTime * 6);
 		}
+		if (startJump) {
+
+			Jump ();
+
+		}
+
 	}
 
 	void OnTriggerEnter(Collider collideObject) {
+
 		if(collideObject.tag == "MiniGame_Apple") {
+
 			collideObject.transform.FindChild("GrabWave").animation.Play();
 			Destroy(collideObject.transform.FindChild("GrabWave").gameObject, 1);
 			collideObject.transform.FindChild("GrabWave").transform.parent = null;
@@ -71,6 +83,7 @@ public class FarmCharacterMove : MonoBehaviour {
 
 		}
 		if(collideObject.tag == "MiniGame_Straw") {
+
 			collideObject.transform.FindChild("GrabWave").animation.Play();
 			Destroy(collideObject.transform.FindChild("GrabWave").gameObject, 1);
 			collideObject.transform.FindChild("GrabWave").transform.parent = null;
@@ -78,6 +91,7 @@ public class FarmCharacterMove : MonoBehaviour {
 
 		}
 		if(collideObject.tag == "MiniGame_Peach") {
+
 			collideObject.transform.FindChild("GrabWave").animation.Play();
 			Destroy(collideObject.transform.FindChild("GrabWave").gameObject, 1);
 			collideObject.transform.FindChild("GrabWave").transform.parent = null;
@@ -85,6 +99,7 @@ public class FarmCharacterMove : MonoBehaviour {
 			
 		}
 		if(collideObject.tag == "MiniGame_Black") {
+
 			collideObject.transform.FindChild("GrabWave").animation.Play();
 			Destroy(collideObject.transform.FindChild("GrabWave").gameObject, 1);
 			collideObject.transform.FindChild("GrabWave").transform.parent = null;
@@ -92,6 +107,7 @@ public class FarmCharacterMove : MonoBehaviour {
 			
 		}
 		if(collideObject.tag == "MiniGame_Rasp") {
+
 			collideObject.transform.FindChild("GrabWave").animation.Play();
 			Destroy(collideObject.transform.FindChild("GrabWave").gameObject, 1);
 			collideObject.transform.FindChild("GrabWave").transform.parent = null;
@@ -99,6 +115,7 @@ public class FarmCharacterMove : MonoBehaviour {
 			
 		}
 		if(collideObject.tag == "MiniGame_Blue") {
+
 			collideObject.transform.FindChild("GrabWave").animation.Play();
 			Destroy(collideObject.transform.FindChild("GrabWave").gameObject, 1);
 			collideObject.transform.FindChild("GrabWave").transform.parent = null;
@@ -114,10 +131,14 @@ public class FarmCharacterMove : MonoBehaviour {
 	private void Jump() {
 		startJumpTime = Time.time;
 		startJump = false;
-		rigidbody.AddForce(10,5.8f,0, ForceMode.Impulse);
+		rigidbody.AddForce(0,5.8f,0, ForceMode.Impulse);
 
 		animationControler.SetBool("Jump", true);
+
+		
 	}
+
+
 
 	private bool IsGrounded {
 		get {
@@ -137,4 +158,5 @@ public class FarmCharacterMove : MonoBehaviour {
 				return false;
 		}
 	}
+
 }

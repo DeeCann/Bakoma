@@ -8,7 +8,7 @@ public class MiniGameFarm : MonoBehaviour {
 	void Awake () {
 		//Debug.Log(PlayerPrefs.GetString("Character_1"));
 
-		switch(PlayerPrefs.GetString("Character_1")) {
+		switch(PlayerPrefs.GetString("Current_character")) {
 
 		case "Frog": _myCharacter = (GameObject)Instantiate(Resources.Load("zaba"), _myCharacterStartPosition, Quaternion.identity); break;
 		case "Bear": _myCharacter = (GameObject)Instantiate(Resources.Load("mis"), _myCharacterStartPosition, Quaternion.identity); break;
