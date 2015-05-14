@@ -54,9 +54,16 @@ public class MinigameField : MonoBehaviour
 
     void OnTriggerEnter(Collider playerCollider)
     {
+
+        rand_game = Random.Range(1, 101);
+        //rand_game = 90;
+
+        
+
         if (playerCollider.tag == "Player" && playerCollider.gameObject.GetComponent<PlayerRoute>().NumberOfFieldsToGo == 1)
+
         {
-            rand_game = Random.Range(1, 101);
+            
 
             if (rand_game >= 70 && rand_game <= 85)
             {

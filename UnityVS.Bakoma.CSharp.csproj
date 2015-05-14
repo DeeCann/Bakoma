@@ -92,11 +92,13 @@
     <Compile Include="Assets\JSON\JSONObject.cs" />
     <Compile Include="Assets\JSON\JSONTemplates.cs" />
     <Compile Include="Assets\JSON\VectorTemplates.cs" />
+    <Compile Include="Assets\LocalNotification.cs" />
     <Compile Include="Assets\MeshBrush\Example_Runtime.cs" />
     <Compile Include="Assets\MeshBrush\MB_MeshCombineUtility.cs" />
     <Compile Include="Assets\MeshBrush\MeshBrush.cs" />
     <Compile Include="Assets\MeshBrush\MeshBrushParent.cs" />
     <Compile Include="Assets\MeshBrush\MeshBrush_RuntimeAPI.cs" />
+    <Compile Include="Assets\NotificationTest.cs" />
     <Compile Include="Assets\OVR\Scripts\OVRCamera.cs" />
     <Compile Include="Assets\OVR\Scripts\OVRCameraController.cs" />
     <Compile Include="Assets\OVR\Scripts\OVRCrosshair.cs" />

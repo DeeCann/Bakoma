@@ -50,6 +50,14 @@
      <Compile Include="Assets\Plugins\MiniJSON.cs" />
      <Compile Include="Assets\Plugins\NativeGateway\BunchManager.cs" />
      <Compile Include="Assets\Plugins\NativeGateway\NativeGateway.cs" />
+     <Compile Include="Assets\Plugins\OneSignal\Example\GameControllerExample.cs" />
+     <Compile Include="Assets\Plugins\OneSignal\GameThrive.cs" />
+     <Compile Include="Assets\Plugins\OneSignal\MiniJSON.cs" />
+     <Compile Include="Assets\Plugins\OneSignal\OneSignal.cs" />
+     <Compile Include="Assets\Plugins\OneSignal\OneSignalAndroid.cs" />
+     <Compile Include="Assets\Plugins\OneSignal\OneSignalIOS.cs" />
+     <Compile Include="Assets\Plugins\OneSignal\OneSignalPlatform.cs" />
+     <Compile Include="Assets\Plugins\OneSignal\OneSignalWP.cs" />
      <Compile Include="Assets\Plugins\meminfo.cs" />
      <Compile Include="Assets\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" />
      <Compile Include="Assets\Standard Assets\Image Effects (Pro Only)\BlurEffect.cs" />
