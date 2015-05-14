@@ -18,7 +18,7 @@ public class Field : IField  {
 	private int _randomFieldsMovementValue = 0;
 	
 	private List<bool> sockets = new List<bool>() {false, false, false, false, false};
-    private List<Vector3> socketsPositions = new List<Vector3>() { new Vector3(-0.01f, 0, -0.01f), new Vector3(-0.07f, 0, 0.07f), new Vector3(0.07f, 0, 0.07f), new Vector3(-0.07f, 0, -0.07f), new Vector3(0.07f, 0, -0.07f) };
+    private List<Vector3> socketsPositions = new List<Vector3>() { new Vector3(-0.01f, 0, -0.01f), new Vector3(-0.1f, 0, 0.1f), new Vector3(0.1f, 0, 0.1f), new Vector3(-0.1f, 0, -0.1f), new Vector3(0.1f, 0, -0.1f) };
 
 	public Field() {
 		MyType = MyFieldType.Null;

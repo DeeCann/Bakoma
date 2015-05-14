@@ -1,23 +1,6 @@
 ﻿<Properties>
-<<<<<<< HEAD
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Farm_mi\Scripts\add_point_.js">
-    <Files>
-      <File FileName="Assets\Scripts\Fields\MinigameField.cs" Line="43" Column="43" />
-      <File FileName="Assets\Trampoliny\scripts\how.js" Line="1" Column="1" />
-      <File FileName="Assets\Farm_mi\Scripts\how_to_play.js" Line="1" Column="1" />
-      <File FileName="Assets\Farm_mi\Scripts\Game.js" Line="47" Column="1" />
-      <File FileName="Assets\Farm_mi\Scripts\add_point_.js" Line="15" Column="14" />
-      <File FileName="Assets\Scripts\Farm\MiniGameFarm.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Farm\CameraFollow.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\HUD\StartGamePlayerChoose.cs" Line="1" Column="1" />
-      <File FileName="Assets\Farm_mi\Scripts\modules.js" Line="1" Column="1" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
-=======
   <MonoDevelop.Ide.Workspace />
   <MonoDevelop.Ide.Workbench />
->>>>>>> 6a06c79965ae8ac2ad3eeb0e3b39742e92c08faf
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

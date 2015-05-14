@@ -39,7 +39,8 @@ public class Dice : MonoBehaviour {
 			}
 		}
 
-        //if (Input.GetKeyDown(KeyCode.Alpha1)) {
+        //if (Input.GetKeyDown(KeyCode.Alpha1))
+        //{
         //    _newDiceThrow = true;
         //    _diceValue = 1;
         //    _diceThrows++;

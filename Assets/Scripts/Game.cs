@@ -69,12 +69,12 @@ public class Game : MonoBehaviour {
             {
 
                 //GameObject player = Instantiate(Resources.Load(characterNames[i]), Vector3.zero, Quaternion.identity) as GameObject;
-                GameObject player = Instantiate(Resources.Load(PlayerPrefs.GetString("Character_"+(i+1))), Vector3.zero, Quaternion.identity) as GameObject;
+                GameObject player = Instantiate(Resources.Load(PlayerPrefs.GetString("Character_" + (i + 1))), Vector3.zero, Quaternion.identity) as GameObject;
                 //player.name = characterNames[i];
                 player.name = PlayerPrefs.GetString("Character_" + (i + 1));
 
                 //player.GetComponent<PlayerRoute>().StartFieldSocket = _startField.GetComponent<FieldSocket>().TakeSocketNumber;
-                player.GetComponent<PlayerRoute>().StartFieldSocket = _startField.GetComponent<FieldSocket>().TakeSocketNumber(i+1);
+                player.GetComponent<PlayerRoute>().StartFieldSocket = _startField.GetComponent<FieldSocket>().TakeSocketNumber(i + 1);
                 player.transform.position = _startField.GetComponent<FieldSocket>().TakeSocketVectorPosition(player.GetComponent<PlayerRoute>().StartFieldSocket);
                 player.transform.position = new Vector3(player.transform.position.x, 0.06f, player.transform.position.z);
 
@@ -89,7 +89,7 @@ public class Game : MonoBehaviour {
             _currentPlayerRound = 1;
             PlayerPrefs.SetString("Current_character", GetCurrentCharacterName);
 
-            //GameObject player = Instantiate(Resources.Load(characterNames[i]), Vector3.zero, Quaternion.identity) as GameObject;
+           // GameObject player = Instantiate(Resources.Load(characterNames[0]), Vector3.zero, Quaternion.identity) as GameObject;
 
 
 
@@ -97,7 +97,7 @@ public class Game : MonoBehaviour {
             //GameObject player = Instantiate(Resources.Load(characterNames[PlayerPrefs.GetInt("Character")]), Vector3.zero, Quaternion.identity) as GameObject;
             //player.name = characterNames[PlayerPrefs.GetInt("Character")];
 
-            //player.GetComponent<PlayerRoute>().StartFieldSocket = _startField.GetComponent<FieldSocket>().TakeSocketNumber;
+            //player.GetComponent<PlayerRoute>().StartFieldSocket = _startField.GetComponent<FieldSocket>().TakeSocketNumber(0);
             //player.transform.position = _startField.GetComponent<FieldSocket>().TakeSocketVectorPosition(player.GetComponent<PlayerRoute>().StartFieldSocket);
             //player.transform.position = new Vector3(player.transform.position.x, 0.06f, player.transform.position.z);
 

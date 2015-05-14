@@ -58,10 +58,10 @@ public class MinigameField : MonoBehaviour
         {
             rand_game = Random.Range(1, 101);
 
-            if (rand_game >= 70 && rand_game<=85)
+            if (rand_game >= 70 && rand_game <= 85)
             {
                 PlayerPrefs.SetInt("EnterdMiniGame", 1);
-                   
+
                 PlayerPrefs.SetInt("Difficulty", PlayerPrefs.GetInt("CharacterAge_" + Game.GetCurrentPlayerRound));
                 PlayerPrefs.SetString("MiniGameFruit", _minigameNames.ToString());
 
@@ -76,30 +76,30 @@ public class MinigameField : MonoBehaviour
 
                 Game._hasEnteredMinigameField = true;
             }
-		    else if (rand_game >85)
-		    {
-				PlayerPrefs.SetInt("EnterdMiniGame", 1);
-				PlayerPrefs.SetInt("Difficulty", 1);
-				PlayerPrefs.SetString("MiniGameFruit", _minigameNames.ToString());
-					
-				GameObject.Find("GeneratedFruitsContainer").gameObject.SetActive(false);
-				//GameObject.Find("Hippo").gameObject.SetActive(false);
-				StartCoroutine("LoadFarm");
-				//Application.LoadLevel("Test");
-					
-				_hasPlayerForMiniGame = true;
-				_playerEnteredTime = Time.time;
+            else if (rand_game > 85)
+            {
+                PlayerPrefs.SetInt("EnterdMiniGame", 1);
+                PlayerPrefs.SetInt("Difficulty", 1);
+                PlayerPrefs.SetString("MiniGameFruit", _minigameNames.ToString());
+
+                GameObject.Find("GeneratedFruitsContainer").gameObject.SetActive(false);
+                //GameObject.Find("Hippo").gameObject.SetActive(false);
+                StartCoroutine("LoadFarm");
+                //Application.LoadLevel("Test");
+
+                _hasPlayerForMiniGame = true;
+                _playerEnteredTime = Time.time;
 
                 Game._hasEnteredMinigameField = true;
-		    }
-            else if (rand_game <70)
+            }
+            else if (rand_game < 70)
             {
                 PlayerPrefs.SetInt("EnterdMiniGame", 1);
                 PlayerPrefs.SetInt("Difficulty", PlayerPrefs.GetInt("CharacterAge_" + Game.GetCurrentPlayerRound));
                 PlayerPrefs.SetString("MiniGameQuiz", _minigameNames.ToString());
 
                 GameObject.Find("GeneratedFruitsContainer").gameObject.SetActive(false);
-                   
+
                 StartCoroutine("LoadQuiz");
                 //Application.LoadLevel("Test");
 
