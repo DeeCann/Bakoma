@@ -10,29 +10,35 @@ public class PlayerMove : MonoBehaviour {
     private bool _speedUp = false;
     private float _speedUpMaxTIme = 3;
     private float _speedFieldFactor = 0;
+    private float distToGround = 0;
 
 	void Awake() {
 		// isKinematic must be blocked on hills to stop character from slide down
-		rigidbody.isKinematic = true;
+        GetComponent<Rigidbody>().isKinematic = true;
 	}
+
+    void Start() {
+
+    }
 
 	void Update() {
 		if(GetComponent<PlayerRoute>().IsMyMove) { 
 			if(Dice.HasNewDiceThrow) {
 				GetComponent<PlayerRoute>().NumberOfFieldsToGo = Dice.FieldsToGo;
 				_hasNewMove = true;
-				rigidbody.isKinematic = false;
 			}
 		}
 	}
 
 	void FixedUpdate() {
+       
+
 		if(_hasNewMove) {
-            GetComponent<CapsuleCollider>().radius = 0.15f;
+            GetComponent<Rigidbody>().isKinematic = false;
 			_nextField = GetComponent<PlayerRoute>().MyNextField;
 
-			if(!GetComponent<PlayerRoute>().IsWaitingForInteraction)
-				RotateTowards();
+            if (!GetComponent<PlayerRoute>().IsWaitingForInteraction)
+                RotateTowards();
 
 			if(GetComponent<PlayerRoute>().MoveHasEnded()) {
 				_hasNewMove = false;
@@ -51,8 +57,7 @@ public class PlayerMove : MonoBehaviour {
 			    transform.position = Vector3.MoveTowards(transform.position, _nextField, Time.deltaTime * 0.6f);
 		} else {
 			transform.rotation = lookAtRotation;
-			rigidbody.isKinematic = true;
-            GetComponent<CapsuleCollider>().radius = 0;
+            GetComponent<Rigidbody>().isKinematic = true;
 		}
 	}
 
