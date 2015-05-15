@@ -186,6 +186,7 @@
     <Compile Include="Assets\Scripts\WebSerwis\Connect.cs" />
     <Compile Include="Assets\Scripts\initFB.cs" />
     <Compile Include="Assets\Scripts\quit_gb.cs" />
+    <Compile Include="Assets\Scripts\ram_test.cs" />
     <Compile Include="Assets\meminfo\test\test.cs" />
     <Compile Include="Assets\meminfo\test\test_gb.cs" />
     <None Include="Assets\External\FastShadows\Shaders\FS_ShadowShader.shader" />
