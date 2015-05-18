@@ -58,6 +58,7 @@
      <Compile Include="Assets\Quiz\scripts\mainsoundoff_quiz.js" />
      <Compile Include="Assets\Quiz\scripts\quiz.js" />
      <Compile Include="Assets\Scripts\loader_js.js" />
+     <Compile Include="Assets\Scripts\off_baner.js" />
      <Compile Include="Assets\Scripts\preloader.js" />
      <Compile Include="Assets\Scripts\quit.js" />
      <Compile Include="Assets\Scripts\quit_gb.js" />
@@ -69,6 +70,7 @@
      <Compile Include="Assets\Trampoliny\scripts\doubleclick.js" />
      <Compile Include="Assets\Trampoliny\scripts\drag.js" />
      <Compile Include="Assets\Trampoliny\scripts\draw_symbol.js" />
+     <Compile Include="Assets\Trampoliny\scripts\end_button.js" />
      <Compile Include="Assets\Trampoliny\scripts\fruitgenerator.js" />
      <Compile Include="Assets\Trampoliny\scripts\how.js" />
      <Compile Include="Assets\Trampoliny\scripts\inbox_sound.js" />
