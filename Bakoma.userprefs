@@ -1,18 +1,13 @@
 ﻿<Properties>
-<<<<<<< HEAD
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Fields\MinigameField.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Quiz\scripts\quiz.js">
     <Files>
-      <File FileName="Assets\Farm_mi\Scripts\how_to_play.js" Line="20" Column="9" />
-      <File FileName="Assets\Scripts\Farm\FarmCharacterMove.cs" Line="12" Column="2" />
-      <File FileName="Assets\Farm_mi\Scripts\modules.js" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Fields\MinigameField.cs" Line="59" Column="11" />
+      <File FileName="Assets\Quiz\scripts\quiz.js" Line="216" Column="25" />
+      <File FileName="Assets\Quiz\data 7.csv" Line="1" Column="1" />
+      <File FileName="Assets\Quiz\data 6.csv" Line="1" Column="1" />
+      <File FileName="Assets\Quiz\scripts\click.js" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
-=======
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench />
->>>>>>> 9f30421ec9f7155bfefcffbd04b1faef9bc533c8
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

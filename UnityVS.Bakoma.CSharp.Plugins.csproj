@@ -52,6 +52,21 @@
     <Reference Include="IFacebook">
       <HintPath>Assets\Facebook\Scripts\IFacebook.dll</HintPath>
     </Reference>
+    <Reference Include="OneSignalSDK">
+      <HintPath>Assets\Plugins\OneSignalSDK.dll</HintPath>
+    </Reference>
+    <Reference Include="ProBuilderCore">
+      <HintPath>Assets\ProCore\Prototype\Classes\ProBuilderCore.dll</HintPath>
+    </Reference>
+    <Reference Include="ProBuilderMeshOps">
+      <HintPath>Assets\ProCore\Prototype\Classes\ProBuilderMeshOps.dll</HintPath>
+    </Reference>
+    <Reference Include="ProCore">
+      <HintPath>Assets\ProCore\Shared\Code\ProCore.dll</HintPath>
+    </Reference>
+    <Reference Include="SixBySeven">
+      <HintPath>Assets\ProCore\Shared\Code\SixBySeven.dll</HintPath>
+    </Reference>
     <Reference Include="FlurryAdLib">
       <HintPath>Assets\Standard Assets\NeatPlug\Ads\FlurryAd\FlurryAdLib.dll</HintPath>
     </Reference>
@@ -96,8 +111,6 @@
     <None Include="Assets\MeshBrush\Documentation.txt" />
     <None Include="Assets\MeshBrush\SimpleVegetation.shader" />
     <None Include="Assets\MeshBrush\SimpleVegetationUnlit.shader" />
-    <None Include="Assets\OVR\Shaders\OVRGUIShader.shader" />
-    <None Include="Assets\OVR\Shaders\TextShader3D.shader" />
     <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
     <None Include="Assets\Plugins\Android\res\values\google_play_services_version.xml" />
     <None Include="Assets\Plugins\donotdelete.txt" />
@@ -184,6 +197,7 @@
     <None Include="Assets\Trampoliny\anim\mask.shader" />
     <None Include="Assets\Trampoliny\dupa.shader" />
     <None Include="Assets\Trampoliny\mWaterScreen1\waterscreen1.shader" />
+    <None Include="Assets\Plugins\OneSignalSDK.dll" />
     <None Include="Assets\Standard Assets\NeatPlug\Ads\FlurryAd\FlurryAdLib.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2013\UnityVS.CSharp.targets" />

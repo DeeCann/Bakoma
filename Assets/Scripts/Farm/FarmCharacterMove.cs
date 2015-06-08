@@ -23,7 +23,7 @@ public class FarmCharacterMove : MonoBehaviour {
 	void Update() {
 		if(Application.platform == RuntimePlatform.OSXEditor)_horizontalInput = Input.GetAxis("Horizontal") * 0.3f;
 		else _horizontalInput = Input.acceleration.x;
-		//_horizontalInput = Input.GetAxis("Horizontal") * 0.3f;
+		_horizontalInput = Input.GetAxis("Horizontal") * 0.3f;
 		if(Application.platform == RuntimePlatform.OSXEditor) {
 			if(Input.GetKeyDown(KeyCode.Space) && IsGrounded)
 				startJump = true;

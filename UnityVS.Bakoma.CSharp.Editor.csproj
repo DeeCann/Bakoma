@@ -70,6 +70,24 @@
     <Reference Include="IFacebook">
       <HintPath>Assets\Facebook\Scripts\IFacebook.dll</HintPath>
     </Reference>
+    <Reference Include="OneSignalSDK">
+      <HintPath>Assets\Plugins\OneSignalSDK.dll</HintPath>
+    </Reference>
+    <Reference Include="ProBuilderCore">
+      <HintPath>Assets\ProCore\Prototype\Classes\ProBuilderCore.dll</HintPath>
+    </Reference>
+    <Reference Include="ProBuilderMeshOps">
+      <HintPath>Assets\ProCore\Prototype\Classes\ProBuilderMeshOps.dll</HintPath>
+    </Reference>
+    <Reference Include="ProBuilderEditor">
+      <HintPath>Assets\ProCore\Prototype\Editor\ProBuilderEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="ProCore">
+      <HintPath>Assets\ProCore\Shared\Code\ProCore.dll</HintPath>
+    </Reference>
+    <Reference Include="SixBySeven">
+      <HintPath>Assets\ProCore\Shared\Code\SixBySeven.dll</HintPath>
+    </Reference>
     <Reference Include="FlurryAdLib">
       <HintPath>Assets\Standard Assets\NeatPlug\Ads\FlurryAd\FlurryAdLib.dll</HintPath>
     </Reference>
@@ -133,14 +151,6 @@
     <Compile Include="Assets\InstantOC\Editor\IocEditor.cs" />
     <Compile Include="Assets\JSON\Editor\JSONChecker.cs" />
     <Compile Include="Assets\MeshBrush\Editor\MeshBrushEditor.cs" />
-    <Compile Include="Assets\OVR\Editor\OVRBuild.cs" />
-    <Compile Include="Assets\OVR\Editor\OVRCameraControllerEditor.cs" />
-    <Compile Include="Assets\OVR\Editor\OVRDeviceEditor.cs" />
-    <Compile Include="Assets\OVR\Editor\OVREditorGUIUtility.cs" />
-    <Compile Include="Assets\OVR\Editor\OVRPlayerControllerEditor.cs" />
-    <Compile Include="Assets\OVR\Editor\OVRPrefabs.cs" />
-    <Compile Include="Assets\OVR\Editor\OVRShimLoader.cs" />
-    <Compile Include="Assets\OVR\Editor\OVRUGUIEditor.cs" />
     <None Include="Assets\External\FastShadows\Shaders\FS_ShadowShader.shader" />
     <None Include="Assets\External\MatCap Shaders\Shaders\MatCap_Lit.shader" />
     <None Include="Assets\External\MatCap Shaders\Shaders\MatCap_TextureMult.shader" />
@@ -152,8 +162,6 @@
     <None Include="Assets\MeshBrush\Documentation.txt" />
     <None Include="Assets\MeshBrush\SimpleVegetation.shader" />
     <None Include="Assets\MeshBrush\SimpleVegetationUnlit.shader" />
-    <None Include="Assets\OVR\Shaders\OVRGUIShader.shader" />
-    <None Include="Assets\OVR\Shaders\TextShader3D.shader" />
     <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
     <None Include="Assets\Plugins\Android\res\values\google_play_services_version.xml" />
     <None Include="Assets\Plugins\donotdelete.txt" />
@@ -244,6 +252,7 @@
     <None Include="Assets\AssetStoreTools\Editor\AssetStoreToolsExtra.dll" />
     <None Include="Assets\Editor\NeatPlug\Ads\FlurryAd\FlurryAdEditor.dll" />
     <None Include="Assets\Editor\NeatPlug\Common\NeatPlugCommonEditor.dll" />
+    <None Include="Assets\ProCore\Prototype\Editor\ProBuilderEditor.dll" />
     <None Include="Assets\UnityVS\Editor\SyntaxTree.VisualStudio.Unity.Bridge.dll" />
     <None Include="Assets\UnityVS\Editor\SyntaxTree.VisualStudio.Unity.Messaging.dll" />
     <None Include="Assets\UnityVS\Editor\UnityVS.VersionSpecific.dll" />
